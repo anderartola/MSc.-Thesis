@@ -1,0 +1,232 @@
+\chapter{Constraining Warm Dark Matter at the density level}\label{sec: inference pipeline}
+
+
+\section{Inference pipeline: from Lyman-alpha skewers to WDM constraints}
+
+In section \ref{chap: deep learning} we have given a detrailed analysis of our Bayesian deep-learning algorithm to recover IGM densties from a Lyman-$\alpha$ skewer. The baryonic density of the IGM is sensitive to the WDM mass through a clear physical mechanism related to gravitational clustering. In this section, we use the recovered IGM density fields to constrain WDM candidates. Note that the natural observable quantity related to the Lyman-$\alpha$ forest is the flux. As a consequence, an almost omnipresent choice in the literature has been to work directly with summary quantities on the flux, which is a proxy of the underlying density. Such summaries include the power spectrum (PS) \cite{Villasenor_2023}, the curvature \cite{Becker_2010}, the probability distribution function (PDF), etc. The deep-learning approach introduced in section \ref{chap: deep learning} allows us to directly recover the baryonic density field along a line of sight, thus having full acces to the field level IGM properties. In this section, we use the recovered $\Delta_\tau$ fields by our neureal network to constraint WDM directly at the density field level. Recall Figure \ref{fig:villasenor_wdm} and Figure \ref{fig: exact density PDF} showing how different WDM models affect the density field. We strive to capture that difference in the WDM models to constrain which free-streaming length are compatible with QSO observations. Note that for a given line of sight, the precise value of the density field not only depends on the WDM masses ( and other possible physical paramters), but most crucially it depends on the random density fluctuation that have seeded the gravitational collapse process. Equivalently, in a simulation setting, the obtained densities would depend on the seed used to initiliaze each simulation. This makes infeasible to campare a given Lyman-$\alpha$ skewer to a simulated one, and means that we must use aggregated summaries over multiple skewer that capture the global properties of the field. In this work, we perform the inference use the density PDF as the summary statistic of choice. This is a well-tested and robuat statistic \cite{Gaikwad_2021}. In section \ref{sec:IMNN} we give an additional argument, based on Information Maximising Neural Networks, to support this choice of summary statistic.
+
+
+The basic working principle of inference pipeline is to fit the observed $\Delta_\tau$ PDF, with its associated uncertainties, to the corresponding $\Delta_\tau$ PDF produced by each WDM model. To compare similar quantities, we always work with the recovered field by our neural network from section \ref{chap: deep learning}. Note that in the \texttt{SHERWOOD} only a finite number of DM models are avaible, due to the computational cost of running this simulation. In more detail, we only have acces to the models CDM, and WDM1,2,3,4,8,12. We smoothly and linaerly interpolate the PDF by interpolating each PDF bin to generate a $\Delta_\tau$ PDF in the range of WDM masses from 0 to 1 KeV. Note that, since we expect the real observations to fall close to the CDM model, and have multiple simulations close to CDM, we expect this interpolation not to limit the inference pipeline. See Figure \ref{fig: exact density PDF} again and observe how similar are the PDF for CDM and WDM3. For more massive models in $\texttt{SHERWOOD}$ the PDF converge to the CDM PDF.
+
+For each DM model of inverse mass $m$ we denote by PDF($m$)  the $\Delta_\tau$ PDF computed over the recovered densities by our NN network over all avaible sightlines in the \texttt{SHERWOOD} or \texttt{SHERWOOD THERMAL} datasets. We refer to this as the model PDF. Let us denote by $\widehat{\text{PDF}}$ the recovered PDF for a target set of (observed) skewers. Then, we fit $\hat{\text{PDF}}$ to the model PDFs using a simple $\chi^2$ fit:
+
+\begin{equation}\label{eq: chi definition}
+    \chi^2 (m)=\sum_i \frac{(\text{PDF}(m)_i-\widehat{\text{PDF}}_i)^2}{(\sigma_i)^2},
+\end{equation}
+where the index $i$ refers to each PDF bin and $\sigma_i$ are the uncertainties on the observed data. If the data is normally independently and normally distributed, the quantity in Equation \ref{eq: chi definition} follows a $\chi^2$ distribution \cite{numerical_recipees_c}. The model that minimises the quantity is the best-fit model, on which we can compute uncertainties and obtain a confidence region of compatible models with the observed data. Since we are only fitting a single parameter model, the 1 and 2-sigma confiderence regions on the WDM mass are given, respectively, by the boundaries of 
+\begin{equation}\label{eq:sigma chi square}
+    \chi^2(m)-\chi^2_{\text{min}}=1,4,
+\end{equation}
+where $\chi^2_{\text{min}}$ is the best-fit $\chi^2$ value.
+In the following, we will be interested in the $2\sigma$ confidence regions. This region can be interpreted as the set of WDM models that guarantee to contain the ``true'' model with a $95\%$ probability. In the current literature, WDM constraints are often reported as the $2\sigma$ upper limit, where the lower limit typically corresponds to CDM. The current more stringent $2\sigma$
+WDM limit constraints are $\sim 3$ KeV, see \cite{Villasenor_2023} and \cite{sherwood_wdm}.
+Note that this fitting procedure is non-Bayesian, in the sense that we don't include any prior knowledge or use Bayes' theorem. Again, this procedure is compared in section \ref{sec:IMNN} to a IMNN Bayesian fit, leading to similar results. 
+
+
+
+
+
+\section{Inference testing on Sherwood spectra under realistic observational conditions}\label{sec:inference test sherwood}
+In this first section we run our inference pipeline from section \ref{sec: inference pipeline} using a set of toy observed skewers. More precisely, we use our neural netowork trained on different subsets of the \texttt{SHERWOOD} dataset and use validation \texttt{SHERWOOD} skewers as the ``observed'' skewers.
+
+\subsection{Untrained DM models}
+We begin by testing the robustness and inter(extra)polation capabilities of the neural networks by considering the \texttt{NOTRAIN} models that are trained on data that iteratively excludes each one of the WDM models. For each one of those trained neural networks, for instance \texttt{NOTRAINWDM4} (which was not trained on WDM4), we predict on the WDM4 sightlines, compute the recovered $\Delta_\tau$ with its uncertainties according to \ref{sec:recovered statistics} and run the inference pipeline. We also perform additional variations by running the pipeline only on the PDF bins whose value is greater than a fixed constant. This has the effecto of only fitting the peak of the PDF, and neglecting the low-information tails. Figure \ref{fig: inference no train} summarises this inference tests. Each plot corresponds to a different fit combining predictions from each \texttt{NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi^2$. The blue curve is the $\chi^2$ metric. Note that we are using all 5000 sightlines on the inference step. This is not a realistic sample size, but rather a test to the inter(extra)polation of the pipeline.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{img/ML/inference_no_train.png}
+    \caption{Inference results on the \texttt{NOTRAIN} neural netoworks. Each plot corresponds to a different fit combining predictions from each \texttt{NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi^2$. The blue curve is the $\chi^2$ metric. Note that we are using all 5000 sightlines on the inference step.}
+    \label{fig:inference no train}
+\end{figure}
+Recall that on WDM2,3,4 the models are interpolating. Observe that as a consequence, the recovered mass is consistently recovered within the $1\sigma$ region. In contrast, with the models CDM and WDM1, the neural networks have to extrapolate on unseen DM models. As expected, the recovered model mass might not even be included in the $2\sigma$ regions, meaning that the pipeline fails to correctly recover the true mass if we interpolate models. This does not affect our prediction with real data, since, as we have already mentioned, current WDM constraints favour a lower mass limir of $\sim 3$ KeV. Lastly, observe in Figure \ref{fig:inference no train} that the mask applied on the horizontal axis does not significantly affect the recovered masses.
+
+
+\subsection{Realistic UVES observational conditions}
+
+In this section, we explore the effect of realistic observational conditions, such as the number of observed quasars, the signal-to-noise ratio (SNR, or the instrumental resolution, in the infered DM constraints. For that purpose, we use typical parameters for the Ultraviolet and Visual Echelle Spectrograph (UVES) on the European Southern Observatory's Very Large Telescope \cite{Murphy_2018}. We consider a spectral resolution of $6$ km$/$s per pixel, variable SNR in the range $20-30$ and a variable number of targets in the range $30-40$. Note that the skewers in the \texttt{SHERWOOD} dataset are 20h$^{-1}$cMpc in length, while the spectral range in the UVES instrument expands multiple times  that range. In particular, since measurements can extand up to redshifts differences $\Delta z \sim 1$, we assume that each observed spectrum can be descomposed into $\sim 15$ of our \texttt{SHERWOOD} skewers.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/ML/SNR_vs_N.png}
+    \caption{Inference predictions on WDM3 for different combinations of SNR and number of targets.}
+    \label{fig: inference snr vs n}
+\end{figure}
+
+A common compromise in an observational program with a fixed observational time is between number of targets and exposure time per target, which determines the SNR. In Figure \ref{fig: inference snr vs n} we show how prioritising SNR or the number of targets affects to infered WDM masses on the WDM3 model. In general, we find that increasing the target number leads to slighly tighter confidence regions, while increasing the SNR leads to more accurate constraints.
+
+%forecast plot
+
+\section{Inference on alternative hydrodynamical codes}
+
+\section{Comparison of the inference pipeline against Information Maximising Neural Networks}
+
+
+The inference pipeline presented so far in this section is based on a simple $\chi^2$ fit of the $\Delta_\tau$ recovered PDFs from our fiducial NN model. This pipeline rellies on a series of contingent choices, most notably the use of the density PDFs as the summary statistics of the fields. In this section, we explore, in an agnostic way, the possiblity of using other summaries different from the $\Delta_\tau$ PDFs to perform the inference (note that other summaries such as the density power spectrum, curvature,... could potentially be used). More concretely, we will introduce Information Maximising Neural Networks (IMNNs) and use them to perform the inference within a Bayesian framework. We then compare the results of this procedure with the inerence pipeline discussed in section \ref{sec: inference pipeline}.
+
+\subsection{Information Maximising Neural Networks}
+Information Maximising Neural Networks aim at obtaining optimal summaries of data \cite{Charnock_2018}. Neural networks are used to parametrise these summaries in an agnostic way by maximising the information of the summaries with respect to the model parameters of interest.
+
+Consider a data-generating procedure depending on some model parameters $\theta$, generating data realization $d_i(\theta)$ where $i$ labels a realization or initial seed of the simulation. We want to obtain a function $f \colon d \mapsto x$ that maps each simulation to a summary vector of the same size as $\theta$. This is, essentially, a compression algorithm. IMNNs work by transforming the original likelihood of the data, which is a priori not known, into the gaussian form
+
+\begin{equation}
+    -2\ln\mathcal{L}\left(x|\theta\right)=\left(x-\mu\left(\theta\right)\right)^TC^{-1}\left(x-\mu\left(\theta\right)\right),
+\end{equation}
+
+where $C$ is the covariance matrix of the calculated summaries with a set of $n_s$ simulations, and $\mu$ the summary mean depending on the model parameters. The information of the observed summaries with respect to $\theta$ is then the Fisher information matrix \cite{ly2017tutorialfisherinformation}:
+
+\begin{equation}\label{eq:Fisher information}
+    F_{\alpha \beta} =-\operatorname{E}\bigg[\frac{\partial^2}{\partial\theta_\alpha\partial\theta_\beta}\log \mathcal{L}(x;\theta)\bigg|\theta\bigg]= \frac{\partial \mu}{\partial \theta_\alpha}C^{-1} \frac{\partial \mu}{\partial \theta_\beta},
+\end{equation}
+whose determinant we note as $|F|$. 
+The goal is to obtain summaries that maximise the Fisher information while mainting a minimum covariance condition to generate independent summaries. The summaries produced by the network can then be used to perform inference on them. Since the Fisher information is a quantity that depends on the model paramters $\theta$, the quantity in Equation \ref{eq:Fisher information} needs to be evaluated at some fiducial model parameters in order to obtain a numerical result.
+
+IMNNs have been succesfully leveraged in the IGM community. Recent papers have explored the possibility of using them to perform IGM thermal paramter inference from Lyman-$\alpha$ skewers, see \cite{maitra2024parameterestimationlyalphaforest} for instance, where authors find IMNNs to yield tighter and more robust constraints than classical Markov Chain Monte Carlo approaches. Despite these promising results, many challenges arise when using IMNNs on real data, primarly related to the correct identification and interpretation of model parameters.
+
+\subsection{IMNN training and non-linear summaries}
+In this section we consider a simple MLP architecture with linear layers followed by PReLU($\alpha$) activation functions and a dropout layer that randomly (with probability $p$) sets to 0 the any layer weight during each epoch to prevent over-fitting. The network takes as input a simulated data vector $d$ and prodcued a summary vector $x$ of the same size and the parameter vector $\theta$. We use the Adam optimiser to maximise |F| by minimising the following loss function
+
+\begin{equation}\label{eq:IMNN loss}
+    \mathcal{L}_{IMNN} = - \log(|F|) + \lambda \frac{\mathcal{N}}{\mathcal{N}+\exp(-\mathcal{N})} *\mathcal{N},
+\end{equation}
+where $\mathcal{N}=||C-I||+|C^{-1}-I|||$ measure the deviation from independt summaries and $\lambda$ is a coupling constant. In Equation \ref{eq:IMNN loss}, the second term sets a scale for the Fisher information by producing summaries whose covariance approaches the identity matrix. Once this is achieved, the term containing the exponential factor vanishes and the network will maximise $|F|$. Note that there is not a unique set of potential optimal sumamries. In fact, any bijective function of a sufficient statistic for a certian likelihood is also a sufficient statistic.
+
+For each paramter update in the training procedure, we generate a batch of data at the fidicual parameters $\theta_f$. The derivatives in Equation \ref{eq:Fisher information} are numerically approximated with finite differences by running simulations at parameters $\theta_f \pm \Delta \theta_\alpha$, where $\Delta \theta_\alpha$ are a small parameter variation, and then calcualting
+
+\begin{equation}
+    \frac{\partial x}{\partial \theta_\alpha}=\frac{x(d(\theta_f + \Delta \theta_\alpha))-x(d(\theta_f - \Delta \theta_\alpha))}{2 \Delta \theta_\alpha}.
+\end{equation}
+We then calculate $C$, the covariance of the summaries at fiducal paramters, and use it to compute the Fisher information in Equation \ref{eq:Fisher information} and the loss function in Equation \ref{eq:IMNN loss}. Note that, since the covariance matrix and the derivative in the Fisher information matrix are computed at the data summaries, they implicitely depend on the NN parameters.
+
+\subsection{Summarising a Gaussian signal}\label{sec:IMNN normal}
+We implement IMNNs using Pytorch\footnote{\url{https://pytorch.org}}, a deep-learning Python framework. We test the implementation first by exploring its behavior on a toy model, where we generate ramdon samples from a Gaussian distribtion $\mathcal{N}(\mu, \sigma)$. The sufficient statistic for the model parameters $\theta=(\mu,\sigma)$ are, in this case, the sample mean and standard deviation:
+
+\begin{equation}
+    \hat{\mu}=\frac{1}{n_d}\sum d_i \hspace{1cm} \hat{\sigma}^2 = \frac{1}{n_d-1}\sum (d_i -\hat{\mu})^2.
+\end{equation}
+Note that the statistic for $\sigma$ is non-linear.
+For this example, we select fiducial parameters $\theta_f=(\mu=0, \sigma=1)$ and $\Delta \theta=(0.1 , 0.1)$ and generate random fields with 100 pixels. In total, 5000 fields are generated for each parameter set, including a validation dataset. Note that testing the network performance in the validation dataset is crucial in performing early-stopping during the training process. Indeed, since the training dataset is limited, it will contain spurious correlations that the network will use to infer a higher information than expected. By stopping the training when the network information on the validation set saturates, we can avoid this problem. We use a simple architecture, with layers $[128,128,128,2]$, learning rate of $0.001$, dropout rate of $p=0.5$, and batch size of $500$. Observe the training evolution in Figure \ref{fig:IMNN training normal test}, where we show $|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets. As can be seen, the validation information quickly saturates in $\sim 100$ epochs, and then slowly decreases as the network over-fits.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\linewidth]{img/ML/normal_plot_training.png}
+    \caption{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.}
+    \label{fig:IMNN training normal test}
+\end{figure}
+
+To better interpret the network output and to understand its behavior, we generate samples of the same size with the zero mean but a standar deviation randomly sampled from $(0,12)$. We then compute the exact statistic (the sample standar deviation) and plot it against the second IMNN sumamry output. The result is Figure \ref{fig:IMNN normal std}. Observe that the exact statistic in the $x$-axis is highly correlated to the network summary in the $y$-axis. Since the relation between the two quantities is clearly bijective, the model has succesfully learnt to extract all the possible information for the field covariance. The natural scatter is due to having a simple NN model.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/ML/std_vs_model.png}
+    \caption{The IMNN summary plotted agains the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.}
+    \label{fig:IMNN normal std}
+\end{figure}
+Note that the network has not seen any normal field with such variances $\sigma \in (0,12)$ during training, yet it is able to extract the correct summary. This is of crucial importance, since it means that we could use the IMNN summaries to do inference on a field with parameter values slighly different from the fiducial ones used during training.
+
+
+To conclude the exploration of this toy model, we use the network to perform Bayesian inference. We implement a simple Approximate Bayesian Computation (ABC) \cite{review_ABC} algorithm that obtains approximate posterior samples from a given set of prior samples and observed data. As the observed data, we take 50 Gaussian fields simulated at fiducial parameter $(\mu=0, \sigma=1)$ values. As priors, we take 5000 samples from a non-informative uniform distribution in $(-5, 5)$ for $\mu$ and $(0, 10)$ for $\sigma$. The ABC rejection algorithm is described in Algorithm \ref{alg:ABC}.
+
+
+\begin{algorithm}
+    \caption{Approximate Bayesian Computation Rejection Algorithm}\label{alg:ABC}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} Observed data $\mathbf{y}$, threshold $\epsilon$, number of simulations $N$, prior distribution $\pi(\theta)$
+    \State \textbf{Output:} Accepted parameter values $\{\theta_i\}_{i=1}^M$
+    
+    \State Initialize $M \gets 0$
+    \For{$i = 1$ to $N$}
+        \State Sample $\theta^*$ from the prior distribution $\pi(\theta)$
+        \State Simulate data $\mathbf{y}^*$ from the model using $\theta^*$
+        \If{$d(\mathbf{y}, \mathbf{y}^*) \leq \epsilon$}
+            \State Accept $\theta^*$: $\theta_{M+1} \gets \theta^*$
+            \State Increment $M \gets M + 1$
+        \EndIf
+    \EndFor
+    
+    \State \textbf{return} $\{\theta_i\}_{i=1}^M$
+    \end{algorithmic}
+    \end{algorithm}
+In Figure \ref{fig:IMNN normal posterior} we show the posterior samples and Gaussian Kernel Density Estimation (KDE) for the distributions of $\mu$ and $\sigma$. The dashed vertical lines show the true parameter values. As expected, and even with a non-informative prior, the IMNN summary contain sufficient information to produce tight posterior around the true model parameters. Note that the posterior scatter on the non-linear summary $\sigma$ is larger than on the linear summary $\mu$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/ML/ABC_posteriors_normal.png}
+    \caption{Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of a IMNN. The dashed vertical lines show the true parameter values.}
+    \label{fig:IMNN normal posterior}
+\end{figure}
+
+
+
+
+
+
+\subsection{IMNN inference results on WDM masses}\label{sec:IMNN}
+We can now deploy a simple IMNN as an alternative way of constraining WDM models. We follow section \ref{sec:IMNN normal} and consider a similar architecture but now with 4 dense layers of size $[512, 512, 256, 2]$. As input to the NN, we consider Lyman-$\alpha$ flux skewers. Since in flux space the skewers has many simulation-specific and prominnent features that can be picked-up by a NN, we work in Fourier space. More precisely, the input to the network are 
+\begin{equation}
+    \sqrt{k} |\delta_F (k)|,
+\end{equation}
+where $\delta_F$ is the flux contrast of the skewer.
+We use the \texttt{SHERWOOD} simulation suite with varied WDM mass to train the IMNN. Note that this means that we are assuming that WDM is the only model parameter affecting the Lyman-$\alpha$ forest property. We ignore thermal parameters variations for this demosntration. We train our model on the fiducial CDM mass corresponding to $0$ Kev$^{-1}$, and use the WDM3 model corresponding to $0$ Kev$^{-1}$ to calculate the summary derivatives. The choice of WDM3 is due to the flux skewers showing sufficient variation with respect to CDM.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\linewidth]{img/ML/WDM_training_plot.png}
+    \caption{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt{SHERWOOD} dataset Lyman-$\alpha$ skewers.}
+    \label{fig:IMNN  wdm training}
+\end{figure}
+In Figure \ref{fig:IMNN wdm training} we show the training progress of the IMNN as a function of the epoch. The information extracted on the validation split quickly saturates at $\sim 250$ epochs. It is clear that the network is able to learn a map from Lyman-$\alpha$ skewers in Fourier space into a one-dimensional parameter space. Since the \texttt{SHERWOOD} suite has a fix number of simulations, interpreting the network output summaries is a challenging task.
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.53\textwidth}
+        \centering
+            \includegraphics[width=1\textwidth]{img/ML/IMNN_output.png}
+            \caption{IMNN outputs for the \texttt{SHERWOOD} Lyman-$\alpha$ skewers.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{img/ML/IMNN_ABC_wdm.png}
+        \caption{ABC WDM mass posterior for a test of 50 observed CDM skewers. The $2\sigma$ WDM constraint is $\sim 3 $ Kev.}     
+    \end{subfigure}
+        \caption{}
+        \label{fig:IMNN WDM posterior}
+\end{figure}
+
+In Figure \ref{fig:IMNN WDM posterior}a) we show the summaries of the trained IMNN for all the aviable \texttt{SHERWOOD} Lyman-$\alpha$ skewers is Fourier space. Observe how the summaries show a large scatter for every model, corresponding to the large simulation variability within each skewer. However, the mean summaries show a clear bijective trend, manifesting that the IMNN has learnt an informative summary. Note that this can be interpreted as the necessity of a large number of observed samples when constraining WDM models.
+We use the IMNN summaries to perform an inference test and obtain a Bayesian posterior as follows. First, we select 50 CDM skewers from the validation dataset and obtain their corresponding summaries by passing them through the IMNN. We now use all validation skewers from the \texttt{SHERWOOD} suite and obtain their summaries. We use the ABC rejection algorithm \ref{alg:ABC} to generate to posterior distribution in Figure \ref{fig:IMNN WDM posterior}b). The $2\sigma$ limit for the WDM mass is $\sim 3$ KeV. Recall that this is a comparable constraint to the one obtained in section \ref{sec:inference test sherwood}. We interpret this not only as a robustness sign of our original pipeline involving a $\chi^2$ fit the $\Delta_\tau$ PDFs, but most notably as a sign that it optimally extracts the majority of the information of the Lyman-$\alpha$ skewers with respect to the WDM mass parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PDF:
+\begin{equation}\label{eq:PDF of PDF}
+    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
+\end{equation}
+
+
+\section{WDM constraints from SQUAD DR1 observational data}

@@ -1,0 +1,40 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.4}%
+\contentsline {section}{\numberline {1.1}Cosmological preliminaries}{1}{section.5}%
+\contentsline {section}{\numberline {1.2}Dark matter}{3}{section.18}%
+\contentsline {subsection}{\numberline {1.2.1}Evidence for the inclusion of dark matter in the cosmological model}{3}{subsection.19}%
+\contentsline {subsection}{\numberline {1.2.2}Manifold dark matter candidates}{3}{subsection.20}%
+\contentsline {subsection}{\numberline {1.2.3}Constraining mechanisms for dark matter}{3}{subsection.21}%
+\contentsline {section}{\numberline {1.3}The intergalactic medium}{3}{section.22}%
+\contentsline {subsection}{\numberline {1.3.1}The Lyman-alpha forest as a probe of the IGM}{3}{subsection.23}%
+\contentsline {chapter}{\numberline {2}Simulating the Lyman-alpha forest: The Sherwood simulation suite}{6}{chapter.29}%
+\contentsline {section}{\numberline {2.1}Prelude on cosmological simulation}{6}{section.30}%
+\contentsline {section}{\numberline {2.2}Obtaining mock Lyman-alpha skewers from cosmological simulations}{6}{section.31}%
+\contentsline {section}{\numberline {2.3}Statistical analysis of the effect of dark matter in the flux and density fields}{6}{section.32}%
+\contentsline {section}{\numberline {2.4}Peculiar velocities and optical depth-weighted quantities}{6}{section.35}%
+\contentsline {chapter}{\numberline {3}Deep Learning the Lyman-alpha forest}{8}{chapter.36}%
+\contentsline {section}{\numberline {3.1}Introduction and motivation for the use of Deep Learning}{8}{section.37}%
+\contentsline {section}{\numberline {3.2}Fundamentals of (Bayesian) Neural Networks}{14}{section.48}%
+\contentsline {subsection}{\numberline {3.2.1}Dataset generation, data augmentation and overfitting.}{17}{subsection.56}%
+\contentsline {subsection}{\numberline {3.2.2}Deep learning architecture}{20}{subsection.62}%
+\contentsline {subsection}{\numberline {3.2.3}Prediction uncertainty and Bayesian models}{22}{subsection.69}%
+\contentsline {subsection}{\numberline {3.2.4}Hyperparameter selection}{24}{subsection.75}%
+\contentsline {subsection}{\numberline {3.2.5}Loss function and training}{26}{subsection.84}%
+\contentsline {section}{\numberline {3.3}Workflow implementation: Recovering IGM conditions from the Lyman-alpha forest}{29}{section.113}%
+\contentsline {section}{\numberline {3.4}Recovered field statistics and uncertainties}{34}{section.121}%
+\contentsline {section}{\numberline {3.5}Model interpretability and limitations}{35}{section.122}%
+\contentsline {chapter}{\numberline {4}Constraining Warm Dark Matter at the density level}{37}{chapter.126}%
+\contentsline {section}{\numberline {4.1}Inference pipeline: from Lyman-alpha skewers to WDM constraints}{37}{section.127}%
+\contentsline {section}{\numberline {4.2}Inference testing on Sherwood spectra under realistic observational conditions}{39}{section.130}%
+\contentsline {subsection}{\numberline {4.2.1}Untrained DM models}{39}{subsection.131}%
+\contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{41}{subsection.133}%
+\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{42}{section.135}%
+\contentsline {section}{\numberline {4.4}Comparison of the inference pipeline against Information Maximising Neural Networks}{42}{section.136}%
+\contentsline {subsection}{\numberline {4.4.1}Information Maximising Neural Networks}{42}{subsection.137}%
+\contentsline {subsection}{\numberline {4.4.2}IMNN training and non-linear summaries}{43}{subsection.140}%
+\contentsline {subsection}{\numberline {4.4.3}Summarising a Gaussian signal}{44}{subsection.143}%
+\contentsline {subsection}{\numberline {4.4.4}IMNN inference results on WDM masses}{46}{subsection.162}%
+\contentsline {section}{\numberline {4.5}WDM constraints from SQUAD DR1 observational data}{49}{section.167}%
+\contentsline {chapter}{\numberline {5}Conclusions}{50}{chapter.168}%
+\contentsline {chapter}{\nonumberline Bibliography}{51}{chapter*.169}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,14 @@
+ReLU
+GFLOPS
+PFLOPS
+representability
+expressivity
+training-valiation
+Sobel
+NN
+convolving
+downsample
+frequentist
+Palpatine
+best-perfoming
+OPTUNA

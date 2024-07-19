@@ -1,0 +1,5 @@
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QIllustration for a non-stochastic neural network a), a network with stochastic activations b), and a network with stochastic weights in c).\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QIn an exercise of pure democracy , consider a classifier \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q who picks the class with the majority of votes.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QThe performance and convergence properties of a deep learning model are highly sensitive to its precise architecture, and hence, to the hyperparameters that control the latter: number of layers, the exact type of layers (convolutional, dense,...)\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QMirroredStrategy.\\E$"}
+{"rule":"LARGE_NUMBER_OF","sentence":"^\\QNote that this can be interpreted as the necessity of a large number of observed samples when constraining WDM models.\\E$"}
