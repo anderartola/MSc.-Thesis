@@ -28,13 +28,15 @@
 \contentsline {section}{\numberline {4.2}Inference testing on Sherwood spectra under realistic observational conditions}{39}{section.130}%
 \contentsline {subsection}{\numberline {4.2.1}Untrained DM models}{39}{subsection.131}%
 \contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{41}{subsection.133}%
-\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{42}{section.135}%
-\contentsline {section}{\numberline {4.4}Comparison of the inference pipeline against Information Maximising Neural Networks}{42}{section.136}%
-\contentsline {subsection}{\numberline {4.4.1}Information Maximising Neural Networks}{42}{subsection.137}%
-\contentsline {subsection}{\numberline {4.4.2}IMNN training and non-linear summaries}{43}{subsection.140}%
-\contentsline {subsection}{\numberline {4.4.3}Summarising a Gaussian signal}{44}{subsection.143}%
-\contentsline {subsection}{\numberline {4.4.4}IMNN inference results on WDM masses}{46}{subsection.162}%
-\contentsline {section}{\numberline {4.5}WDM constraints from SQUAD DR1 observational data}{49}{section.167}%
-\contentsline {chapter}{\numberline {5}Conclusions}{50}{chapter.168}%
-\contentsline {chapter}{\nonumberline Bibliography}{51}{chapter*.169}%
+\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{44}{section.138}%
+\contentsline {subsection}{\numberline {4.3.1}The Nyx code: a comparison with the Sherwood suite}{44}{subsection.139}%
+\contentsline {subsection}{\numberline {4.3.2}Inference test on Nyx Lyman-alpha skewers}{44}{subsection.140}%
+\contentsline {section}{\numberline {4.4}Comparison of the inference pipeline against Information Maximising Neural Networks}{44}{section.141}%
+\contentsline {subsection}{\numberline {4.4.1}Information Maximising Neural Networks}{44}{subsection.142}%
+\contentsline {subsection}{\numberline {4.4.2}IMNN training and non-linear summaries}{45}{subsection.145}%
+\contentsline {subsection}{\numberline {4.4.3}Summarising a Gaussian signal}{46}{subsection.148}%
+\contentsline {subsection}{\numberline {4.4.4}IMNN inference results on WDM masses}{49}{subsection.167}%
+\contentsline {section}{\numberline {4.5}WDM constraints from SQUAD DR1 observational data}{52}{section.172}%
+\contentsline {chapter}{\numberline {5}Conclusions}{53}{chapter.173}%
+\contentsline {chapter}{\nonumberline Bibliography}{54}{chapter*.174}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -30,19 +30,19 @@ Note that this fitting procedure is non-Bayesian, in the sense that we don't inc
 In this first section we run our inference pipeline from section \ref{sec: inference pipeline} using a set of toy observed skewers. More precisely, we use our neural netowork trained on different subsets of the \texttt{SHERWOOD} dataset and use validation \texttt{SHERWOOD} skewers as the ``observed'' skewers.
 
 \subsection{Untrained DM models}
-We begin by testing the robustness and inter(extra)polation capabilities of the neural networks by considering the \texttt{NOTRAIN} models that are trained on data that iteratively excludes each one of the WDM models. For each one of those trained neural networks, for instance \texttt{NOTRAINWDM4} (which was not trained on WDM4), we predict on the WDM4 sightlines, compute the recovered $\Delta_\tau$ with its uncertainties according to \ref{sec:recovered statistics} and run the inference pipeline. We also perform additional variations by running the pipeline only on the PDF bins whose value is greater than a fixed constant. This has the effecto of only fitting the peak of the PDF, and neglecting the low-information tails. Figure \ref{fig: inference no train} summarises this inference tests. Each plot corresponds to a different fit combining predictions from each \texttt{NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi^2$. The blue curve is the $\chi^2$ metric. Note that we are using all 5000 sightlines on the inference step. This is not a realistic sample size, but rather a test to the inter(extra)polation of the pipeline.
+We begin by testing the robustness and inter(extra)polation capabilities of the neural networks by considering the \texttt{NOTRAIN} models that are trained on data that iteratively excludes each one of the WDM models. For each one of those trained neural networks, for instance \texttt{NOTRAINWDM4} (which was not trained on WDM4), we predict on the WDM4 sightlines, compute the recovered $\Delta_\tau$ with its uncertainties according to \ref{sec:recovered statistics} and run the inference pipeline. We also perform additional variations by running the pipeline only on the PDF bins whose value is greater than a fixed constant. This has the effecto of only fitting the peak of the PDF, and neglecting the low-information tails. Figure \ref{fig:inference no train} summarises this inference tests. Each plot corresponds to a different fit combining predictions from each \texttt{NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi^2$. The blue curve is the $\chi^2$ metric. Note that we are using all 5000 sightlines on the inference step. This is not a realistic sample size, but rather a test to the inter(extra)polation of the pipeline.
 
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.7]{img/ML/inference_no_train.png}
+    \includegraphics[width=0.9\textwidth]{img/ML/inference_no_train.png}
     \caption{Inference results on the \texttt{NOTRAIN} neural netoworks. Each plot corresponds to a different fit combining predictions from each \texttt{NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi^2$. The blue curve is the $\chi^2$ metric. Note that we are using all 5000 sightlines on the inference step.}
     \label{fig:inference no train}
 \end{figure}
 Recall that on WDM2,3,4 the models are interpolating. Observe that as a consequence, the recovered mass is consistently recovered within the $1\sigma$ region. In contrast, with the models CDM and WDM1, the neural networks have to extrapolate on unseen DM models. As expected, the recovered model mass might not even be included in the $2\sigma$ regions, meaning that the pipeline fails to correctly recover the true mass if we interpolate models. This does not affect our prediction with real data, since, as we have already mentioned, current WDM constraints favour a lower mass limir of $\sim 3$ KeV. Lastly, observe in Figure \ref{fig:inference no train} that the mask applied on the horizontal axis does not significantly affect the recovered masses.
 
 
-\subsection{Realistic UVES observational conditions}
+\subsection{Realistic UVES observational conditions}\label{sec:hires test}
 
 In this section, we explore the effect of realistic observational conditions, such as the number of observed quasars, the signal-to-noise ratio (SNR, or the instrumental resolution, in the infered DM constraints. For that purpose, we use typical parameters for the Ultraviolet and Visual Echelle Spectrograph (UVES) on the European Southern Observatory's Very Large Telescope \cite{Murphy_2018}. We consider a spectral resolution of $6$ km$/$s per pixel, variable SNR in the range $20-30$ and a variable number of targets in the range $30-40$. Note that the skewers in the \texttt{SHERWOOD} dataset are 20h$^{-1}$cMpc in length, while the spectral range in the UVES instrument expands multiple times  that range. In particular, since measurements can extand up to redshifts differences $\Delta z \sim 1$, we assume that each observed spectrum can be descomposed into $\sim 15$ of our \texttt{SHERWOOD} skewers.
 
@@ -50,15 +50,60 @@ In this section, we explore the effect of realistic observational conditions, su
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{img/ML/SNR_vs_N.png}
-    \caption{Inference predictions on WDM3 for different combinations of SNR and number of targets.}
+    \caption{Inference predictions on WDM3 for different combinations of SNR and number of targets N.}
     \label{fig: inference snr vs n}
 \end{figure}
 
-A common compromise in an observational program with a fixed observational time is between number of targets and exposure time per target, which determines the SNR. In Figure \ref{fig: inference snr vs n} we show how prioritising SNR or the number of targets affects to infered WDM masses on the WDM3 model. In general, we find that increasing the target number leads to slighly tighter confidence regions, while increasing the SNR leads to more accurate constraints.
+A common compromise in an observational program with a fixed observational time is between number of targets and exposure time per target, which determines the SNR. In Figure \ref{fig: inference snr vs n} we show how prioritising SNR or the number of targets affects to infered WDM masses on the WDM3 model. In general, we find that increasing the target number leads to slighly tighter confidence regions, while increasing the SNR leads to more accurate constraints. Most crucially, observe how the true model mass is, in both cases, recovered within $2\sigma$.
 
-%forecast plot
+We now evaluate the constraining power of the approach developed in this work. For that purporse, we assume CDM to be the true DM model and use our fiducial neural network trained on \texttt{SHERWOOD}. We then draw 450 \texttt{SHERWOOD} skewers, corresponding to 30 observed UVES spectra, post-process them with a resolution of 6 km/s, add random Gaussian noise with $\text{SNR}=30$ and use them to run our inference pipeline from section \ref{sec: inference pipeline}. Since the fit depends on the exact draw of ``observed'' skewers, we repeat this process 100 times with a random draw each time to obtain the $2\sigma$ limit distribution.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/ML/inference_cdm_sherwood.png}
+    \caption{The figure shows 100 different $\chi^2$ fits on 450 \texttt{SHERWOOD} CDM skerwers and the $2\sigma$ constraints distribution as we vary the exact obsserved draw.}
+    \label{fig: inference cdm sherwood}
+\end{figure}
+Figure \ref{fig: inference cdm sherwood} shows the distriution of $2\sigma$ limits and the mean $2\sigma$ constraint produced by this process. The mean $2\sigma$ constraint that we report for the inverse mass is $\sim 0.12$ KeV$^{-1}$, or $\sim 8.3$ KeV for the WDM model mass.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/ML/pdf_model_observed.png}
+    \caption{An example observed $\Delta_\tau$ PDF recovered using 450 skewers and its uncertainties in black, plotted againt the model CDM PDF, which is the best-fit model in the $\chi^2$ test. }
+    \label{fig: inference cdm PDF}
+\end{figure}
+
+To confirm that the fitting process works as expected, we plot in Figure \ref{fig: inference cdm PDF} the best fit PDF, which corresponds to the CDM model according to Figure \ref{fig: inference cdm sherwood} and an example recovered PDF from a set of 450 observed skewers. Recall that the uncertainties in the recoved PDF include the sample scatter using bootstrapping as well as the machine learning uncertainties, as we have discussed in setion \ref{sec:recovered statistics}. As expected, the observed PDF in within a $2\sigma$ distance of the model CDM PDF.
+
+In Figure \ref{fig: wdm constraints summary} we summarise in black the current $2\sigma$ state-of-the-art constraint in the literature, using a non-ML approach. In orange, we compare the forecasted constraints from the non-machine learning approach in \cite{sherwood_wdm} to our approach in an equivalent dataset to the one used in section \ref{sec:hires test}. Compared to current limits, our forecasted constraint is a twofold improvemen, from $\sim 4$ to $\sim 8$ KeV. On the same dataset, we forecast our machine learning technique to also outperform the current pipeline in \cite{sherwood_wdm}. As a significant caveat, note that the work in \cite{sherwood_wdm} is a joint analysis not only on WDM but also on thermal parameters of the IGM, cosmological paramters, etc. The aforementioned paper encompasses a larger number of parameters with a more complex and refined approach than this work.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/ML/limits_summary.png}
+    \caption{Summary $2\sigma$ relic WDM constraints based on \cite{sherwood_wdm} and this work.}
+    \label{fig: wdm constraints summary}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Inference on alternative hydrodynamical codes}
+
+\subsection{The Nyx code: a comparison with the Sherwood suite}
+
+\subsection{Inference test on Nyx Lyman-alpha skewers}
+
+
 
 \section{Comparison of the inference pipeline against Information Maximising Neural Networks}
 

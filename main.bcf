@@ -2425,10 +2425,15 @@
     <bcf:citekey order="62" intorder="1">Villasenor_2023</bcf:citekey>
     <bcf:citekey order="63" intorder="1">sherwood_wdm</bcf:citekey>
     <bcf:citekey order="64" intorder="1">Murphy_2018</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">Charnock_2018</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">ly2017tutorialfisherinformation</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">maitra2024parameterestimationlyalphaforest</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">review_ABC</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Charnock_2018</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">ly2017tutorialfisherinformation</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">maitra2024parameterestimationlyalphaforest</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">review_ABC</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

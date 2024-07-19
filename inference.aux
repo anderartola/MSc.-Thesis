@@ -18,47 +18,60 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Inference results on the \texttt  {NOTRAIN} neural netoworks. Each plot corresponds to a different fit combining predictions from each \texttt  {NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi ^2$. The blue curve is the $\chi ^2$ metric. Note that we are using all 5000 sightlines on the inference step.\relax }}{40}{figure.caption.132}\protected@file@percent }
 \newlabel{fig:inference no train}{{4.1}{40}{Inference results on the \texttt {NOTRAIN} neural netoworks. Each plot corresponds to a different fit combining predictions from each \texttt {NOTRAIN} model with each of the masks applied to the PDF when fitting. The light and dark blue regions correspond to the 1 and 2 sigma confidence regions. The red line corresponds to the true DM model mass, and the black line to the best-fit model that minimises the $\chi ^2$. The blue curve is the $\chi ^2$ metric. Note that we are using all 5000 sightlines on the inference step.\relax }{figure.caption.132}{}}
 \newlabel{fig:inference no train@cref}{{[figure][1][4]4.1}{[1][39][]40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Inference predictions on WDM3 for different combinations of SNR and number of targets.\relax }}{41}{figure.caption.134}\protected@file@percent }
-\newlabel{fig: inference snr vs n}{{4.2}{41}{Inference predictions on WDM3 for different combinations of SNR and number of targets.\relax }{figure.caption.134}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Inference predictions on WDM3 for different combinations of SNR and number of targets N.\relax }}{41}{figure.caption.134}\protected@file@percent }
+\newlabel{fig: inference snr vs n}{{4.2}{41}{Inference predictions on WDM3 for different combinations of SNR and number of targets N.\relax }{figure.caption.134}{}}
 \newlabel{fig: inference snr vs n@cref}{{[figure][2][4]4.2}{[1][41][]41}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{41}{subsection.133}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{42}{section.135}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Comparison of the inference pipeline against Information Maximising Neural Networks}{42}{section.136}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Information Maximising Neural Networks}{42}{subsection.137}\protected@file@percent }
-\newlabel{eq:Fisher information}{{4.4}{43}{Information Maximising Neural Networks}{equation.139}{}}
-\newlabel{eq:Fisher information@cref}{{[equation][4][4]4.4}{[1][43][]43}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}IMNN training and non-linear summaries}{43}{subsection.140}\protected@file@percent }
-\newlabel{eq:IMNN loss}{{4.5}{43}{IMNN training and non-linear summaries}{equation.141}{}}
-\newlabel{eq:IMNN loss@cref}{{[equation][5][4]4.5}{[1][43][]43}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Summarising a Gaussian signal}{44}{subsection.143}\protected@file@percent }
-\newlabel{sec:IMNN normal}{{4.4.3}{44}{Summarising a Gaussian signal}{subsection.143}{}}
-\newlabel{sec:IMNN normal@cref}{{[subsection][3][4,4]4.4.3}{[1][44][]44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces $|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.\relax }}{45}{figure.caption.146}\protected@file@percent }
-\newlabel{fig:IMNN training normal test}{{4.3}{45}{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.\relax }{figure.caption.146}{}}
-\newlabel{fig:IMNN training normal test@cref}{{[figure][3][4]4.3}{[1][44][]45}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces The IMNN summary plotted agains the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.\relax }}{46}{figure.caption.147}\protected@file@percent }
-\newlabel{fig:IMNN normal std}{{4.4}{46}{The IMNN summary plotted agains the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.\relax }{figure.caption.147}{}}
-\newlabel{fig:IMNN normal std@cref}{{[figure][4][4]4.4}{[1][45][]46}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}IMNN inference results on WDM masses}{46}{subsection.162}\protected@file@percent }
-\newlabel{sec:IMNN}{{4.4.4}{46}{IMNN inference results on WDM masses}{subsection.162}{}}
-\newlabel{sec:IMNN@cref}{{[subsection][4][4,4]4.4.4}{[1][46][]46}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Approximate Bayesian Computation Rejection Algorithm\relax }}{47}{algorithm.148}\protected@file@percent }
-\newlabel{alg:ABC}{{3}{47}{Approximate Bayesian Computation Rejection Algorithm\relax }{algorithm.148}{}}
-\newlabel{alg:ABC@cref}{{[algorithm][3][]3}{[1][46][]47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of a IMNN. The dashed vertical lines show the true parameter values.\relax }}{47}{figure.caption.161}\protected@file@percent }
-\newlabel{fig:IMNN normal posterior}{{4.5}{47}{Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of a IMNN. The dashed vertical lines show the true parameter values.\relax }{figure.caption.161}{}}
-\newlabel{fig:IMNN normal posterior@cref}{{[figure][5][4]4.5}{[1][46][]47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces $|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt  {SHERWOOD} dataset Lyman-$\alpha $ skewers.\relax }}{48}{figure.caption.164}\protected@file@percent }
-\newlabel{fig:IMNN wdm training}{{4.6}{48}{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt {SHERWOOD} dataset Lyman-$\alpha $ skewers.\relax }{figure.caption.164}{}}
-\newlabel{fig:IMNN wdm training@cref}{{[figure][6][4]4.6}{[1][48][]48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \relax }}{49}{figure.caption.165}\protected@file@percent }
-\newlabel{fig:IMNN WDM posterior}{{4.7}{49}{\relax }{figure.caption.165}{}}
-\newlabel{fig:IMNN WDM posterior@cref}{{[figure][7][4]4.7}{[1][48][]49}}
-\newlabel{eq:PDF of PDF}{{4.9}{49}{IMNN inference results on WDM masses}{equation.166}{}}
-\newlabel{eq:PDF of PDF@cref}{{[equation][9][4]4.9}{[1][49][]49}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}WDM constraints from SQUAD DR1 observational data}{49}{section.167}\protected@file@percent }
+\newlabel{sec:hires test}{{4.2.2}{41}{Realistic UVES observational conditions}{subsection.133}{}}
+\newlabel{sec:hires test@cref}{{[subsection][2][4,2]4.2.2}{[1][41][]41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces The figure shows 100 different $\chi ^2$ fits on 450 \texttt  {SHERWOOD} CDM skerwers and the $2\sigma $ constraints distribution as we vary the exact obsserved draw.\relax }}{42}{figure.caption.135}\protected@file@percent }
+\newlabel{fig: inference cdm sherwood}{{4.3}{42}{The figure shows 100 different $\chi ^2$ fits on 450 \texttt {SHERWOOD} CDM skerwers and the $2\sigma $ constraints distribution as we vary the exact obsserved draw.\relax }{figure.caption.135}{}}
+\newlabel{fig: inference cdm sherwood@cref}{{[figure][3][4]4.3}{[1][42][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces An example observed $\Delta _\tau $ PDF recovered using 450 skewers and its uncertainties in black, plotted againt the model CDM PDF, which is the best-fit model in the $\chi ^2$ test. \relax }}{43}{figure.caption.136}\protected@file@percent }
+\newlabel{fig: inference cdm PDF}{{4.4}{43}{An example observed $\Delta _\tau $ PDF recovered using 450 skewers and its uncertainties in black, plotted againt the model CDM PDF, which is the best-fit model in the $\chi ^2$ test. \relax }{figure.caption.136}{}}
+\newlabel{fig: inference cdm PDF@cref}{{[figure][4][4]4.4}{[1][42][]43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Summary $2\sigma $ relic WDM constraints based on \blx@tocontentsinit {0}\cite {sherwood_wdm} and this work.\relax }}{44}{figure.caption.137}\protected@file@percent }
+\newlabel{fig: wdm constraints summary}{{4.5}{44}{Summary $2\sigma $ relic WDM constraints based on \cite {sherwood_wdm} and this work.\relax }{figure.caption.137}{}}
+\newlabel{fig: wdm constraints summary@cref}{{[figure][5][4]4.5}{[1][43][]44}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{44}{section.138}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}The Nyx code: a comparison with the Sherwood suite}{44}{subsection.139}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Inference test on Nyx Lyman-alpha skewers}{44}{subsection.140}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Comparison of the inference pipeline against Information Maximising Neural Networks}{44}{section.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Information Maximising Neural Networks}{44}{subsection.142}\protected@file@percent }
+\newlabel{eq:Fisher information}{{4.4}{45}{Information Maximising Neural Networks}{equation.144}{}}
+\newlabel{eq:Fisher information@cref}{{[equation][4][4]4.4}{[1][45][]45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}IMNN training and non-linear summaries}{45}{subsection.145}\protected@file@percent }
+\newlabel{eq:IMNN loss}{{4.5}{46}{IMNN training and non-linear summaries}{equation.146}{}}
+\newlabel{eq:IMNN loss@cref}{{[equation][5][4]4.5}{[1][46][]46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Summarising a Gaussian signal}{46}{subsection.148}\protected@file@percent }
+\newlabel{sec:IMNN normal}{{4.4.3}{46}{Summarising a Gaussian signal}{subsection.148}{}}
+\newlabel{sec:IMNN normal@cref}{{[subsection][3][4,4]4.4.3}{[1][46][]46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces $|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.\relax }}{47}{figure.caption.151}\protected@file@percent }
+\newlabel{fig:IMNN training normal test}{{4.6}{47}{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.\relax }{figure.caption.151}{}}
+\newlabel{fig:IMNN training normal test@cref}{{[figure][6][4]4.6}{[1][47][]47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces The IMNN summary plotted agains the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.\relax }}{48}{figure.caption.152}\protected@file@percent }
+\newlabel{fig:IMNN normal std}{{4.7}{48}{The IMNN summary plotted agains the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.\relax }{figure.caption.152}{}}
+\newlabel{fig:IMNN normal std@cref}{{[figure][7][4]4.7}{[1][48][]48}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Approximate Bayesian Computation Rejection Algorithm\relax }}{49}{algorithm.153}\protected@file@percent }
+\newlabel{alg:ABC}{{3}{49}{Approximate Bayesian Computation Rejection Algorithm\relax }{algorithm.153}{}}
+\newlabel{alg:ABC@cref}{{[algorithm][3][]3}{[1][48][]49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}IMNN inference results on WDM masses}{49}{subsection.167}\protected@file@percent }
+\newlabel{sec:IMNN}{{4.4.4}{49}{IMNN inference results on WDM masses}{subsection.167}{}}
+\newlabel{sec:IMNN@cref}{{[subsection][4][4,4]4.4.4}{[1][49][]49}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of a IMNN. The dashed vertical lines show the true parameter values.\relax }}{50}{figure.caption.166}\protected@file@percent }
+\newlabel{fig:IMNN normal posterior}{{4.8}{50}{Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of a IMNN. The dashed vertical lines show the true parameter values.\relax }{figure.caption.166}{}}
+\newlabel{fig:IMNN normal posterior@cref}{{[figure][8][4]4.8}{[1][49][]50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces $|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt  {SHERWOOD} dataset Lyman-$\alpha $ skewers.\relax }}{51}{figure.caption.169}\protected@file@percent }
+\newlabel{fig:IMNN wdm training}{{4.9}{51}{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt {SHERWOOD} dataset Lyman-$\alpha $ skewers.\relax }{figure.caption.169}{}}
+\newlabel{fig:IMNN wdm training@cref}{{[figure][9][4]4.9}{[1][49][]51}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \relax }}{52}{figure.caption.170}\protected@file@percent }
+\newlabel{fig:IMNN WDM posterior}{{4.10}{52}{\relax }{figure.caption.170}{}}
+\newlabel{fig:IMNN WDM posterior@cref}{{[figure][10][4]4.10}{[1][51][]52}}
+\newlabel{eq:PDF of PDF}{{4.9}{52}{IMNN inference results on WDM masses}{equation.171}{}}
+\newlabel{eq:PDF of PDF@cref}{{[equation][9][4]4.9}{[1][51][]52}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}WDM constraints from SQUAD DR1 observational data}{52}{section.172}\protected@file@percent }
 \@setckpt{inference}{
-\setcounter{page}{50}
+\setcounter{page}{53}
 \setcounter{equation}{9}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
@@ -73,7 +86,7 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{7}
+\setcounter{figure}{10}
 \setcounter{table}{0}
 \setcounter{StandardModuleDepth}{0}
 \setcounter{parentequation}{0}
@@ -100,7 +113,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{68}
+\setcounter{instcount}{73}
 \setcounter{maxnames}{10}
 \setcounter{minnames}{5}
 \setcounter{maxitems}{3}
