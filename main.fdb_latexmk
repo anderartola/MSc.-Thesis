@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1723723735 "main.bcf" "main.bbl" "main" 1723724025 0
-  "./references.bib" 1723721787 48667 3fd6573e04570beacfc231fde25307d8 ""
-  "main.bcf" 1723724025 112513 ad3a16bce4be8c0e52bdb34d25a78a31 "pdflatex"
+["biber main"] 1723730906 "main.bcf" "main.bbl" "main" 1723731063 0
+  "./references.bib" 1723730855 49119 afb2a2222d40d7eb50d82b4117528f06 ""
+  "main.bcf" 1723731063 112678 78e99688c9b107d2af68b18dbc610f97 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723724004 "/Users/ander/Desktop/Master/MSc. Thesis/main.tex" "main.pdf" "main" 1723724025 0
+["pdflatex"] 1723731041 "/Users/ander/Desktop/Master/MSc. Thesis/main.tex" "main.pdf" "main" 1723731063 0
   "/Users/ander/Desktop/Master/MSc. Thesis/main.tex" 1723723984 3582 8e135901b32550d021a17d7bcbe3056d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -304,11 +304,11 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1703621548 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1703621482 7883456 9bffab1051090021b4f3602b8977da66 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "Introduction.aux" 1723724007 8855 2d3513a41aac42bb2636516aa6034ef6 "pdflatex"
+  "Introduction.aux" 1723731044 8855 2d3513a41aac42bb2636516aa6034ef6 "pdflatex"
   "Introduction.tex" 1723723573 9345 f23a2e597fdb1ee881cdd3a98db9e33a ""
-  "ML.aux" 1723724008 21082 10d4bf8857e40dc10105d750e9397057 "pdflatex"
-  "ML.tex" 1723708920 65378 bd0f5f62da7dceb550ce64ea0f89cac3 ""
-  "conclusion.aux" 1723724024 4564 8366c1ed1602c15dd3d6bda97dbe37e6 "pdflatex"
+  "ML.aux" 1723731046 21233 db8925d5d572227bd8b95c1a8d06c06d "pdflatex"
+  "ML.tex" 1723731028 66928 61b1a06bc193baf174ca78cec28c7b42 ""
+  "conclusion.aux" 1723731063 4564 a1ae998acc34e6741de68dcba5e161f4 "pdflatex"
   "conclusion.tex" 1715320226 21 fe4b20616295c9a322e6cc7648a79dcb ""
   "img//ML/fig1_color.pdf" 1715320226 17318 52c151ba964cb0322c009c84174b8e5b ""
   "img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf" 1715320226 244048 742a465e1b936dd468821b0c002b70ed ""
@@ -348,16 +348,16 @@
   "img/ML/villa_wdm.png" 1686333937 6621997 aa469897eeedc860dff4d6545eda9e66 ""
   "img/ML/violin_nyx.png" 1723471839 152995 22f0ad4bf02f58533552ce6e4c963405 ""
   "img/lyman-alpha.pdf" 1715320226 60462 ea929bd85951ebb5f937bce73a2cddec ""
-  "inference.aux" 1723724024 23128 aca3fec3f0f37597747c35ffa9d34d84 "pdflatex"
-  "inference.tex" 1723723045 46996 0e5673b65f28b989a7cf07b60db42b31 ""
-  "main.aux" 1723724025 34337 77bd35b112fd32a46df7c4e59b07cda7 "pdflatex"
-  "main.bbl" 1723723739 312138 9cdd2a1a13c6137ddbeccbe16d6bdc5e "biber main"
-  "main.hd" 1723724006 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.out" 1723724006 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1723724025 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "inference.aux" 1723731063 22969 781e164a2a48089bb9172e4adfadfa9e "pdflatex"
+  "inference.tex" 1723727770 46807 a2b2df0a7a74b4c988eeff3ab082c71e ""
+  "main.aux" 1723731063 34454 644ae8973e96bc6fc325886cc61c6dda "pdflatex"
+  "main.bbl" 1723730910 314238 b8e33c141f526652eafdbb1c3f6c6678 "biber main"
+  "main.hd" 1723731043 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.out" 1723731043 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1723731063 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
   "main.tex" 1723723984 3582 8e135901b32550d021a17d7bcbe3056d ""
-  "main.toc" 1723724025 4388 ec524b208e344304e93163e341322487 "pdflatex"
-  "sherwood.aux" 1723724007 6773 2e73d277c763920949f9517b99e846ea "pdflatex"
+  "main.toc" 1723731063 4372 f89edaa549bbb7a5e94368448a736f31 "pdflatex"
+  "sherwood.aux" 1723731044 6773 2e73d277c763920949f9517b99e846ea "pdflatex"
   "sherwood.tex" 1721400140 1209 811c3627d263b2cd5833c6eb3ffa0209 ""
   (generated)
   "Introduction.aux"

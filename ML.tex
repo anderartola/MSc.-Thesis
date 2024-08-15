@@ -515,6 +515,9 @@ On the \texttt{SHERWOOD} validation split, the network reaches a $1\sigma$ accur
 
 
 \section{Recovered field statistics and uncertainties}\label{sec:recovered statistics}
+Once we have a machinery to recover the IGM density from a Lyman-$\alpha$ skewer, we would like to use this density field information to do statistical inference on the physical parameters of interest. In this work, since the WDM mass directly affects the matter distribution of the Universe (see Figure \ref{fig:villasenor_wdm}) we would like to infer the WDM masses from the recovered $\Delta_\tau$ field. Now, note that the exact $\Delta_\tau$ field of a skewer, such as the one shown in Figure \ref{fig: example_recovered_skewer}, not only depends on a set of physical paramters (WDM mass, temperat,...) but also on the initial conditions or equivalently, the random seed in the cause of a simulation. As a consequence, we will not compare densities on a sightline by sightline basis, but rather compute and comapre agregatted statistics of the fields over multiple realizations that capture global statistical properties, and not simulation-specific characteristics. Statistics that have been amply tested in the literature are the Power Spectrum (PS), the Probability Distribution Function (PDF), the curvature, or the autocorrelation function (see
+\cite{Gaikwad_2021} and \cite{wolfson2023forecastingconstraintshighzigm} for more details). In this work we will focus on the $\Delta_\tau$ PDF. In section \ref{sec:IMNN} we will address the optimiality of this choice. 
+
 ADD bootstrapping and PDF OF PDF
 ADD MATRIX CORR and resampling and recoveries using finite skerwers
 
@@ -524,7 +527,14 @@ ADD MATRIX CORR and resampling and recoveries using finite skerwers
 
 
 
-\section{Model interpretability and limitations}
+PDF:
+\begin{equation}\label{eq:PDF of PDF}
+    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
+\end{equation}
+
+
+
+\section{Model interpretability}
 Deep learning models tend to have, by definition, numerous parameters. As a consequence, giving an interpretation for individual model parameters is far from being a trivial task. On top of the large number of parameters, the nonlinearities and the potentially biased and uncomplete dataset can lead to complex training behaviors. In that regard, deep learning models have classically been regarded as ``black-box'' models. They are often more accurate than simpler statistical models, but lack explainability. Great efforts have been recently made in undertanding the learning dynamics of neural networks \cite{shwartzziv2017opening}, \cite{buhrmester2019analysis}.
 Due to the complexity of this interpretation task, here we choose to only give a qualitative analysis of some aspects that can help gain intuition on how the newtork operate internally.
 

@@ -7313,6 +7313,113 @@
       \verb http://dx.doi.org/10.1093/mnras/stt031
       \endverb
     \endentry
+    \entry{Gaikwad_2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b132ca766bd2a8e963b130f47f95c287}{%
+           family={Gaikwad},
+           familyi={G\bibinitperiod},
+           given={Prakash},
+           giveni={P\bibinitperiod}}}%
+        {{hash=abc9e0261fe97a44aaa310fed0c49ba3}{%
+           family={Srianand},
+           familyi={S\bibinitperiod},
+           given={Raghunathan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cbd35fb2578044e20e95b48b7228ccfe}{%
+           family={Haehnelt},
+           familyi={H\bibinitperiod},
+           given={Martin\bibnamedelima G},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=fe83de78a89e8817a213b9b37796f5c0}{%
+           family={Choudhury},
+           familyi={C\bibinitperiod},
+           given={Tirthankar\bibnamedelima Roy},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press (OUP)}%
+      }
+      \strng{namehash}{f4dfea56afb88ab30cdc6b148227c828}
+      \strng{fullhash}{f4dfea56afb88ab30cdc6b148227c828}
+      \strng{bibnamehash}{f4dfea56afb88ab30cdc6b148227c828}
+      \strng{authorbibnamehash}{f4dfea56afb88ab30cdc6b148227c828}
+      \strng{authornamehash}{f4dfea56afb88ab30cdc6b148227c828}
+      \strng{authorfullhash}{f4dfea56afb88ab30cdc6b148227c828}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1365-2966}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{A consistent and robust measurement of the thermal state of the IGM at 2 < z < 4 from a large sample of Ly-alpha forest spectra: evidence for late and rapid HeIIreionization}
+      \field{volume}{506}
+      \field{year}{2021}
+      \field{pages}{4389\bibrangedash 4412}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1093/mnras/stab2017
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1093/mnras/stab2017
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1093/mnras/stab2017
+      \endverb
+    \endentry
+    \entry{wolfson2023forecastingconstraintshighzigm}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=ffa119584cb5e36dfde9cff445ef0980}{%
+           family={Wolfson},
+           familyi={W\bibinitperiod},
+           given={Molly},
+           giveni={M\bibinitperiod}}}%
+        {{hash=675771c038403547f709c4b04941611a}{%
+           family={Hennawi},
+           familyi={H\bibinitperiod},
+           given={Joseph\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=e9868b35e5df9c169803fc920c674787}{%
+           family={Davies},
+           familyi={D\bibinitperiod},
+           given={Frederick\bibnamedelima B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=bf2622e06f1798478cd55f6ceb0d882a}{%
+           family={Lukić},
+           familyi={L\bibinitperiod},
+           given={Zarija},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a8d71c662550cfc91e75ccff7045800b}{%
+           family={Oñorbe},
+           familyi={O\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{98e93cd59f444de17db59081084f7ef9}
+      \strng{fullhash}{98e93cd59f444de17db59081084f7ef9}
+      \strng{bibnamehash}{98e93cd59f444de17db59081084f7ef9}
+      \strng{authorbibnamehash}{98e93cd59f444de17db59081084f7ef9}
+      \strng{authornamehash}{98e93cd59f444de17db59081084f7ef9}
+      \strng{authorfullhash}{98e93cd59f444de17db59081084f7ef9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Forecasting constraints on the high-z IGM thermal state from the Lyman-$\alpha$ forest flux auto-correlation function}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2309.05647
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2309.05647
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2309.05647
+      \endverb
+    \endentry
     \entry{shwartzziv2017opening}{misc}{}
       \name{author}{2}{}{%
         {{hash=11ec0d907628a973140a39bb0dca5b31}{%
@@ -7412,8 +7519,8 @@
       \strng{authorbibnamehash}{e362d5c8900cb7f9ec63f5ae68daa694}
       \strng{authornamehash}{e362d5c8900cb7f9ec63f5ae68daa694}
       \strng{authorfullhash}{e362d5c8900cb7f9ec63f5ae68daa694}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -7433,61 +7540,6 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1111/j.1365-2966.2010.17507.x
-      \endverb
-    \endentry
-    \entry{Gaikwad_2021}{article}{}
-      \name{author}{4}{}{%
-        {{hash=b132ca766bd2a8e963b130f47f95c287}{%
-           family={Gaikwad},
-           familyi={G\bibinitperiod},
-           given={Prakash},
-           giveni={P\bibinitperiod}}}%
-        {{hash=abc9e0261fe97a44aaa310fed0c49ba3}{%
-           family={Srianand},
-           familyi={S\bibinitperiod},
-           given={Raghunathan},
-           giveni={R\bibinitperiod}}}%
-        {{hash=cbd35fb2578044e20e95b48b7228ccfe}{%
-           family={Haehnelt},
-           familyi={H\bibinitperiod},
-           given={Martin\bibnamedelima G},
-           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=fe83de78a89e8817a213b9b37796f5c0}{%
-           family={Choudhury},
-           familyi={C\bibinitperiod},
-           given={Tirthankar\bibnamedelima Roy},
-           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press (OUP)}%
-      }
-      \strng{namehash}{f4dfea56afb88ab30cdc6b148227c828}
-      \strng{fullhash}{f4dfea56afb88ab30cdc6b148227c828}
-      \strng{bibnamehash}{f4dfea56afb88ab30cdc6b148227c828}
-      \strng{authorbibnamehash}{f4dfea56afb88ab30cdc6b148227c828}
-      \strng{authornamehash}{f4dfea56afb88ab30cdc6b148227c828}
-      \strng{authorfullhash}{f4dfea56afb88ab30cdc6b148227c828}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1365-2966}
-      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
-      \field{month}{7}
-      \field{number}{3}
-      \field{title}{A consistent and robust measurement of the thermal state of the IGM at 2 < z < 4 from a large sample of Ly-alpha forest spectra: evidence for late and rapid HeIIreionization}
-      \field{volume}{506}
-      \field{year}{2021}
-      \field{pages}{4389\bibrangedash 4412}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1093/mnras/stab2017
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1093/mnras/stab2017
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1093/mnras/stab2017
       \endverb
     \endentry
     \entry{numerical_recipees_c}{book}{}
