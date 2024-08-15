@@ -7587,6 +7587,171 @@
       \verb http://dx.doi.org/10.1093/mnras/sty2834
       \endverb
     \endentry
+    \entry{Almgren_2013}{article}{}
+      \name{author}{5}{}{%
+        {{hash=fd4a309fce1ec04f57f1ff13f34f0f89}{%
+           family={Almgren},
+           familyi={A\bibinitperiod},
+           given={Ann\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d10a079953d9591d44e42c28b8a87f11}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={John\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=675d43ffb827fd255ccfc6a2e78d4a00}{%
+           family={Lijewski},
+           familyi={L\bibinitperiod},
+           given={Mike\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bf2622e06f1798478cd55f6ceb0d882a}{%
+           family={Lukić},
+           familyi={L\bibinitperiod},
+           given={Zarija},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=4a1adcd493fc833f605ce43925675215}{%
+           family={Van\bibnamedelima Andel},
+           familyi={V\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{80bb583469f91a9d4ab87b0487cabaac}
+      \strng{fullhash}{80bb583469f91a9d4ab87b0487cabaac}
+      \strng{bibnamehash}{80bb583469f91a9d4ab87b0487cabaac}
+      \strng{authorbibnamehash}{80bb583469f91a9d4ab87b0487cabaac}
+      \strng{authornamehash}{80bb583469f91a9d4ab87b0487cabaac}
+      \strng{authorfullhash}{80bb583469f91a9d4ab87b0487cabaac}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1538-4357}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Nyx: A MASSIVELY PARALLEL AMR CODE FOR COMPUTATIONAL COSMOLOGY}
+      \field{volume}{765}
+      \field{year}{2013}
+      \field{pages}{39}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0004-637x/765/1/39
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/0004-637X/765/1/39
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/0004-637X/765/1/39
+      \endverb
+    \endentry
+    \entry{Wang_2015}{article}{}
+      \name{author}{14}{}{%
+        {{hash=57674e9a633f3c4a6fdeb45edd157480}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Feige},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ff9f9e3cfa277308db3bc27daec7ad32}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xue-Bing},
+           giveni={X\bibinithyphendelim B\bibinitperiod}}}%
+        {{hash=a89d74a0dcb18ac2a97e9dbd0d861568}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Xiaohui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=288393c1ca3ae2e9f9c49e379491613d}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jinyi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=aad981708c41165f42d6d48575813da1}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=84da152a28627dad3b8cc1a00b8ae344}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={Weimin},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f7077d7050259f93ffbdff6fc9bc915b}{%
+           family={Zuo},
+           familyi={Z\bibinitperiod},
+           given={Wenwen},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3c13bf0fe52a44dd116db777045e959c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2d57d2b8671eb43d785a44057baa4ed6}{%
+           family={McGreer},
+           familyi={M\bibinitperiod},
+           given={Ian\bibnamedelima D.},
+           giveni={I\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=07a19d3ca13fe64ecc1b833e4ff0d358}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Luis\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=89d7f87ed24740a7cf791c049ff7deea}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Minjin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d16aa0879612f82c2aae3699ff89e232}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=9939a1aac5722039768f30b73e52558d}{%
+           family={Bian},
+           familyi={B\bibinitperiod},
+           given={Fuyan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=30cb736cd0f638438f1a7e87b5eb8dfa}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Linhua},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{e9a0d51d58aee7057fcdab31e8520f69}
+      \strng{fullhash}{a563d0254b11b7179c782db1f3c248a4}
+      \strng{bibnamehash}{e9a0d51d58aee7057fcdab31e8520f69}
+      \strng{authorbibnamehash}{e9a0d51d58aee7057fcdab31e8520f69}
+      \strng{authornamehash}{e9a0d51d58aee7057fcdab31e8520f69}
+      \strng{authorfullhash}{a563d0254b11b7179c782db1f3c248a4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-8213}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{AN ULTRA-LUMINOUS QUASAR AT z = 5.363 WITH A TEN BILLION SOLAR MASS BLACK HOLE}
+      \field{volume}{807}
+      \field{year}{2015}
+      \field{pages}{L9}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/2041-8205/807/1/l9
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/2041-8205/807/1/L9
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/2041-8205/807/1/L9
+      \endverb
+    \endentry
     \entry{Charnock_2018}{article}{}
       \name{author}{3}{}{%
         {{hash=c547c24b16a5b16ca62ac1d0a2861755}{%
@@ -7614,8 +7779,8 @@
       \strng{authorbibnamehash}{be0d728c1bb5008eb2233f61aaa5854f}
       \strng{authornamehash}{be0d728c1bb5008eb2233f61aaa5854f}
       \strng{authorfullhash}{be0d728c1bb5008eb2233f61aaa5854f}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2470-0029}
@@ -7669,8 +7834,8 @@
       \strng{authorbibnamehash}{90acc7113166baef2e7a0dc0ec41c75f}
       \strng{authornamehash}{90acc7113166baef2e7a0dc0ec41c75f}
       \strng{authorfullhash}{90acc7113166baef2e7a0dc0ec41c75f}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{math.ST}
@@ -7721,8 +7886,8 @@
       \strng{authorbibnamehash}{269dd42be883bdb610539c0963ff1d10}
       \strng{authornamehash}{269dd42be883bdb610539c0963ff1d10}
       \strng{authorfullhash}{269dd42be883bdb610539c0963ff1d10}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph.CO}
@@ -7758,8 +7923,8 @@
       \strng{authorbibnamehash}{078d7e7bea8ede267c3a2f19112359da}
       \strng{authornamehash}{078d7e7bea8ede267c3a2f19112359da}
       \strng{authorfullhash}{078d7e7bea8ede267c3a2f19112359da}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{stat.CO}

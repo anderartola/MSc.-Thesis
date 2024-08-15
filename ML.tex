@@ -518,7 +518,9 @@ On the \texttt{SHERWOOD} validation split, the network reaches a $1\sigma$ accur
 ADD bootstrapping and PDF OF PDF
 ADD MATRIX CORR and resampling and recoveries using finite skerwers
 
-
+\begin{equation}\label{eq: residuals}
+    r_i=\frac{\Delta_{\tau,i}-\mu_i}{\sigma_i}
+\end{equation}
 
 
 
@@ -532,7 +534,7 @@ Although many open-source libraries, such as \textit{Captum}\footnote{https://gi
     \text{Saliency}(i) = \frac{\partial  \mu_i}{\partial f_j}.
 \end{equation}
 
-
+Figure \ref{fig: saliency} shows the saliency profile averaged over all output density pixels. This gives a global average metric on the relevant flux pixels to predict the density at a certain pixel. The typical saliency ``length'', that is, the typical number of pixels from the pixel center that are useful to predict its density is $\sim 30$. Since at redshift $z=4.4$ our pixel scale on the \texttt{SHERWOOD} data is $1.3$ km/s, we obtain that in velocity space a window of $\sim 40$ km/s is needed to recover the density at a pixel. This particular dynamic is coherent with the underlying physical process, which is a strong robustness sign of our machine learning model. In fact, for the typical IGM gas in the \texttt{SHERWOOD} suite, the Lyman-$\alpha$ absorbtion cross-section profile has a typical scatter of (see Equation \ref{eq:lyman opacity} $ b(T) \sim 20$ km/s.
 
 
 \begin{figure}
