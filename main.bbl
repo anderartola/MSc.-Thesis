@@ -7487,6 +7487,118 @@
       \verb 1911.12116
       \endverb
     \endentry
+    \entry{explaiNN}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=7e02e80eefb55ce6b493dbe7f80c423b}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a5828df003747b8446b38e0484fdf932}{%
+           family={Olah},
+           familyi={O\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=80a7ecb0fd29b36581e59ff5137f9b34}{%
+           family={Vreeken},
+           familyi={V\bibinitperiod},
+           given={Jilles},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=065ea1322a46302df9762ba792037807}{%
+           family={Meila},
+           familyi={M\bibinitperiod},
+           given={Marina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=55926e2ed0c54f92266d978954a4cdc3}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tong},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{fullhash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{bibnamehash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{authorbibnamehash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{authornamehash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{authorfullhash}{c81610a6257c85a5c8d6b96fa1e7cffe}
+      \strng{editorbibnamehash}{66052b963da76b05d2a1aa8c85cacd62}
+      \strng{editornamehash}{66052b963da76b05d2a1aa8c85cacd62}
+      \strng{editorfullhash}{66052b963da76b05d2a1aa8c85cacd62}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a novel method for exploring how neurons within neural networks interact. In particular, we consider activation values of a network for given data, and propose to mine noise-robust rules of the form X {\rightarrow} Y , where X and Y are sets of neurons in different layers. We identify the best set of rules by the Minimum Description Length Principle as the rules that together are most descriptive of the activation data. To learn good rule sets in practice, we propose the unsupervised ExplaiNN algorithm. Extensive evaluation shows that the patterns it discovers give clear insight in how networks perceive the world: they identify shared, respectively class-specific traits, compositionality within the network, as well as locality in convolutional layers. Moreover, these patterns are not only easily interpretable, but also supercharge prototyping as they identify which groups of neurons to consider in unison.}
+      \field{booktitle}{Proceedings of the 38th International Conference on Machine Learning}
+      \field{month}{18--24 Jul}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{What’s in the Box? Exploring the Inner Life of Neural Networks with Robust Rules}
+      \field{volume}{139}
+      \field{year}{2021}
+      \field{pages}{3352\bibrangedash 3362}
+      \range{pages}{11}
+      \verb{file}
+      \verb http://proceedings.mlr.press/v139/fischer21b/fischer21b.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v139/fischer21b.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v139/fischer21b.html
+      \endverb
+    \endentry
+    \entry{pruning}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=b241e721206e7548af8a3e8ffe7fc0e1}{%
+           family={Hossain},
+           familyi={H\bibinitperiod},
+           given={Intekhab},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7e02e80eefb55ce6b493dbe7f80c423b}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5dddb59bacd332eccb072200f0fbd900}{%
+           family={Burkholz},
+           familyi={B\bibinitperiod},
+           given={Rebekka},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b46634dd509cf71893ab0ebdb17df19a}{%
+           family={Quackenbush},
+           familyi={Q\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \strng{fullhash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \strng{bibnamehash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \strng{authorbibnamehash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \strng{authornamehash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \strng{authorfullhash}{59ffb5d38008017bd2bfaf6bda5afe46}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Not all tickets are equal and we know it: Guiding pruning with domain-specific knowledge}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2403.04805
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2403.04805
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2403.04805
+      \endverb
+    \endentry
     \entry{Becker_2010}{article}{}
       \name{author}{4}{}{%
         {{hash=b19035670dc4a3a4febd0d69c06c76c8}{%

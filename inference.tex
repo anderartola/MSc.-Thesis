@@ -98,7 +98,7 @@ In Figure \ref{fig: wdm constraints summary} we summarise in black the current $
 
 
 \section{Inference on alternative hydrodynamical codes}
-In this section we test our inference pipeline on Nyx, a different set of hydrodynamical code. We start by discribing in a broad way the differences between the Nyx run used and the Sherwood simulations, and then we use our fiducial neural network trained on the \texttt{SHERWOOD THERMAL} suite to recover the Nyx densities and obtain the corresponding constraints.
+In this section we test our inference pipeline on Nyx, a different hydrodynamical code. We start by discribing in a broad way the differences between the Nyx run used and the Sherwood simulations, and then we use our fiducial neural network trained on the \texttt{SHERWOOD THERMAL} suite to recover the Nyx densities and obtain the corresponding constraints.
 
 
 \subsection{The Nyx code}
@@ -190,9 +190,9 @@ where $t\in \{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$ and $m$ labels the c
 
 
 \section{WDM constraints from SQUAD DR1 observational data}\label{sec:inference squad}
-We begin applying our density recovery and WDM mass inference pipeline toa set of 6 observed quasar sightlines from the SQUAD DR1 survey \cite{Murphy_2018}. Since we are working with observational data, we will always train the model with the complete \texttt{SHERWOOD THERMAL} dataset that includes varied thermal histories and WDM masses. Note that since we are not trying to cosntraint the thermal history (or other parameters that can affect the Lyman-$\alpha$ forest), we should ideally use a training set that includes as much variation as possible to make sure the neural network can perform in a scenario where we ignore the true thermal history.
+We begin applying our density recovery and WDM mass inference pipeline to a set of 6 observed quasar sightlines from the SQUAD DR1 survey \cite{Murphy_2018}. Since we are working with observational data, we will always train the model with the complete \texttt{SHERWOOD THERMAL} dataset that includes varied thermal histories and WDM masses. Note that since we are not trying to cosntraint the thermal history (or other parameters that can affect the Lyman-$\alpha$ forest), we should ideally use a training set that includes as much variation as possible to make sure the neural network can perform in a scenario where we ignore the true thermal history.
 
-The SQUAD DR1  data consists of 6 Lyman-$\alpha$ sightlines of size 20h$^{-1}$cMpc with varied SNR (see table \ref{tab: squad dr1}), observed with the Ultraviolet and Visual Echelle Spectrograph (UVES) on the European Southern Observatory’s Very Large Telescope, which has an average resolution of $\mathrm{FWHM}\approx 6$km s$^{-1}$. We consider sightlines centred at $z=4.4$ for this specific application. Since each quasar has its own noise level, we retrain the same fiducial architeture with the corresponding noise level before the prediction step.
+Our SQUAD DR1  data consists of 6 Lyman-$\alpha$ sightlines of size 20h$^{-1}$cMpc with varied SNR (see table \ref{tab: squad dr1}), observed with the Ultraviolet and Visual Echelle Spectrograph (UVES) on the European Southern Observatory’s Very Large Telescope, which has an average resolution of $\mathrm{FWHM}\approx 6$km s$^{-1}$. We consider sightlines centred at $z=4.4$ for this specific application. Since each quasar has its own noise level, we retrain the same fiducial architecture with the corresponding noise level before the prediction step.
 
 \begin{table}
     \caption[]{List of the SQUAD DR1 sightlines used, see \cite{Murphy_2018} for the reduction details, together with their emission redshift and the average continuum SNR.     

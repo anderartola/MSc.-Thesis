@@ -534,14 +534,39 @@ PDF:
 
 
 
-\section{Model interpretability}
-Deep learning models tend to have, by definition, numerous parameters. As a consequence, giving an interpretation for individual model parameters is far from being a trivial task. On top of the large number of parameters, the nonlinearities and the potentially biased and uncomplete dataset can lead to complex training behaviors. In that regard, deep learning models have classically been regarded as ``black-box'' models. They are often more accurate than simpler statistical models, but lack explainability. Great efforts have been recently made in undertanding the learning dynamics of neural networks \cite{shwartzziv2017opening}, \cite{buhrmester2019analysis}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Model interpretability and limitations}
+Deep learning models tend to have, by definition, numerous parameters. As a consequence, giving an interpretation for individual model parameters is far from being a trivial task. On top of the large number of parameters, the nonlinearities and the potentially biased and uncomplete datasets can lead to complex training behaviors. In that regard, deep learning models have classically been regarded as ``black-box'' models. They are often more accurate than simpler statistical models, but lack explainability. Great efforts have been recently made in undertanding the learning dynamics of neural networks \cite{shwartzziv2017opening}, \cite{buhrmester2019analysis}, \cite{explaiNN}.
 Due to the complexity of this interpretation task, here we choose to only give a qualitative analysis of some aspects that can help gain intuition on how the newtork operate internally.
 
-Although many open-source libraries, such as \textit{Captum}\footnote{https://github.com/pytorch/captum}, implement popular methods for deep learning model visualization and interpretation, in this work we use TensorFlow's built-in'differentiation capabilities. In particular, we use Automatic Differentiation to compute the \textit{saliency} score of the model, defined as the gradient of the model output with respecto to the model input. As a consequence, for every target density pixel, the saliency score measure which flux pixel variation contributes the most to a change in density. Saliency is a simple socre giving us insights into how the model uses flux to recunstruct densities. Additionally, note that calculating such gradients do not requeire any numerical finite diffrence approximation, since TensorFlow's GradientTape class can build an exact computational graph with all the operations performed on the input flux. The saliency at density pixel $i$ and input flux pixel $j$ is simply
+\subsection{Saliency analysis}
+Although many open-source libraries, such as \textit{Captum}\footnote{https://github.com/pytorch/captum}, implement popular methods for deep learning model visualization and interpretation, in this work we use TensorFlow's built-in'differentiation capabilities. In particular, we use Automatic Differentiation to compute the \textit{saliency} score of the model, defined as the gradient of the model output with respecto to the model input. As a consequence, for every target density pixel, the saliency score measure which flux pixel variation contributes the most to a change in density. Saliency is a simple socre giving us insights into how the model uses flux to recunstruct densities. Additionally, note that calculating such gradients do not requeire any numerical finite diffrence approximation, since TensorFlow's GradientTape class can build an exact computational graph with all the operations performed on the input flux. Saliency maps are a popular technique in applied science to explore deep learning model. In fact, in many physics reachearch articles, it tends to be the only tool used for this purpose. This highlights the need to develop more robust and easily-deployable frameworks for deep learning models.
+
+The saliency at density pixel $i$ and input flux pixel $j$ is simply
 
 \begin{equation}
-    \text{Saliency}(i) = \frac{\partial  \mu_i}{\partial f_j}.
+    \text{Saliency}(i,j) = \frac{\partial  \mu_i}{\partial f_j}.
 \end{equation}
 
 Figure \ref{fig: saliency} shows the saliency profile averaged over all output density pixels. This gives a global average metric on the relevant flux pixels to predict the density at a certain pixel. The typical saliency ``length'', that is, the typical number of pixels from the pixel center that are useful to predict its density is $\sim 30$. Since at redshift $z=4.4$ our pixel scale on the \texttt{SHERWOOD} data is $1.3$ km/s, we obtain that in velocity space a window of $\sim 40$ km/s is needed to recover the density at a pixel. This particular dynamic is coherent with the underlying physical process, which is a strong robustness sign of our machine learning model. In fact, for the typical IGM gas in the \texttt{SHERWOOD} suite, the Lyman-$\alpha$ absorbtion cross-section profile has a typical scatter of (see Equation \ref{eq:lyman opacity} $ b(T) \sim 20$ km/s.
@@ -556,17 +581,53 @@ Figure \ref{fig: saliency} shows the saliency profile averaged over all output d
 
 
 
+\subsection{Covariate shift}
 As we have already mentioned when discussing Figure \ref{fig: example_recovered_skewer}, saturated regions lead to larger uncertainties in the network's predictions, reflecting the fact that noise dominates over the physical signal. Observe again the saturated region around 7h$^{-1}$cMp and 8h$^{-1}$cMp in Figure \ref{fig: example_recovered_skewer}. Both of these regions have completly different density profiles, but the network predicts the same u-shape profile with a similar peak density. This peak density is slighlt above the mean density in the simulation box and is similar for the CDM and WDM3 models. We can interpret this as the network leaning a unique mean ``high-density'' value for saturated regions and the whole dataset.
+The way the model predicts those mean densities based on the training dataset is, again, far from being trivial.
+However, it is clear that the training data contains all the information leading to any possible bias/characteristic in the deep learning model predictions. An important effect regarding the avaible data is \emph{covariate shift}. Covariate shift occurs when the training and validation data are sampled from different distributions. Covariate shift can be difficult to detect and can lead to biased predictions. In this work, we try to test the generalization capabilities of our model by adding random noise and validation on unseen data from multiple hydrodynamical codes with different specification, to make sure the model is learning the relevant physics. This is a pragmatic approach to address covariate shift, since more formal techniques are out of the scope of this work. Nonetheless, we are aware an insufficient dataset can significantly degrade performace. As an illustration of the undesirable effects of covariate shift, we retrain the fiducial architectures on a subset of the \texttt{SHERWOOD} dataset where we iteratively eliminate each one of the WDM models. We call this set of models \texttt{NOTRAIN}. For instances, \texttt{NOTRAIN-WDM1} has not been train on the WDM1 data. In Figure \ref{fig: skewer notrain wdm1} and Figure \ref{fig: skewer notrain wdm4} we show the models \texttt{NOTRAIN-WDM1} and \texttt{NOTRAIN-WDM4} predicting, respectively, on WDM1 and WDM4 skewers from the \texttt{SHERWOOD} dataset.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/ML/skewer_notrain_wdm1.pdf}
+    \caption{The \texttt{NOTRAIN-WDM1} model predicting on a WDM1 skewer, compared to the fiducial model trained on the whole \texttt{SHERWOOD} dataset.}
+    \label{fig: skewer notrain wdm1}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/ML/skewer_notrain_wdm4.pdf}
+    \caption{The \texttt{NOTRAIN-WDM4} model predicting on a WDM4 skewer, compared to the fiducial model trained on the whole \texttt{SHERWOOD} dataset.}
+    \label{fig: skewer notrain wdm4}
+\end{figure}
+Note the clear covariate shift effect in Figure \ref{fig: skewer notrain wdm1}, where the \texttt{NOTRAIN-WDM1} have a systeatic bias towards lower densities. In comparison, in Figure \ref{fig: skewer notrain wdm4} the model \texttt{NOTRAIN-WDM1} shows no clear indication of any bias, and is almost indistinguishable from the fiducial model. In the former case, the model has to extrapolate on data generated from an unseen model, which gives clearly an incorrect predidction. In the later case, the model has been trained on CDM and WDM3, so predicting on WDM4 is an interpolation task.
+
+\subsection{Extreme covariate shift and malicious data}
+In regression tasks related to computer vision, it is customary to mask certain parts of the input to explore how the model reacts to specific features. Following this idea, we have designed a set of malicious Lyman-$\alpha$ skewers that include artefacts and unnatural features that are not present in the training dataset. Therefore, this can be considered as an extreme case of cavoariate shift. In Figure \ref{fig: skewer malicious} we show the fiducial model predictions for two such skewers. In the first case, we consider a fully saturated skewer with zero flux and only a small amount of noise. Observe how the model makes an educated guess and predicts the mean density for the whole skewer. However, the model is very confident in the predictions and produces minimal uncertainties. This is not correct from the physical standpoint, since any density higher that the truth can produce a saturated flux. In the second skewer we have complete transmission except a saturated absorption feature. The predictions for the pixels with complete transmissions are below the mean density, and on the saturated pixels it is above the mean density with a higher uncertainty. This is closer to a ``real'' absorption feature with more accurate prediction.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/ML/malicious_input.png}
+    \caption{The \texttt{NOTRAIN-WDM4} model predicting on a WDM4 skewer, compared to the fiducial model trained on the whole \texttt{SHERWOOD} dataset.}
+    \label{fig: skewer malicious}
+\end{figure}
 
 
+\subsection{Model pruning}
+Prunning refers to the idea of eliminating certain components of a deep neural network, or equivalently, considering a sub-network. The motivation to prune a network is generally to reduce the number of parameters, which can improve interpretability, and allow users to better trace the flow of information through the network. Since most deep network are over-parametrised, pruning can improve training while mantaining a very similar performance to the original architecure. Pruning is an active area of research, and there are efforts being made to use domain-specific expertise to prune networks and make informed choices about their topology \cite{pruning}. In this work, we have used \texttt{OPTUNA} in section \ref{sec:optuna} to tune the hyperparameters of the model on the sole basis of a performance metric function. This naturally over-parametrises the network, with connections and filters that might be redundant. This means that there is a potential room for improvement when it comes to finding more interpretable networks with fewer parameters and a more stable trainig.
 
-talk about the no train tests
-weird inputs
-filters number, values, activation.
-saliency
-
+To illustrate how pruning can affect the performance of our model, we briefly focus on the first convolutional layer of the architecutre in Figure \ref{fig:ML nn architecture}. In Figure \ref{fig: filter acti} we show the activation of the first 4 convolutional filters for a trained network with architecute [2, 2], [4, 16] for a randomly selected skewer, following the notation in Table \ref{table: fiducial architecture}. Note that out of the four filters, the blue and green ones are scaled versions of each other, and similarly, the red and orange filters are also scaled versions of one another. To test of this redundancy affects the network, the prune half of the filters in this first layer to an architecture [2, 2], [2, 16]. Figure \ref{fig: pruned NLL} shows the training NLL curve for both architecures. As can be seen, they reach a simialar performace in terms of the NLL, but the pruned architecure has a more stable learning curve and convergence in a smoother way.
 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/ML/filter-acti.pdf}
+    \caption{First layer activation of the convolutional filters for a trained network with architecture [2, 2], [4, 16] for a randomly selected CDM skewer from \texttt{SHERWOOD}.}
+    \label{fig: filter acti}
+\end{figure}
 
-
-
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/ML/NLL_diff_channels.pdf}
+    \caption{Training curves for the NLL comparing the model [2, 2], [4, 16] and the prunned architecutre [2, 2], [2, 16] with half of the convolutional filters in the first layer.}
+    \label{fig: pruned NLL}
+\end{figure}
