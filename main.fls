@@ -1528,6 +1528,11 @@ INPUT ./img/ML/skewer.pdf
 INPUT img/ML/skewer.pdf
 INPUT ./img/ML/skewer.pdf
 INPUT ./img/ML/skewer.pdf
+INPUT ./img/ML/PDF_masked_unmasked.pdf
+INPUT ./img/ML/PDF_masked_unmasked.pdf
+INPUT img/ML/PDF_masked_unmasked.pdf
+INPUT ./img/ML/PDF_masked_unmasked.pdf
+INPUT ./img/ML/PDF_masked_unmasked.pdf
 INPUT ./img/ML/saliency.pdf
 INPUT ./img/ML/saliency.pdf
 INPUT img/ML/saliency.pdf

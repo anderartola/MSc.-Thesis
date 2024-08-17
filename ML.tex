@@ -490,7 +490,7 @@ We use the Adam optimizer with fixed moment decay rates as implementation in the
     \label{fig:ML learning curve}
 \end{figure}
 
-In \cref{fig: example_recovered_skewer} we show an example 20h$^{-1}$cMpc  Lyman-$\alpha$ validation skewer from the \texttt{SHERWOOD} dataset. The top panel shows the input flux to the network. The bottom panel shows the true $\Delta_\tau$ density fields, the (mean) recovered densities and the $1\sigma$ envelope predicted by the Bayesian network. Note that, in the spectral regions with large features and variations in the flux, the predicted mean density closely follows the true field. In those regions, there is enough physical information for the network to accurately recover $\Delta_\tau$. In contrast, in the saturated regions with low flux, the noise dominates, and the network predicts larger uncertainties (observe, for instance, the saturated region in Figure \ref{fig: example_recovered_skewer} around 8h$^{-1}$cMpc). This should be regarded as a strength of Bayesian netoworks, since they are able to accurately detect and make explicit situations where the predictions should not be trusted. To minimize the mean error in regions where the network cannot make accurate preditions, note how there is a bias towards quasi-constant mean prediction. This is visible around 8h$^{-1}$cMpc, where the true density has a steep increasing profile, and the predition has an almost constant u-shaped profile.
+In Figure \ref{fig: example_recovered_skewer} we show an example 20h$^{-1}$cMpc  Lyman-$\alpha$ validation skewer from the \texttt{SHERWOOD} dataset. The top panel shows the input flux to the network. The bottom panel shows the true $\Delta_\tau$ density fields, the (mean) recovered densities and the $1\sigma$ envelope predicted by the Bayesian network. Note that, in the spectral regions with large features and variations in the flux, the predicted mean density closely follows the true field. In those regions, there is enough physical information for the network to accurately recover $\Delta_\tau$. In contrast, in the saturated regions with low flux, the noise dominates, and the network predicts larger uncertainties (observe, for instance, the saturated region in Figure \ref{fig: example_recovered_skewer} around 8h$^{-1}$cMpc). This should be regarded as a strength of Bayesian netoworks, since they are able to accurately detect and make explicit situations where the predictions should not be trusted. To minimize the mean error in regions where the network cannot make accurate preditions, note how there is a bias towards quasi-constant mean prediction. This is visible around 8h$^{-1}$cMpc, where the true density has a steep increasing profile, and the predition has an almost constant u-shaped profile.
 
 \begin{figure}
     \centering
@@ -515,11 +515,34 @@ On the \texttt{SHERWOOD} validation split, the network reaches a $1\sigma$ accur
 
 
 \section{Recovered field statistics and uncertainties}\label{sec:recovered statistics}
-Once we have a machinery to recover the IGM density from a Lyman-$\alpha$ skewer, we would like to use this density field information to do statistical inference on the physical parameters of interest. In this work, since the WDM mass directly affects the matter distribution of the Universe (see Figure \ref{fig:villasenor_wdm}) we would like to infer the WDM masses from the recovered $\Delta_\tau$ field. Now, note that the exact $\Delta_\tau$ field of a skewer, such as the one shown in Figure \ref{fig: example_recovered_skewer}, not only depends on a set of physical paramters (WDM mass, temperat,...) but also on the initial conditions or equivalently, the random seed in the cause of a simulation. As a consequence, we will not compare densities on a sightline by sightline basis, but rather compute and comapre agregatted statistics of the fields over multiple realizations that capture global statistical properties, and not simulation-specific characteristics. Statistics that have been amply tested in the literature are the Power Spectrum (PS), the Probability Distribution Function (PDF), the curvature, or the autocorrelation function (see
-\cite{Gaikwad_2021} and \cite{wolfson2023forecastingconstraintshighzigm} for more details). In this work we will focus on the $\Delta_\tau$ PDF. In section \ref{sec:IMNN} we will address the optimiality of this choice. 
+Once we have a machinery to recover the IGM density from a Lyman-$\alpha$ skewer, we would like to use this density field information to do statistical inference on the physical parameters of interest. In this work, since the WDM mass directly affects the matter distribution of the Universe (see Figure \ref{fig:villasenor_wdm}) we would like to infer the WDM masses from the recovered $\Delta_\tau$ field. Now, note that the exact $\Delta_\tau$ field of a skewer, such as the one shown in Figure \ref{fig: example_recovered_skewer}, not only depends on a set of physical paramters (WDM mass, temperat,...) but also on the initial conditions or equivalently, the random seed in the simulation. As a consequence, we will not compare densities on a sightline by sightline basis, but rather compute and compare agregatted statistics of the fields over multiple realizations that capture global statistical properties, and not simulation-specific characteristics. Statistics that have been amply tested in the literature are the Power Spectrum (PS), the Probability Distribution Function (PDF), the curvature, or the autocorrelation function (see \cite{Gaikwad_2021} and \cite{wolfson2023forecastingconstraintshighzigm} for more details). In this work we will focus on the $\Delta_\tau$ PDF. In section \ref{sec:IMNN} we will address the optimiality of this choice. 
+
+We will carefully describe the statistical inference pipeline in section \ref{sec: inference algo} . The main idea will be to fit the density PDF obtained from the Bayesian neural network using observed skewers to the PDFs from each WDM model in the \texttt{SHERWOOD} dataset. An important consideration for a succesful pipeline will be to compare \emph{apples to apples}, i.e., to compare statistics that have been obtained through the same process to reduce any potential bias. For that reason, we will always work with the ML-recovered density by our fiducial neural network, and compare the \emph{observed} statistics to the \emph{model} statistics from each WDM run. The model statistics are computed over the whole simulation box using all 5000 skewers from each run. The observed statistics are typically computed over a much smaller number of observed sightline. In this section, we analyse the statistics recovered from the predicted $\Delta_\tau$ field by the Bayesian network, including how to calculate their uncertainties, which will be crucial for the rest of the inference process.
+
+\subsection{Noisy regions and masking}
+Recall Figure \ref{fig: example_recovered_skewer} are the central example in theis regression problem. The flux-saturated regions where the flux is close the zero and dominated by noise have no physical information to recover the density. Potentially, any density higher than the truth could also produce a saturated profile. The model correctly detects these regions and produces larger uncertainties, but the mean predictions have no physical information and should not be considered in any posterior analysis. Hence, we will mask these regions when comouting the model and observed $\Delta_\tau$ PDFs. This has the effect of modyfying the shape of the PDF by removing part of the high-density tail. We show in Figure \ref{fig: PDF masked unmasked} the odel $\Delta_\tau$ PDFs for the \texttt{SHERWOOD} runs computed using the recovered density by out neural network and explicitly highlight the effect of masking the satured regions that have a flux $\leq 3\frac{1}{\mathrm{SNR}}$. As can be noted, the artefact that occurs at high densities  ($log(\Delta_\tau) \sim 0.5$) dissapears when masking. It can be interpreted as a bias introduced in the saturated regions.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/PDF_masked_unmasked.pdf}
+    \caption{Model $\Delta_\tau$ PDFs for the \texttt{SHERWOOD} runs computed using the recovered density by out neural network. We explicitly highlight the effect of masking the satured regions that have a flux $\leq 3\frac{1}{\mathrm{SNR}}$. }
+    \label{fig: PDF masked unmasked}
+\end{figure}
+
+
+\subsection{Uncertainty in the recovered statistics}
+When estimating uncertainties for the recovered PDF, there are two main sources to consider. Firstly, the Bayesian ML predictions have a certain uncertainty associated to them, which transfer to the density PDF as an additional scatter. We include such uncertainties by considering the predicted density field $\Delta_\tau$ resample 1000 times the posterior distribution produced by the network. We do this process for every observed skewer, compute the 1000 PDFs for each sample, and then the standar deviation between the 1000 statistics. The resampling process requieres careful consideration.
+
 
 ADD bootstrapping and PDF OF PDF
-ADD MATRIX CORR and resampling and recoveries using finite skerwers
+
+PDF:
+\begin{equation}\label{eq:PDF of PDF}
+    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
+\end{equation}
+
+ADD MATRIX CORR of cdm vs wdm and argue i alsways use cdm
+and resampling and recoveries using finite skerwers
 
 \begin{equation}\label{eq: residuals}
     r_i=\frac{\Delta_{\tau,i}-\mu_i}{\sigma_i}
@@ -527,10 +550,35 @@ ADD MATRIX CORR and resampling and recoveries using finite skerwers
 
 
 
-PDF:
-\begin{equation}\label{eq:PDF of PDF}
-    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
-\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

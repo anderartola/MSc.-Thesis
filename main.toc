@@ -22,26 +22,28 @@
 \contentsline {subsection}{\numberline {3.2.5}Loss function and training}{26}{subsection.85}%
 \contentsline {section}{\numberline {3.3}Workflow implementation: Recovering IGM conditions from the Lyman-alpha forest}{29}{section.114}%
 \contentsline {section}{\numberline {3.4}Recovered field statistics and uncertainties}{34}{section.122}%
-\contentsline {section}{\numberline {3.5}Model interpretability and limitations}{35}{section.125}%
-\contentsline {subsection}{\numberline {3.5.1}Saliency analysis}{36}{subsection.126}%
-\contentsline {subsection}{\numberline {3.5.2}Covariate shift}{36}{subsection.130}%
-\contentsline {subsection}{\numberline {3.5.3}Extreme covariate shift and malicious data}{39}{subsection.133}%
-\contentsline {subsection}{\numberline {3.5.4}Model pruning}{39}{subsection.135}%
-\contentsline {chapter}{\numberline {4}Constraining Warm Dark Matter at the density level}{42}{chapter.138}%
-\contentsline {section}{\numberline {4.1}Inference pipeline: from Lyman-alpha skewers to WDM constraints}{42}{section.139}%
-\contentsline {section}{\numberline {4.2}Inference testing on Sherwood spectra under realistic observational conditions}{44}{section.142}%
-\contentsline {subsection}{\numberline {4.2.1}Untrained DM models}{44}{subsection.143}%
-\contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{46}{subsection.145}%
-\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{48}{section.150}%
-\contentsline {subsection}{\numberline {4.3.1}The Nyx code}{49}{subsection.151}%
-\contentsline {subsection}{\numberline {4.3.2}Inference test on Nyx Lyman-alpha skewers}{52}{subsection.157}%
-\contentsline {section}{\numberline {4.4}WDM constraints from SQUAD DR1 observational data}{54}{section.160}%
-\contentsline {section}{\numberline {4.5}WDM constraints from GHOST observed spectrum}{56}{section.164}%
-\contentsline {section}{\numberline {4.6}Comparison of the inference pipeline against Information Maximising Neural Networks}{58}{section.168}%
-\contentsline {subsection}{\numberline {4.6.1}Information Maximising Neural Networks}{58}{subsection.169}%
-\contentsline {subsection}{\numberline {4.6.2}IMNN training and non-linear summaries}{59}{subsection.172}%
-\contentsline {subsection}{\numberline {4.6.3}Summarising a Gaussian signal}{60}{subsection.175}%
-\contentsline {subsection}{\numberline {4.6.4}IMNN inference results on WDM masses}{64}{subsection.194}%
-\contentsline {chapter}{\numberline {5}Conclusions}{66}{chapter.198}%
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.199}%
+\contentsline {subsection}{\numberline {3.4.1}Noisy regions and masking}{35}{subsection.123}%
+\contentsline {subsection}{\numberline {3.4.2}Uncertainty in the recovered statistics}{36}{subsection.125}%
+\contentsline {section}{\numberline {3.5}Model interpretability and limitations}{37}{section.128}%
+\contentsline {subsection}{\numberline {3.5.1}Saliency analysis}{37}{subsection.129}%
+\contentsline {subsection}{\numberline {3.5.2}Covariate shift}{39}{subsection.133}%
+\contentsline {subsection}{\numberline {3.5.3}Extreme covariate shift and malicious data}{41}{subsection.136}%
+\contentsline {subsection}{\numberline {3.5.4}Model pruning}{41}{subsection.138}%
+\contentsline {chapter}{\numberline {4}Constraining Warm Dark Matter at the density level}{44}{chapter.141}%
+\contentsline {section}{\numberline {4.1}Inference pipeline: from Lyman-alpha skewers to WDM constraints}{44}{section.142}%
+\contentsline {section}{\numberline {4.2}Inference testing on Sherwood spectra under realistic observational conditions}{46}{section.145}%
+\contentsline {subsection}{\numberline {4.2.1}Untrained DM models}{46}{subsection.146}%
+\contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{48}{subsection.148}%
+\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{50}{section.153}%
+\contentsline {subsection}{\numberline {4.3.1}The Nyx code}{51}{subsection.154}%
+\contentsline {subsection}{\numberline {4.3.2}Inference test on Nyx Lyman-alpha skewers}{54}{subsection.160}%
+\contentsline {section}{\numberline {4.4}WDM constraints from SQUAD DR1 observational data}{56}{section.163}%
+\contentsline {section}{\numberline {4.5}WDM constraints from GHOST observed spectrum}{58}{section.167}%
+\contentsline {section}{\numberline {4.6}Comparison of the inference pipeline against Information Maximising Neural Networks}{60}{section.171}%
+\contentsline {subsection}{\numberline {4.6.1}Information Maximising Neural Networks}{60}{subsection.172}%
+\contentsline {subsection}{\numberline {4.6.2}IMNN training and non-linear summaries}{61}{subsection.175}%
+\contentsline {subsection}{\numberline {4.6.3}Summarising a Gaussian signal}{62}{subsection.178}%
+\contentsline {subsection}{\numberline {4.6.4}IMNN inference results on WDM masses}{66}{subsection.197}%
+\contentsline {chapter}{\numberline {5}Conclusions}{68}{chapter.201}%
+\contentsline {chapter}{\nonumberline Bibliography}{69}{chapter*.202}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
