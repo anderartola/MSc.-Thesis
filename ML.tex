@@ -134,18 +134,12 @@ The paper \citetitle{wdm_from_field} \cite{wdm_from_field}, which is especially 
 
 Another recent use of deep learning to analyse IGM data can be found in the paper \citetitle{lynna} \cite{lynna}, where authors harvest the field level potential of residual convolutional networks to perform inference on the thermal parameters of the IGM, namely $T_0$, the temperature at mean density, and $\gamma$, the slope of the temperature-density relation. Their model is trained on simulation boxes with side-length 120 Mpc from which $10^5$ sightlines are extracted and processed to produce mock Lyman-$\alpha$ spectra. The simulation boxes are run with different thermal parameters, by sampling 121 $(T_0,\gamma)$ combinations in the parameter space. The network is trained on 24000 labeled spectra from the mix of thermal models, and the architecture is designed to predict a mean value for the thermal parameters as well as an estimate for the parameter covariance matrix. Figure \ref{fig:ML LYNNA} shows the scatter in the point predictions for $(T_0,\gamma)$ for a set of 4000 unseen test spectra. The true parameter values, shown as dashed lines, are recovered by the average of the point predictions, shown as the dark green cross. The authors also perform a comparison with an inference pipeline based on the traditional transmitted flux power spectrum, and find that the posterior constraint using the machine learning field-level approach are 5.65 times tighter.
 
-
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\linewidth]{img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf}
-    \caption{Figure extract from \cite{lynna} showing the performance of the neural network recovering thermal parameters on a set of unseen skewers. The true parameter values, shown as dashed lines, are recovered by the average of the point predictions, shown as the dark green cross.}
+    \includegraphics[width=0.6\textwidth]{img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf}
+    \caption{Figure extracted from \cite{lynna} showing the performance of the neural network recovering thermal parameters on a set of unseen skewers. The true parameter values, shown as dashed lines, are recovered by the average of the point predictions, shown as the dark green cross.}
     \label{fig:ML LYNNA}
 \end{figure}
-
-
-
-
-
 
 \section{Fundamentals of (Bayesian) Neural Networks}
 
@@ -531,29 +525,89 @@ Recall Figure \ref{fig: example_recovered_skewer} are the central example in the
 
 
 \subsection{Uncertainty in the recovered statistics}
-When estimating uncertainties for the recovered PDF, there are two main sources to consider. Firstly, the Bayesian ML predictions have a certain uncertainty associated to them, which transfer to the density PDF as an additional scatter. We include such uncertainties by considering the predicted density field $\Delta_\tau$ resample 1000 times the posterior distribution produced by the network. We do this process for every observed skewer, compute the 1000 PDFs for each sample, and then the standar deviation between the 1000 statistics. The resampling process requieres careful consideration.
+When estimating uncertainties for the recovered PDF, there are two main sources to consider.
+
+\subsubsection{Sampling from reconstructed density fields}
+Firstly, the Bayesian ML predictions have a certain uncertainty associated to them, which transfer to the density PDF as an additional scatter. We include such uncertainties by considering the predicted density field $\Delta_\tau$ and resampling 1000 times the posterior distribution produced by the network. We do this process for every observed skewer, compute the 1000 PDFs for each sample, and then the standar deviation between the 1000 statistics. The resampling process requieres careful consideration. If we resample for each Gaussian distribution $\mathcal{N}(\mu_i,\sigma_i)$ independently at each pixel $i$, the resamples as essentially Gaussian noise, as can be seen in Figure \ref{fig: resampling indep}.
 
 
-ADD bootstrapping and PDF OF PDF
 
-PDF:
-\begin{equation}\label{eq:PDF of PDF}
-    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
-\end{equation}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/ml_resample_no_covariance.png}
+    \caption{An example \texttt{SHERWOOD} CDM skewer, together with the reconstructed $\Delta_\tau$ in blue. The red field shows a resampling without including covariance between the pixels, which genreates random noise.}
+    \label{fig: resampling indep}
+\end{figure}
 
-ADD MATRIX CORR of cdm vs wdm and argue i alsways use cdm
-and resampling and recoveries using finite skerwers
+To generate adequate resamples, we must include the correlation between pixels and sample from the joint distribution. We estimate such correlation matrices on the prediction resiuals in the \texttt{SHERWOOD} suite, defined as:
 
 \begin{equation}\label{eq: residuals}
     r_i=\frac{\Delta_{\tau,i}-\mu_i}{\sigma_i}
 \end{equation}
 
+To generate a smooth correlation matrix for the residuals, we also augment the data by applying 1000 translations to each spectrum. We compute such correlation matrix for the reference \texttt{SHERWOOD} CDM skewers, as shown in Figure \ref{fig: corr mat cdm}, and will refer to it as $\Sigma$. Note that the nearby pixels are correlated for a distance of $\lesssim 50$, as the quasi-diagonal structure of the matrix suggests. We have computed similar matrices for the rest of the \texttt{SHERWOOD} models, finding very similar results. As a consequence, we use the reference CDM correlation matrix for this resampling step in what follows.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/cov_mat_imprs.png}
+    \caption{The $\Delta_\tau$ correlation matrix $\Sigma$ for the prediction \texttt{SHERWOOD} CDM residuals as defined in Equation \ref{eq: residuals} at $z=4.4$ for the fiducial trained neural network. Each reconstructed density field has been augmented by applying 1000 translations to generate a smooth matrix.}
+    \label{fig: corr mat cdm}
+\end{figure}
+
+To resample from a reconsted $\Delta_\tau$ skewer by our neural network, we draw a sample from the multivariate normal $\mathcal{N}(0,\Sigma)$. The reconstructed sample for the density field is then taken to be $\mu+\sigma \mathcal{N}(0,\Sigma)$, where $\mu$ is the vector of mean predictions, and $\sigma$ the vector of standard deviation predictions. Figure \ref{fig: resampling corr} shows a series of 100 draws from the same recovered density skewer as Figure \ref{fig: resampling indep}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/ml_resample_corr.png}
+    \caption{A set of 100 draws including the correlation between neraby pixels for a \texttt{SHERWOOD} CDM skewer. As opposed to Figure \ref{fig: resampling indep}, the samples are continous and no longer show a noisy behavior.}
+    \label{fig: resampling corr}
+\end{figure}
+
+\subsubsection{Intrinsic scatter in the recovered PDF}
+Secondly, we estimate a second contribution to the total uncertainty in the recovered PDF by considering the fact that we have only observed a finite set of skewers, and hence we don't have acces to the full $\Delta_\tau$ field. To estimate this intrinsic scatter, we use \emph{bootstrapping} \cite{Kreiss2011}. Bootstrapping approximates the true distribution of the PDF statistic by generating artificial samples from the observed data. Suppose we observed $N$ sightlines, reconstruct their $\Delta_\tau$ field and then compute the PDF. To estimate how this PDF depends on the exact observed skewers, we draw $N$ sightline from the set of observed ones, potentially inclduing repetitions. This might result in repeated sightlines. We then compute the PDF for this new sample. We repeat this process 1000 times and then compute the scatter in the PDF acroos all 1000 samples. 
+
+Bootstrapping approximates to true distribution as $N\to \infty$. It is then resonable to ask whether this method is accurate when we are only observing a low number of sightlines. To answer this, we note that the $\Delta_\tau$ PDF is a function of the density value of each of the pixels, which can be considered a random variable depending on the observations. As a consequence, the PDF is itself a random variable, and has a probability distribtuion. We would like to estimate this probability distribution and verify whether boostrapping provides a reasonable estimate.
+
+To estimate the distribution of the PDF, let us assume that we observe a total of $N$ pixels, that we will consider as independent for now. Suppose that the $\Delta_\tau$ distribution for each density pixel is $f$. We want to estimate the probability distribution $p(\lambda |f(x),N )$ that a bin of the PDF has a value $\lambda$, conditional on observing $N$ pixels and a true probability for a density $x$ of $f(x)$. Let us denote by $X_i$ the $N$ pixels values that are considered random variable to be observed and start by noting that, by definition,
+
+\begin{align}
+    \mathrm{PDF} (x)& \propto \sum_{i=1}^N \mathds{1}_{\{X_i=x \}}\\
+    \implies P(\mathrm{PDF}(x)=\lambda)&=P(\{ \mathrm{Number\ of\ } X_i \mathrm{\ equal\ to\ } x\}=N\lambda)\\
+    &= {N\choose N\lambda}f(x)^{N\lambda}(1-f(x))^{N-N\lambda}
+\end{align}
 
 
 
 
 
+We have shown that the probability distribution of the PDF statistic is:
 
+\begin{equation}\label{eq:PDF of PDF}
+    p(\lambda |f(x),N )\propto \frac{\Gamma(N+1)}{\Gamma(N\lambda+1)\Gamma(N-N\lambda+1)} f(x)^{N\lambda}(1-f(x))^{N(1-\lambda)}
+\end{equation}
+
+Interestingly, and in agreement with bootstrapping, the distribution in Equation \ref{eq:PDF of PDF} has a mean that converges to $f(x)$ as $N\to \infty$ and a variance that converges to 0 as $N\to \infty$. To compare how this exact distribution differs fromt the ucnertainties estimated using bootstrapping, we show in Figure \ref{fig: boot vs exact} the uncertainties on the $\Delta_\tau$ PDF estimated using bootstrapping with 1000 samples and using the standard deviation in Equation \ref{eq:PDF of PDF}. We show the results for 6 CDM skewers with 2048 pixels each.
+Both uncertainties are comparable, with bootstrapping slighly underestimated the standar deviation of Equation \ref{eq:PDF of PDF}. However, bootstrapping includes the correlation between neraby bins, which has not been taking into account when deriving Equation \ref{eq:PDF of PDF}. For those two reasons, we will consider the bootstrapping uncertainties in what follows when estimating the intrinsic scatter of the recovered PDF.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/boot_vs_exxact.png}
+    \caption{}
+    \label{fig: boot vs exact}
+\end{figure}
+
+Finally, the total uncertainties on the observed $\Delta_\tau$ PDF is obtained by adding in quadrature the machine learning uncertainties and the intrinsic scatter using bootstrapping.
+
+To illustrate the process of recovering the PDF statistic including all the uncertainties mentioned aboved, we select 60 \texttt{SHERWOOD} CDM skewers at $z=4.4$ from the validation set as our ``observed'' data. In Figure \ref{fig: PDF sample vs full} we compare the $\Delta_\tau$ PDF computed over the full simulation box (that is, using all skewers) to the PDF computed using the 60 observed skewers. Keep in mind that we always used the $\Delta_\tau$ fields reconstructed by the fiducial neural network and mask the flux-staturated regions.
+We find that 60 skewers from the same dataset as sufficient to accurately recover the PDF statistic.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/ML/PDF_full_vs_60.pdf}
+    \caption{$\Delta_\tau$ PDF computed over the full simulation box (that is, using all skewers) compared to the PDF computed using the 60 observed skewers in the \texttt{SHERWOOD} run at $z=4.4$. We have used the $\Delta_\tau$ fields reconstructed by the fiducial neural network and mask the flux-staturated regions.
+We find that 60 skewers from the same dataset as sufficient to accurately recover the PDF statistic.}
+    \label{fig: PDF sample vs full}
+\end{figure}
 
 
 

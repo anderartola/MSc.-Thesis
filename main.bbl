@@ -7420,6 +7420,52 @@
       \verb https://arxiv.org/abs/2309.05647
       \endverb
     \endentry
+    \entry{Kreiss2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e141648cdf936dbda4dc44d6963c35ab}{%
+           family={Kreiss},
+           familyi={K\bibinitperiod},
+           given={Jens-Peter},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=c2ec3e01ecfbc6432d491825d9d6104f}{%
+           family={Paparoditis},
+           familyi={P\bibinitperiod},
+           given={Efstathios},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{866f37adad917690f72e8d61e6d4d0e6}
+      \strng{fullhash}{866f37adad917690f72e8d61e6d4d0e6}
+      \strng{bibnamehash}{866f37adad917690f72e8d61e6d4d0e6}
+      \strng{authorbibnamehash}{866f37adad917690f72e8d61e6d4d0e6}
+      \strng{authornamehash}{866f37adad917690f72e8d61e6d4d0e6}
+      \strng{authorfullhash}{866f37adad917690f72e8d61e6d4d0e6}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1226-3192}
+      \field{journaltitle}{Journal of the Korean Statistical Society}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{Bootstrap methods for dependent data: A review}
+      \field{volume}{40}
+      \field{year}{2011}
+      \field{pages}{357\bibrangedash 378}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.jkss.2011.08.009
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.jkss.2011.08.009
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.jkss.2011.08.009
+      \endverb
+    \endentry
     \entry{shwartzziv2017opening}{misc}{}
       \name{author}{2}{}{%
         {{hash=11ec0d907628a973140a39bb0dca5b31}{%
@@ -7475,8 +7521,8 @@
       \strng{authorbibnamehash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
       \strng{authornamehash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
       \strng{authorfullhash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.AI}
