@@ -8,7 +8,7 @@
 \label{sec:motiv_ml}
 
 
-Fundamentally, a neural network is a directed and acyclic computational graph \cite{LeCun2015}. It represents a set of operations that transform input data input an output. In the simplest case of a fully connected network, the nodes of this graph are represented by neurons. Neurons are organized on successive layers, making the information flow from a layer to the following one. In the most basic scenario, the neurons in a given layer are linearly connected to the neurons in the previous layer. Each neuron then adds a bias to the result of the computation and applies a non-linear function to the result, which determines the activation state of the neuron. Consider the graph shown in \cref{fig:MLP}, where the input neuron has a value $x$ and the output neuron has a value $y(x)$. The intermediate layers have values
+Fundamentally, a neural network is a directed and acyclic computational graph \cite{LeCun2015}. It represents a set of operations that transform input data input an output. In the simplest case of a fully connected network, the nodes of this graph are represented by neurons. Neurons are organized on successive layers, making the information flow from a layer to the following one. In the most basic scenario, the neurons in a given layer are linearly connected to the neurons in the previous layer. Each neuron then adds a bias to the result of the computation and applies a non-linear function to the result, which determines the activation state of the neuron. Consider the graph shown in Figure \ref{fig:MLP}, where the input neuron has a value $x$ and the output neuron has a value $y(x)$. The intermediate layers have values
 \begin{equation}
     \begin{dcases}
         x_1=\sigma(\alpha_1 x+\beta_1)\\
@@ -574,7 +574,7 @@ To estimate the distribution of the PDF, let us assume that we observe a total o
 \begin{align}
     \mathrm{PDF} (x)& \propto \sum_{i=1}^N \mathds{1}_{\{X_i=x \}}\\
     \implies P(\mathrm{PDF}(x)=\lambda)&=P(\{ \mathrm{Number\ of\ } X_i \mathrm{\ equal\ to\ } x\}=N\lambda)\\
-    &= {N\choose N\lambda}f(x)^{N\lambda}(1-f(x))^{N-N\lambda}
+    &= \binom{N}{N\lambda}f(x)^{N\lambda}(1-f(x))^{N-N\lambda}
 \end{align}
 
 

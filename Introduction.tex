@@ -69,9 +69,24 @@ In consequence, at the redshift of interest for this work, $z\sim 4-5$, the univ
 
 \section{The intergalactic medium}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{The Lyman-alpha forest as a probe of the IGM}
 
-Let us now describe how an intergalactic cloud (with no peculiar velocity) along the line of sight of a quasar affects its spectrum, allowing for a powerful probing mechanism of the IGM. Consider the situation illustrated in \cref{fig_ch1:Lyman_alpha_diagram}, where a QSO at redshift $z_\text{QSO}$ emits photons, and consider the propagation of an emitted photon with rest-frame frequency $\nu_e$. Those photons are redshifted and are absorbed at $z_\alpha$ by a neutral hydrogen absorber with local number density $n(z_\alpha)$ producing an absorption feature in the flux at the rest-frame Lyman-$\alpha$ resonance $\lambda_\alpha \approx 1215$\r{A}. The unabsorbed photons are then redshifted and are detected by an observer at $z=0$ and a frequency $\nu_o$. The relationship between the frequencies mentioned above is then:
+Let us now describe how an intergalactic cloud (with no peculiar velocity) along the line of sight of a quasar affects its spectrum, allowing for a powerful probing mechanism of the IGM. Consider the situation illustrated in Figure \ref{fig_ch1:Lyman_alpha_diagram}, where a QSO at redshift $z_\text{QSO}$ emits photons, and consider the propagation of an emitted photon with rest-frame frequency $\nu_e$. Those photons are redshifted and are absorbed in $z_\alpha$ by a neutral hydrogen absorber with local number density $n(z_\alpha)$ producing an absorption feature in the flux at the rest-frame Lyman-$\alpha$ resonance $\lambda_\alpha \approx 1215$\r{A}. The unabsorbed photons are then redshifted and are detected by an observer at $z=0$ and a frequency $\nu_o$. The relationship between the frequencies mentioned above is then:
 \begin{equation}
     \nu_o=\frac{\nu_e}{1+z_e}=\frac{\nu_\alpha}{1+z_\alpha} 
 \end{equation}
@@ -104,9 +119,15 @@ The Gunn-Peterson Lyman-$\alpha$ opacity can then be used to estimate the averag
     \label{fig:villasenor_wdm}
 \end{figure}
 
+
+The Lyman-$\alpha$ optical depth $\tau$ can be obtained from the neutral hydrogen gas properties along the sightline as follows:
 \begin{equation}\label{eq:lyman opacity}
-    3+1+4
-\end{equation}
+    \begin{aligned}\tau(z_0)&=\frac{cI_\alpha}{\sqrt{\pi}}\int dx\frac{n_{\mathrm{H}}[x,z(x)]}{b[x,z(x)][1+z(x)]}\times V\left\{\frac{c[z(x)-z_0]}{b[x,z(x)](1+z_0)}+\frac{v[x,z(x)]}{b[x,z(x)]},\alpha\right\}\end{aligned}
+\end{equation} 
+where $n_\text{H}$ is the neutral hydrogen density, $b=\sqrt{\frac{2k_BT}{m_p}}$, $v$ is the peculiar velocity along the sightline, $m_p$ is the proton mass, $k_B$ is Boltzmann's constant, $\alpha$ is the recombination coefficient, $c$ is the speed of light, $I_\alpha$ is the total cross-section for Lyman-$\alpha$ absorption and $V$ is the Voigt function \cite{Choudhury_2001}.
+
+
+
 
 discuss villa plot and pdf and ps plot
 

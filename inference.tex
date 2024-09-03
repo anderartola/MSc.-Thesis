@@ -148,7 +148,7 @@ We begin by evaluating the performance of our fiducial neural network with froze
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{img/ML/violin_nyx.png}
-    \caption{iolin plot with the $1\sigma$ residues distribution as defined in Equation \ref{eq: residuals}. Values in the range $[0,1]$ correspond to pixels that have been succesfully recovered within a $1\sigma$ accuracy. Observer how the models with earlier reionization ($z_\mathrm{re}=7$ and $z_\mathrm{re}=8$), which have lower temperatures, have a higher recovery rate. This is likely due to the fact that our training data set contains more WDM models close to CDM, and we know that loss WDM masses and low temperate have a degenerate effect on the Lyman-$\alpha$ forest. In general, we note that the $\geq 75 \%$ of the pixels are correctly recovered.}
+    \caption{Violin plot with the $1\sigma$ residues distribution as defined in Equation \ref{eq: residuals}. Values in the range $[0,1]$ correspond to pixels that have been succesfully recovered within a $1\sigma$ accuracy. Observer how the models with earlier reionization ($z_\mathrm{re}=7$ and $z_\mathrm{re}=8$), which have lower temperatures, have a higher recovery rate. This is likely due to the fact that our training data set contains more WDM models close to CDM, and we know that loss WDM masses and low temperate have a degenerate effect on the Lyman-$\alpha$ forest. In general, we note that the $\geq 75 \%$ of the pixels are correctly recovered.}
     \label{fig: nyx violin}
 \end{figure}
 We then run the same inference pipeline for the $z_\mathrm{re}=6$ model as we did in section \ref{sec:hires test} with a single major difference. Since we know that the \texttt{Nyx} runs do not fit any of our thermal models (and the same circumstance will occur when using real observations), we need to utilise the fiducial neural network trained on multiple thermal modes, \texttt{SHERWOOD THERMAL}. Additionally, when fitting the recovered $\Delta_\tau$ PDF to each model PDF, we will have 3 different $\chi^2$ curves for each one of the thermal models $\{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$. To avoid a joint optimization problem and constraining the thermal history on top of the WDM mass (which is out of the scoop of this work, and also unrealisitc since we are not using a fine thermal model grid), we will select the thermal model that minimises the $\chi^2$ value, that is
@@ -156,7 +156,6 @@ We then run the same inference pipeline for the $z_\mathrm{re}=6$ model as we di
     \mathrm{min}_{t,m} \, \, \chi^2(t,m),
 \end{equation}
 where $t\in \{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$ and $m$ labels the continously interpolatted inverse warm dark matter mass. We compute $\chi^2(t,m)$ and find that the ref and hot model produce similar $\chi^2$ values, while the cold model has $\chi^2 \sim 1000$, as expected from Figure \ref{fig: nyx TD}. Both the ref and hot models produce a similar $2\sigma$ lower bound on the WDM mass: $m_{\mathrm{WDM}} \gtrsim 10$ KeV. Compared to section \ref{sec:hires test}, the results are fairly similar, showcasing the robustness of our approach.
-
 
 
 
