@@ -69,12 +69,35 @@ where $\nu\approx 1.12$ and $\alpha$ is related to the WDM particle mass by
 \end{equation}
 The initial coniditons are then generated at $z=99$ using the matter power spectrum, see \cite{Bolton_2016} for more details.
 
-include a bit of the physics in SHERWOOD UVB
-include the table with summaries of the rum
+On top of the hydrodynamics and gravity, the Sherwood code implements a variety of relevant physical process that contribute to the state of the IGM and the Lyman-$\alpha$ forest. The simulations calculate the photo-ionisation and photo-heating for the gas (assumed to be in ionisation equilibrium) by using a uniform ionising UV backgorund as described in \cite{Haardt2012}. Instead of following the star formation process, dense and cold gas particles ($\Delta>1000$ and $T<10^5$K) are converted into collisionless particles. The runs discussed here do not include AGN feedback, which has a small effect on the Lyman-$\alpha$ forest at high redshift.
 
+In our work, we use a subset of the \texttt{SHERWOOD} suite described in \cite{sherwood_wdm}. All boxes are of size 20h$^{-1}$cMpc, with $2\times 1024^3$ particles. The mass for gas and dark matter particles is, respectively, $5.37\times 10^5h^{-1}M_\odot$ and $9.97\times 10^4h^{-1}M_\odot$. In Table \ref{tab: Sherwood} we summarise the runs used in this work.
+
+
+\begin{table}
+        \caption[]{List of the \texttt{SHERWOOD} runs used in the work.
+        All box sizes are 20h$^{-1}$. The table shows the mean temperature of the IGM $T_0$ at redshift $z=4.4$, the redshift of reionisation, and the set of WDM masses included. We work with the inverse WDM mass and consider 0 to correspond to the CDM reference run.}
+           \label{tab: Sherwood}
+       $$ 
+           \begin{array}{p{0.3\linewidth}ccc}
+              \hline
+              \noalign{\smallskip}
+              Run      &  T_0 {[\mathrm{K}]}\ (z=4.4) &z_\mathrm{rei}^\mathrm{end}& \mathrm{WDM} [\mathrm{KeV}^{-1}] \\ 
+              \noalign{\smallskip}
+              \hline
+              \noalign{\smallskip}
+              L20-ref & 10556 &6.00&\{0,\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{8}, \frac{1}{12} \}     \\
+              L20-ref-hot           & 12161&6.01  &\texttt{"}\\
+              L20-ref-cold     & 9862  &5.98&       \texttt{"}     \\
+              \noalign{\smallskip}
+              \hline
+           \end{array}
+       $$ 
+     \end{table}
+The reference run is L20-ref. We will refer to the dataset consisting on this run as \texttt{SHERWOOD} in what follows. We also use two runs with varied thermal parameters L20-ref-hot and L20-ref-cold. The dataset consisting on all 3 runs will be denoted as \texttt{SHERWOOD THERMAL} in this work.
 
 We conclude this section by visually inspecting the \texttt{SHERWOOD} data, to give a broad intuition of how the IGM fields behave. In Figure \ref{fig: 2D density image} we show a 2D neutral hydrogren overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. The simulation size is 20h$^{-1}$cMpc. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect or multiple DM candidates on the density field.
-\begin{figure}
+\begin{figure}[h]
         \centering
         \includegraphics[width=0.99\textwidth]{img/ML/density_image_wdm.pdf}
         \caption{A 2D neutral hydrogren overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. The simulation size is 20h$^{-1}$cMpc. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect or multiple DM candidates on the density field.}

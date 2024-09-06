@@ -1401,6 +1401,7 @@ INPUT ./Introduction.tex
 INPUT Introduction.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecsx1440.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT ./img/lyman-alpha.pdf
 INPUT ./img/lyman-alpha.pdf
 INPUT img/lyman-alpha.pdf
@@ -1441,12 +1442,13 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT ./img/ML/Barnes_hut_tree.png
 INPUT ./img/ML/Barnes_hut_tree.png
 INPUT img/ML/Barnes_hut_tree.png
 INPUT ./img/ML/Barnes_hut_tree.png
 INPUT ./img/ML/Barnes_hut_tree.png
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
 INPUT ./img/ML/density_image_wdm.pdf
 INPUT ./img/ML/density_image_wdm.pdf
 INPUT img/ML/density_image_wdm.pdf
@@ -1654,8 +1656,6 @@ INPUT ./inference.tex
 INPUT inference.tex
 INPUT ./inference.tex
 INPUT inference.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
 INPUT ./img/ML/inference_no_train.png
 INPUT ./img/ML/inference_no_train.png
 INPUT img/ML/inference_no_train.png

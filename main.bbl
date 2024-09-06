@@ -1397,6 +1397,53 @@
       \endverb
       \keyw{cosmic background radiation,cosmological parameters,early Universe,inflation,primordial nucleosynthesis,Astrophysics - Cosmology and Nongalactic Astrophysics}
     \endentry
+    \entry{Mo2010}{book}{}
+      \name{author}{3}{}{%
+        {{hash=62dd07b7d6fb9752bc5227a473571359}{%
+           family={Mo},
+           familyi={M\bibinitperiod},
+           given={Houjun},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c9f4a0a06fdb9a8b8c9c1e28c7aadfb4}{%
+           family={Bosch},
+           familyi={B\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           prefix={van\bibnamedelima den},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=fe0717fe9402f7716bed30595b857f30}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \strng{fullhash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \strng{bibnamehash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \strng{authorbibnamehash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \strng{authornamehash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \strng{authorfullhash}{e04736dcc2d1ff2e493b3b5a88ed61d0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780511807244}
+      \field{month}{5}
+      \field{title}{Galaxy Formation and Evolution}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1017/cbo9780511807244
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1017/CBO9780511807244
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1017/CBO9780511807244
+      \endverb
+    \endentry
     \entry{GunnPeterson}{article}{}
       \name{author}{2}{}{%
         {{hash=979c87948f2e26231271b4fcf8caab69}{%
@@ -1416,8 +1463,8 @@
       \strng{authorbibnamehash}{134a12a6e246362a14c1c7d0eee740b4}
       \strng{authornamehash}{134a12a6e246362a14c1c7d0eee740b4}
       \strng{authorfullhash}{134a12a6e246362a14c1c7d0eee740b4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{APJ}
@@ -1593,8 +1640,8 @@
       \strng{authorbibnamehash}{29d007ef3a7618c52712c990e0cfa88b}
       \strng{authornamehash}{29d007ef3a7618c52712c990e0cfa88b}
       \strng{authorfullhash}{a86271fc0e0c059126cff61ff68adc72}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0004-6256}
@@ -1640,8 +1687,8 @@
       \strng{authorbibnamehash}{79008f3820157dd1c2348dc5196de2a7}
       \strng{authornamehash}{79008f3820157dd1c2348dc5196de2a7}
       \strng{authorfullhash}{79008f3820157dd1c2348dc5196de2a7}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{astro-ph.CO}
@@ -1694,8 +1741,8 @@
       \strng{authorbibnamehash}{377c1652ba3d5635fbf2dd4b7ab4eb12}
       \strng{authornamehash}{377c1652ba3d5635fbf2dd4b7ab4eb12}
       \strng{authorfullhash}{377c1652ba3d5635fbf2dd4b7ab4eb12}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2470-0029}
@@ -1742,8 +1789,8 @@
       \strng{authorbibnamehash}{c1dc588e8e985e1e65a22e6d56471a46}
       \strng{authornamehash}{c1dc588e8e985e1e65a22e6d56471a46}
       \strng{authorfullhash}{c1dc588e8e985e1e65a22e6d56471a46}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1538-4357}
@@ -1907,8 +1954,8 @@
       \strng{authorbibnamehash}{a225781fc8d64f70eb0c4da749a163fa}
       \strng{authornamehash}{a225781fc8d64f70eb0c4da749a163fa}
       \strng{authorfullhash}{65f3ca28e5853f5b4466f46d70353205}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1365-2966}
@@ -2156,6 +2203,138 @@
       \verb http://dx.doi.org/10.1103/PhysRevD.71.063534
       \endverb
     \endentry
+    \entry{Haardt2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c5e69de7b08d4099337aaa37e4d3c1c7}{%
+           family={Haardt},
+           familyi={H\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6eed9d8c84f0a954a9419cd0f1bdeaba}{%
+           family={Madau},
+           familyi={M\bibinitperiod},
+           given={Piero},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{be5a46263f391ec00fc5c2eb69f31004}
+      \strng{fullhash}{be5a46263f391ec00fc5c2eb69f31004}
+      \strng{bibnamehash}{be5a46263f391ec00fc5c2eb69f31004}
+      \strng{authorbibnamehash}{be5a46263f391ec00fc5c2eb69f31004}
+      \strng{authornamehash}{be5a46263f391ec00fc5c2eb69f31004}
+      \strng{authorfullhash}{be5a46263f391ec00fc5c2eb69f31004}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1538-4357}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{RADIATIVE TRANSFER IN A CLUMPY UNIVERSE. IV. NEW SYNTHESIS MODELS OF THE COSMIC UV/X-RAY BACKGROUND}
+      \field{volume}{746}
+      \field{year}{2012}
+      \field{pages}{125}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0004-637x/746/2/125
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/0004-637X/746/2/125
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/0004-637X/746/2/125
+      \endverb
+    \endentry
+    \entry{sherwood_wdm}{article}{}
+      \name{author}{11}{}{%
+        {{hash=882bd7a64abc512a6a51905bcef95e95}{%
+           family={{Iršič}},
+           familyi={I\bibinitperiod},
+           given={Vid},
+           giveni={V\bibinitperiod}}}%
+        {{hash=5728eaa822896cf6d958ddb252712f65}{%
+           family={{Viel}},
+           familyi={V\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cbd35fb2578044e20e95b48b7228ccfe}{%
+           family={{Haehnelt}},
+           familyi={H\bibinitperiod},
+           given={Martin\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a625b3029ac82d4260abdaaf3a746434}{%
+           family={{Bolton}},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=322ad30ed58733a46d137ffae6ba61f0}{%
+           family={{Molaro}},
+           familyi={M\bibinitperiod},
+           given={Margherita},
+           giveni={M\bibinitperiod}}}%
+        {{hash=32d0cfb16abfb07b12455d506f6a5aa1}{%
+           family={{Puchwein}},
+           familyi={P\bibinitperiod},
+           given={Ewald},
+           giveni={E\bibinitperiod}}}%
+        {{hash=df5c1b17ef05bda94ca11cf99fb1e702}{%
+           family={{Boera}},
+           familyi={B\bibinitperiod},
+           given={Elisa},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b19035670dc4a3a4febd0d69c06c76c8}{%
+           family={{Becker}},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b132ca766bd2a8e963b130f47f95c287}{%
+           family={{Gaikwad}},
+           familyi={G\bibinitperiod},
+           given={Prakash},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d138b03ce6b81a34e5c4edb1ede402f8}{%
+           family={{Keating}},
+           familyi={K\bibinitperiod},
+           given={Laura\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=78b891f92d51c2a90c03798dc0718ae4}{%
+           family={{Kulkarni}},
+           familyi={K\bibinitperiod},
+           given={Girish},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{069cf06b70ec4f06db2851f2e14a1675}
+      \strng{fullhash}{55e26f0a42cea9919c36c655a5d8e63c}
+      \strng{bibnamehash}{069cf06b70ec4f06db2851f2e14a1675}
+      \strng{authorbibnamehash}{069cf06b70ec4f06db2851f2e14a1675}
+      \strng{authornamehash}{069cf06b70ec4f06db2851f2e14a1675}
+      \strng{authorfullhash}{55e26f0a42cea9919c36c655a5d8e63c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{043511}
+      \field{eprintclass}{astro-ph.CO}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{PRD}
+      \field{month}{2}
+      \field{number}{4}
+      \field{title}{{Unveiling dark matter free streaming at the smallest scales with the high redshift Lyman-alpha forest}}
+      \field{volume}{109}
+      \field{year}{2024}
+      \field{pages}{043511}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.109.043511
+      \endverb
+      \verb{eprint}
+      \verb 2309.04533
+      \endverb
+      \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics,High Energy Physics - Phenomenology,High Energy Physics - Theory}
+    \endentry
     \entry{Luki__2014}{article}{}
       \name{author}{6}{}{%
         {{hash=bf2622e06f1798478cd55f6ceb0d882a}{%
@@ -2238,8 +2417,8 @@
       \strng{authorbibnamehash}{2f8ad24ba2d5ab74e61aec11dbed4263}
       \strng{authornamehash}{2f8ad24ba2d5ab74e61aec11dbed4263}
       \strng{authorfullhash}{2f8ad24ba2d5ab74e61aec11dbed4263}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-8711}
@@ -2318,8 +2497,8 @@
       \strng{authorbibnamehash}{fb16fbbd4a3862fe9633fcf028677b1c}
       \strng{authornamehash}{fb16fbbd4a3862fe9633fcf028677b1c}
       \strng{authorfullhash}{fb16fbbd4a3862fe9633fcf028677b1c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1365-2966}
@@ -2369,8 +2548,8 @@
       \strng{authorbibnamehash}{f283f78c63a9ea573d1112ca43a357f8}
       \strng{authornamehash}{f283f78c63a9ea573d1112ca43a357f8}
       \strng{authorfullhash}{f283f78c63a9ea573d1112ca43a357f8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1365-2966}
@@ -3075,8 +3254,8 @@
       \strng{authorbibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
       \strng{authornamehash}{c6c75bd00ce5a488e91a749d8383b3df}
       \strng{authorfullhash}{c6c75bd00ce5a488e91a749d8383b3df}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1476-4687}
@@ -3483,8 +3662,8 @@
       \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
       \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
       \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -5804,8 +5983,8 @@
       \strng{authorbibnamehash}{68725b7dda75c59e07a79a3eea77a51a}
       \strng{authornamehash}{68725b7dda75c59e07a79a3eea77a51a}
       \strng{authorfullhash}{66e912c629587bb0660425d6edc20376}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1432-0746}
@@ -5858,8 +6037,8 @@
       \strng{authorbibnamehash}{f15417f224b8a7f43dc39792f560bfaa}
       \strng{authornamehash}{f15417f224b8a7f43dc39792f560bfaa}
       \strng{authorfullhash}{f15417f224b8a7f43dc39792f560bfaa}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1538-3881}
@@ -7959,8 +8138,8 @@
       \strng{authorbibnamehash}{3e08ebdfc7ca2904ab3b91debce95795}
       \strng{authornamehash}{3e08ebdfc7ca2904ab3b91debce95795}
       \strng{authorfullhash}{3e08ebdfc7ca2904ab3b91debce95795}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-2496}
@@ -8216,8 +8395,8 @@
       \strng{authorbibnamehash}{f9a517f99d8450b78124ea4348265e82}
       \strng{authornamehash}{f9a517f99d8450b78124ea4348265e82}
       \strng{authorfullhash}{f9a517f99d8450b78124ea4348265e82}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Lecture Notes in Computer Science}
@@ -8271,8 +8450,8 @@
       \strng{authorbibnamehash}{6a8f61fd5680dbd348b2b27b4a54d0d8}
       \strng{authornamehash}{6a8f61fd5680dbd348b2b27b4a54d0d8}
       \strng{authorfullhash}{6a8f61fd5680dbd348b2b27b4a54d0d8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 25th {ACM} {SIGKDD} International Conference on Knowledge Discovery and Data Mining}
@@ -8314,8 +8493,8 @@
       \strng{authorbibnamehash}{32e09731d91a45b9d92d94246abb7fe7}
       \strng{authornamehash}{32e09731d91a45b9d92d94246abb7fe7}
       \strng{authorfullhash}{32e09731d91a45b9d92d94246abb7fe7}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Several recent advances to the state of the art in image classification benchmarks have come from better configurations of existing techniques rather than novel approaches to feature learning. Traditionally, hyper-parameter optimization has been the job of humans because they can be very efficient in regimes where only a few trials are possible. Presently, computer clusters and GPU processors make it possible to run more trials and we show that algorithmic approaches can find better results. We present hyper-parameter optimization results on tasks of training neural networks and deep belief networks (DBNs). We optimize hyper-parameters using random search and two new greedy sequential methods based on the expected improvement criterion. Random search has been shown to be sufficiently efficient for learning neural networks for several datasets, but we show it is unreliable for training DBNs. The sequential algorithms are applied to the most difficult DBN learning problems from [1] and find significantly better results than the best previously reported. This work contributes novel techniques for making response surface models P(y|x) in which many elements of hyper-parameter assignment (x) are known to be irrelevant given particular values of other elements.}
@@ -8377,93 +8556,6 @@
       \verb{eprint}
       \verb 2404.05794
       \endverb
-    \endentry
-    \entry{sherwood_wdm}{article}{}
-      \name{author}{11}{}{%
-        {{hash=882bd7a64abc512a6a51905bcef95e95}{%
-           family={{Iršič}},
-           familyi={I\bibinitperiod},
-           given={Vid},
-           giveni={V\bibinitperiod}}}%
-        {{hash=5728eaa822896cf6d958ddb252712f65}{%
-           family={{Viel}},
-           familyi={V\bibinitperiod},
-           given={Matteo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=cbd35fb2578044e20e95b48b7228ccfe}{%
-           family={{Haehnelt}},
-           familyi={H\bibinitperiod},
-           given={Martin\bibnamedelima G.},
-           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=a625b3029ac82d4260abdaaf3a746434}{%
-           family={{Bolton}},
-           familyi={B\bibinitperiod},
-           given={James\bibnamedelima S.},
-           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=322ad30ed58733a46d137ffae6ba61f0}{%
-           family={{Molaro}},
-           familyi={M\bibinitperiod},
-           given={Margherita},
-           giveni={M\bibinitperiod}}}%
-        {{hash=32d0cfb16abfb07b12455d506f6a5aa1}{%
-           family={{Puchwein}},
-           familyi={P\bibinitperiod},
-           given={Ewald},
-           giveni={E\bibinitperiod}}}%
-        {{hash=df5c1b17ef05bda94ca11cf99fb1e702}{%
-           family={{Boera}},
-           familyi={B\bibinitperiod},
-           given={Elisa},
-           giveni={E\bibinitperiod}}}%
-        {{hash=b19035670dc4a3a4febd0d69c06c76c8}{%
-           family={{Becker}},
-           familyi={B\bibinitperiod},
-           given={George\bibnamedelima D.},
-           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=b132ca766bd2a8e963b130f47f95c287}{%
-           family={{Gaikwad}},
-           familyi={G\bibinitperiod},
-           given={Prakash},
-           giveni={P\bibinitperiod}}}%
-        {{hash=d138b03ce6b81a34e5c4edb1ede402f8}{%
-           family={{Keating}},
-           familyi={K\bibinitperiod},
-           given={Laura\bibnamedelima C.},
-           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=78b891f92d51c2a90c03798dc0718ae4}{%
-           family={{Kulkarni}},
-           familyi={K\bibinitperiod},
-           given={Girish},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{069cf06b70ec4f06db2851f2e14a1675}
-      \strng{fullhash}{55e26f0a42cea9919c36c655a5d8e63c}
-      \strng{bibnamehash}{069cf06b70ec4f06db2851f2e14a1675}
-      \strng{authorbibnamehash}{069cf06b70ec4f06db2851f2e14a1675}
-      \strng{authornamehash}{069cf06b70ec4f06db2851f2e14a1675}
-      \strng{authorfullhash}{55e26f0a42cea9919c36c655a5d8e63c}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eid}{043511}
-      \field{eprintclass}{astro-ph.CO}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{PRD}
-      \field{month}{2}
-      \field{number}{4}
-      \field{title}{{Unveiling dark matter free streaming at the smallest scales with the high redshift Lyman-alpha forest}}
-      \field{volume}{109}
-      \field{year}{2024}
-      \field{pages}{043511}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevD.109.043511
-      \endverb
-      \verb{eprint}
-      \verb 2309.04533
-      \endverb
-      \keyw{Astrophysics - Cosmology and Nongalactic Astrophysics,High Energy Physics - Phenomenology,High Energy Physics - Theory}
     \endentry
     \entry{UVES}{inproceedings}{}
       \name{author}{7}{}{%
@@ -8665,8 +8757,8 @@
       \strng{authorbibnamehash}{866f37adad917690f72e8d61e6d4d0e6}
       \strng{authornamehash}{866f37adad917690f72e8d61e6d4d0e6}
       \strng{authorfullhash}{866f37adad917690f72e8d61e6d4d0e6}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1226-3192}
@@ -8707,8 +8799,8 @@
       \strng{authorbibnamehash}{2ed44d4ef646b284c32be376cdd43c4d}
       \strng{authornamehash}{2ed44d4ef646b284c32be376cdd43c4d}
       \strng{authorfullhash}{2ed44d4ef646b284c32be376cdd43c4d}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -8743,8 +8835,8 @@
       \strng{authorbibnamehash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
       \strng{authornamehash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
       \strng{authorfullhash}{d3d10afeb0aca69abb2b4e2d135ed4fc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.AI}
@@ -8995,8 +9087,8 @@
       \strng{authorbibnamehash}{9b8c31376f9fc19cd29c0821a0d36bcc}
       \strng{authornamehash}{9b8c31376f9fc19cd29c0821a0d36bcc}
       \strng{authorfullhash}{9b8c31376f9fc19cd29c0821a0d36bcc}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1365-2966}
@@ -9160,8 +9252,8 @@
       \strng{authorbibnamehash}{e9a0d51d58aee7057fcdab31e8520f69}
       \strng{authornamehash}{e9a0d51d58aee7057fcdab31e8520f69}
       \strng{authorfullhash}{a563d0254b11b7179c782db1f3c248a4}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2041-8213}

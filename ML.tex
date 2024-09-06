@@ -8,7 +8,7 @@
 \label{sec:motiv_ml}
 
 
-Fundamentally, a neural network is a directed and acyclic computational graph \cite{LeCun2015}. It represents a set of operations that transform input data input an output. In the simplest case of a fully connected network, the nodes of this graph are represented by neurons. Neurons are organized on successive layers, making the information flow from a layer to the following one. In the most basic scenario, the neurons in a given layer are linearly connected to the neurons in the previous layer. Each neuron then adds a bias to the result of the computation and applies a non-linear function to the result, which determines the activation state of the neuron. Consider the graph shown in Figure \ref{fig:MLP}, where the input neuron has a value $x$ and the output neuron has a value $y(x)$. The intermediate layers have values
+Fundamentally, a neural network is a directed and acyclic computational graph \cite{LeCun2015}. It represents a set of operations that transform input data input into an output. In the simplest case of a fully connected network, the nodes of this graph are represented by neurons. Neurons are organized on successive layers, making the information flow from a layer to the following one. In the most basic scenario, the neurons in a given layer are linearly connected to the neurons in the previous layer. Each neuron then adds a bias to the result of the computation and applies a non-linear function to the result, which determines the activation state of the neuron. Consider the graph shown in Figure \ref{fig:MLP}, where the input neuron has a value $x$ and the output neuron has a value $y(x)$. The intermediate layers have values
 \begin{equation}
     \begin{dcases}
         x_1=\sigma(\alpha_1 x+\beta_1)\\
@@ -170,7 +170,7 @@ The general workflow when working with a deep learning statistical model under s
     \item Using the model on real unseen data to make predictions.
 \end{enumerate}
 
-\subsection{Dataset generation, data augmentation and overfitting.}\label{sec: dataset}
+\subsection{Dataset generation, data augmentation and overfitting}\label{sec: dataset}
 
 In a general real-world setting only a finite dataset is available to us, for instance, obtained from observational procedures.
 That is, we have a set of pairs $\mathcal{D}=\{X_i,Y_i \}_{i=1}^{i=N}$ of $N$ observations from an input-output pairs, distributed according to some distribution $F(X,Y)$:
