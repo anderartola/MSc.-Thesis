@@ -50,7 +50,7 @@ where the density parameters $\Omega$ are related to the physical densities of t
 \begin{equation}\label{eq_ch1:density_params}
     \begin{aligned}&\Omega_\text{M}&&=\quad\frac{8\pi G}{3H_0^2}\rho_{M0}\\&\Omega_\text{R}&&=\quad\frac{8\pi G}{3H_0^2}\rho_{R0}\\&\Omega_{\Lambda}&&=\quad\frac{8\pi G}{3H_0^2}\rho_{\Lambda}\\&\Omega_\text{K}&&=\quad-\frac k{H_0^2}\end{aligned}
 \end{equation}
-In Equation \ref{eq_ch1:density_params}, $\rho_\text{M}$ denotes the matter density of the universe, $\rho_\text{R}$ the radiation density, and $\rho_\Lambda$ the dark energy component. In the following, the values used for the cosmological parameters are $\Omega_m=0.308,\Omega_\Lambda=0.692,h=0.678,\Omega_b=0.0482,\sigma_8=0.829\mathrm{~and~}n=0.961, \Omega_\text{K}\approx 0$, as obtained from CMB measurements by the Planck Collaboration \cite{planck2014}. With the previous cosmological parameters, the matter and cosmological constant are equal when
+In Equation \ref{eq_ch1:density_params}, $\rho_\text{M}$ denotes the matter density of the universe, $\rho_\text{R}$ the radiation density, and $\rho_\Lambda$ the dark energy component. In the following, the values used for the cosmological parameters are $\Omega_m=0.308,\Omega_\Lambda=0.692,h=0.678,\Omega_b=0.0482,\sigma_8=0.829\mathrm{~and~}n=0.961, \Omega_\text{K}\approx 0$, as obtained from CMB measurements by the Planck Collaboration \cite{planck2014}. As we will discuss in Section \ref{sec:DM}, the current cosmological model $\Lambda$CDM include a cold dark matter component that dominates over baryonic matter. With the previous cosmological parameters, the matter and cosmological constant are equal when
 \begin{equation}
     \Omega_\text{M}(1+z)^3=\Omega_\Lambda \implies z\approx 0.3.
 \end{equation}
@@ -60,15 +60,53 @@ In consequence, at the redshift of interest for this work, $z\sim 4-5$, the univ
 
 
 
-\section{Dark matter}
-\subsection{Evidence for the inclusion of dark matter in the cosmological model}
-\subsection{Manifold dark matter candidates}
-\subsection{Constraining mechanisms for dark matter}
 
 
 
 \section{The intergalactic medium}
-More details can be found in the literature \cite{Mo2010}.
+As the name suggests, the intergalactic medium (IGM) is the low density part of the Universe content that permeates the space between halos and galaxies \cite{Mo2010}. The history of the IGM is closely realted to the formation and evolution of galaxies, with multiple feedback mechanism. For instance, IGM gas can aggregate and provide material to be captured by halos, while the radiation emitted by stars and quasars affect the state of the IGM. At sufficiently early times, all baryons were by definitions part of the IGM, so the IGM represents the primordial material for galaxy formation. Since the IGM has very low densities, its properties are typically probed by the absorbtion of light comming from backgorund sources, such as quasars. To give a rough overview of the properties of the IGM, its typical temperature is $\sim 10^4$ K, with peculiar velocities of $\sim 10-100$ km/s and neutral hydrogen column densities of $\sim 10^{12-17}$ cm$^{-2}$.
+
+One of the most relevant proccesses in the IGM is ionisation. Consider the hydrogen recombination process:
+$$p^+ + e^- \xleftrightarrow \ H +\gamma$$
+The ionisation process has two main contribution: collisional ionisation and photo-ionisation.
+
+Collisional ionisation tends to be non-dominant and is due to the collision of a energetic electron with a neutral hydrogen atom. Let $\Gamma_c$ be the collisional rate, so that the number of collisional ionizsation per unit volume per unit time is $\Gamma_c n_{e^-}n_{HI}$. Photo-ionization is the dominant process and arises from an energetic photon colliding with a neutral hydrogen atom. Let $J$ be the flux of ionizing photons, then the number of photo-ionization per volume per time is $\Gamma_i n_{HI}$ where 
+\begin{equation}
+    \Gamma_i=\int_{\nu_\mathrm{t}}^\infty\frac{4\pi J(\nu)}{ch_\mathrm{P}\nu}c\sigma(\nu)\operatorname{d}\nu
+\end{equation}
+and $\nu_t$ is the threshold frequency for ionizing photons (so, the Rydberg energy). If $\alpha$ is the recombination rate, the number of recombinations per time per volume is $\alpha n_{p^+}n_{e^-}$.
+The equilibrium equation is the
+\begin{equation}
+    \alpha n_{p^+}n_{e^-}=\Gamma_i n_{HI}+\Gamma_cn_{e^-}n_{HI}  
+\end{equation}
+And so, the neutral hydrogen number density at equilibrium must be:
+\begin{equation}
+    n_{HI}=\frac{\alpha n_{p^+}n_{e^-}}{\Gamma_c n_{e^-}+\Gamma_i}
+\end{equation}
+Note that here $n_{p^+}$ is the density of free protons. If the gas is highly ionized we can take $n_{e^-}=n_{HI}+n_{p^+}\approx n_{p^+}$ and so, neglecting the collision part:
+\begin{equation}
+    n_{HI}=\frac{\alpha n_{p^+}^2}{\Gamma_i}
+\end{equation}
+In a dynamic universe, the equilibrium holds provided that the reaction rates are sufficiently large compared to the expansion time-scale $H^{-1}$. Since photo-ionization dominates, this can be expressed as 
+\begin{equation}
+    H^{-1}(z)<< \Gamma_i,
+\end{equation}
+where $\Gamma_i$ depends on the ionizing photon flux, and so depends on redshift.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Considering that the IGM is made out of fully ionized hydrogen and helium, we have that:
 
@@ -112,40 +150,13 @@ Now if, the hydrogen density is not homogeneous (that is, $\Delta \neq 1$), $n_H
 \begin{equation}\label{eq: delta and hydrogen density}
     n_H=1.7\cdot 10^{-7}(1+z)^3 \Delta \mathrm{cm}^{-3} .
 \end{equation}
-Since cosmological simulation typically produce as output the baryonic over density $\Delta$, we can use Equation \ref{eq: delta and hydrogen density} to recover the corresponding hydrogren density.
+Since cosmological simulation typically produce as output the baryonic over density $\Delta$, we can use Equation \ref{eq: delta and hydrogen density} to recover the corresponding hydrogren density. The Lyman-$\alpha$ opacity can then be used to estimate the average neutral hydrogen fraction $x_\text{HI}$. The evolution of the observed Lyman-$\alpha$ optical depth indicates that the IGM is highly ionized at $z\lessapprox 5.5$, \cite{Becker_2001_GP_trough}, \cite{Ian_model_inde_reio}. The two main sources of UV ionising photons are belived to be young galaxies and quasars.
 
 
 
 
 
-One of the most relevant proccesses in the IGM is ionisation. Consider the hydrogen recombination process:
-$$p^+ + e^- \xleftrightarrow \ H +\gamma$$
-The ionisation process has two main contribution: collisional ionisation and photo-ionisation.
 
-Collisional ionisation tends to be non-dominant and is due to the collision of a energetic electron with a neutral hydrogen atom. Let $\Gamma_c$ be the collisional rate, so that the number of collisional ionizsation per unit volume per unit time is $\Gamma_c n_{e^-}n_{HI}$.
-
-Photo-ionization is the dominant process and arises from an energetic photon colliding with a neutral hydrogen atom. Let $J$ be the flux of ionizing photons, then the number of photo-ionization per volume per time is $\Gamma_i n_{HI}$ where 
-\begin{equation}
-    \Gamma_i=\int_{\nu_\mathrm{t}}^\infty\frac{4\pi J(\nu)}{ch_\mathrm{P}\nu}c\sigma(\nu)\operatorname{d}\nu
-\end{equation}
-and $\nu_t$ is the threshold frequency for ionizing photons (so, the Rydberg energy). If $\alpha$ is the recombination rate, the number of recombinations per time per volume is $\alpha n_{p^+}n_{e^-}$.
-The equilibrium equation is the
-\begin{equation}
-    \alpha n_{p^+}n_{e^-}=\Gamma_i n_{HI}+\Gamma_cn_{e^-}n_{HI}  
-\end{equation}
-And so, the neutral hydrogen number density at equilibrium must be:
-\begin{equation}
-    n_{HI}=\frac{\alpha n_{p^+}n_{e^-}}{\Gamma_c n_{e^-}+\Gamma_i}
-\end{equation}
-Note that here $n_{p^+}$ is the density of free protons. If the gas is highly ionized we can take $n_{e^-}=n_{HI}+n_{p^+}\approx n_{p^+}$ and so, neglecting the collision part:
-\begin{equation}
-    n_{HI}=\frac{\alpha n_{p^+}^2}{\Gamma_i}
-\end{equation}
-In a dynamic universe, the equilibrium holds provided that the reaction rates are sufficiently large compared to the expansion time-scale $H^{-1}$. Since photo-ionization dominates, this can be expressed as 
-\begin{equation}
-    H^{-1}(z)<< \Gamma_i
-\end{equation}
-Where $\Gamma_i$ depends on the ionizing photon flux, and so depends on redshift.
 
 
 
@@ -184,8 +195,50 @@ If we now take $\sigma_\alpha(\nu)$ to be a Dirac delta centered at the resonanc
 where now $\sigma_\alpha=4.5 \times 10^{-18}$cm$^2$ is to total Lyman-$\alpha$ cross-section.
 Equation \ref{eq_ch1:GP_approx} is known as the Gunn-Peterson approximation for the Lyman-$\alpha$ opacity of the IGM \cite{GunnPeterson}. Equation \ref{eq_ch1:GP_approx} demonstrates that quasar spectra are a useful probe of the intergalactic neutral hydrogen density.
 
-The Gunn-Peterson Lyman-$\alpha$ opacity can then be used to estimate the average neutral hydrogen fraction $x_\text{HI}$. The evolution of the observed Lyman-$\alpha$ optical depth indicates that the IGM is highly ionized at $z\lessapprox 5.5$, \cite{Becker_2001_GP_trough}, \cite{Ian_model_inde_reio}.
 
+
+
+
+A more precise analysis of Equation \ref{eq_ch1:GP_integral} can be done if we do not approximate $\sigma_\alpha$ as a Dirac delta. Instead, we can include the two main broadening effects on the absoprtion corss-section: the natural broadening and the thermal broadening. The natural broadening is a result of quantum processes and generates a Lorentzian profile, while the thermal one is due to the microscopic Doppler effect of thermal motion and generates a Gaussian profile. The resulting combinatin of both the Lorentzian and Gaussian profiles is known as a Voigt profile. It is a non-analytical function with a Gaussian-like shape but heavier tails:
+\begin{equation}\label{eq: Voigt}
+    V(x,y)=\frac{Y}{\pi}\int_{-\infty}^{\infty}\frac{e^{-t^2}}{(x-t)^2+y^2} dt.
+\end{equation}
+The Lyman-$\alpha$ absoprtion cross-section described by the Voigt profile is then
+\begin{equation}
+    \sigma_\alpha(\nu)=\frac{cI_\alpha}{b\sqrt{\pi}} V\left(\frac{x(\nu-\nu_\alpha)}{b\nu_\alpha}, \alpha  \right),
+\end{equation}
+where $b=\frac{\sqrt{2k_BT}}{m_p}$ is the Doppler parameter at temperature $T$, $\nu_\alpha \approx 2.47\times 10^{15}$ Hz is the $Lyman-\alpha$ frequency, $I_\alpha \approx 4.45\times 10^{-18}$ cm$^{-2}$ is the total absoprtion cross-section \cite{Mo2010} and $\alpha$ is the recombination coefficient, which also depends on the temperature.
+The Lyman-$\alpha$ cross-section is then peaked at the resonant frequency, and broadened by the temperature and the recombination rate. Now, consider a sightline of gas absorbing Lyman-$\alpha$ photons. Peculiar bulk velocities $v$ of the gas will add an additional Doppler effect in the cross-section as
+\begin{equation}\label{eq:cross section}
+    \sigma_\alpha(\nu)=\frac{cI_\alpha}{b\sqrt{\pi}} V\left(\frac{x(\nu-\nu_\alpha)}{b\nu_\alpha} +\frac{v}{b}, \alpha  \right).
+\end{equation}
+We can now integrate Equation \ref{eq:cross section} along the sightline to obtain the Lyman-$\alpha$ opcaity $\tau$ as
+\begin{equation}
+    \tau = \int n(t)\sigma_\alpha(\nu_\alpha a(t_0)/a(t)) dt,
+\end{equation}
+where $n$ is the neutral hydrogen density and $t_0$ the emisison time.
+Recalling that the comoving distance $x$ is related to redshift and time as 
+\begin{equation}
+    dx=\frac{c}{H(z)}dz=c(1+z)dt,
+\end{equation}
+we get that the Lyman-$\alpha$ optical depth $\tau$ can be obtained from the neutral hydrogen gas properties along the sightline as follows:
+\begin{equation}\label{eq:lyman opacity}
+    \begin{aligned}\tau(z_0)&=\frac{cI_\alpha}{\sqrt{\pi}}\int dx\frac{n_{\mathrm{H}}[x,z(x)]}{b[x,z(x)][1+z(x)]}\times V\left\{\frac{c[z(x)-z_0]}{b[x,z(x)](1+z_0)}+\frac{v[x,z(x)]}{b[x,z(x)]},\alpha\right\}\end{aligned}
+\end{equation} 
+where $n_\text{H}$ is the neutral hydrogen density, $b=\sqrt{\frac{2k_BT}{m_p}}$, $v$ is the peculiar velocity along the sightline, $m_p$ is the proton mass, $k_B$ is Boltzmann's constant, $\alpha$ is the recombination coefficient, $c$ is the speed of light, $I_\alpha$ is the total cross-section for Lyman-$\alpha$ absorption and $V$ is the Voigt function \cite{Choudhury_2001}. Since the Lyman-$\alpha$ flux $F=e^{-\tau}$ field depends on the properties of the absorbing gas, it contains information about the state of the IGM
+
+
+
+\section{Dark matter}\label{sec:DM}
+
+Many aspects of the large-scale structure of the Universe can be understood by including a \emph{cold dark matter} (CDM) component that represents $\sim 26 \%$ of the critical density \cite{planck2014}. In the standard cosmological model, $\Lambda$CDM, dark matter is an important ingredient for structure formation in the Early Universe. However, its precise nature remains an outstanding problem both in cosmology and particle physics. With more exotic DM candidates, such as primordial black holes, heavily constrained, it is likely that DM consists of some undiscovered elementary particle(s) produced early in the history of the universe \cite{Villanueva_Domingo_2021}. There are multiple pieces of evidence supporting the CDM model, including the rotation curves of spiral galaxies and the kinematics of colliding clusters such as the Bullet cluster \cite{Navarro1996}, \cite{de_Blok_2008}.
+
+On large scales, the predictions of $\Lambda$CDM have been amply tested and are in good agreement with observations \cite{Dalal2002},\cite{VanWaerbeke2004}, \cite{Eisenstein2005}. In contrast, on scales smaller than $\sim 10$ kpc, potential tensions between CDM predictions and observations might exist, including the ``core-cusp" problem related to the DM density profile in halos, or the ``too big to fail" problem linked to the number density of high-luminosity satellites in sub-halos \cite{Moore1994}, \cite{Boylan_Kolchin_2011}, \cite{Weinberg_2015}. Even if the inclusion of complex baryonic feedback processes can alleviate the aforementioned potential discrepancies, alternative models to CDM are worth exploring \cite{Vogelsberger2014}.  
+
+discuss villa plot 
+role on the IGM
+TEST
+free straming length
 \begin{figure}
     \centering
     \includegraphics[scale=0.7]{img/ML/villa_wdm.png}
@@ -193,27 +246,9 @@ The Gunn-Peterson Lyman-$\alpha$ opacity can then be used to estimate the averag
     \label{fig:villasenor_wdm}
 \end{figure}
 
+\subsection{Evidence for the inclusion of dark matter in the cosmological model}
+\subsection{Manifold dark matter candidates}
+WDM and the papers about neutrinos etc.
+\subsection{Constraining mechanisms for dark matter}
+previous efforts, lyman-alpha forest, other techniques for DM being black holes with lensing 
 
-The Lyman-$\alpha$ optical depth $\tau$ can be obtained from the neutral hydrogen gas properties along the sightline as follows:
-\begin{equation}\label{eq:lyman opacity}
-    \begin{aligned}\tau(z_0)&=\frac{cI_\alpha}{\sqrt{\pi}}\int dx\frac{n_{\mathrm{H}}[x,z(x)]}{b[x,z(x)][1+z(x)]}\times V\left\{\frac{c[z(x)-z_0]}{b[x,z(x)](1+z_0)}+\frac{v[x,z(x)]}{b[x,z(x)]},\alpha\right\}\end{aligned}
-\end{equation} 
-where $n_\text{H}$ is the neutral hydrogen density, $b=\sqrt{\frac{2k_BT}{m_p}}$, $v$ is the peculiar velocity along the sightline, $m_p$ is the proton mass, $k_B$ is Boltzmann's constant, $\alpha$ is the recombination coefficient, $c$ is the speed of light, $I_\alpha$ is the total cross-section for Lyman-$\alpha$ absorption and $V$ is the Voigt function \cite{Choudhury_2001}.
-
-
-
-
-discuss villa plot 
-
-ADD notations about overdensityes, relatio nship with omega etc
-
-IGM typical density, temp, temp-density relationship, UVB,phoion equiv. Add part about photoinization equlibrium
-
-Gun Peterson test, and reionization constraints
-contribution to UVB?
-
-ADD IN THE INTRO SOME ABOUT GR AND METRIC
-
-ADD SECTION 2.8.2 OF BOOk
-
-ADD BOLTON ARTICLE WITH UVB AND INFO

@@ -97,7 +97,7 @@ In our work, we use a subset of the \texttt{SHERWOOD} suite described in \cite{s
 The reference run is L20-ref. We will refer to the dataset consisting on this run as \texttt{SHERWOOD} in what follows. We also use two runs with varied thermal parameters L20-ref-hot and L20-ref-cold. The dataset consisting on all 3 runs will be denoted as \texttt{SHERWOOD THERMAL} in this work.
 
 We conclude this section by visually inspecting the \texttt{SHERWOOD} data, to give a broad intuition of how the IGM fields behave. In Figure \ref{fig: 2D density image} we show a 2D neutral hydrogren overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. The simulation size is 20h$^{-1}$cMpc. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect or multiple DM candidates on the density field.
-\begin{figure}[h]
+\begin{figure}[ht]
         \centering
         \includegraphics[width=0.99\textwidth]{img/ML/density_image_wdm.pdf}
         \caption{A 2D neutral hydrogren overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. The simulation size is 20h$^{-1}$cMpc. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect or multiple DM candidates on the density field.}
@@ -152,7 +152,7 @@ with
 \end{equation}
 As can be seen from the Tepper-Garcia approximation, the Voigt function is a modified Gaussian function. Figure \ref{fig: VOIGT APPROX} shows a comparison between the Faddeeva and Tepper-Garcia implementations of the Voigt function for multiple values of the $y$ parameter. Since in our problem typical recombination coefficients are of order $10^{-10}$cm$^3$s$^{-1}$, both implementations are essentially equivalent.
 
-\begin{figure}
+\begin{figure}[ht]
         \centering
         \includegraphics[width=0.8\textwidth]{img/ML/TP-FA.pdf}
         \caption{Comparison of the Voigt function $V(x,y)$ that is included in Equation \ref{eq:lyman opacity} implemented using the relation with the Faddeeva function in Equation \ref{eq:FAD} and the Tepper-Garcia approximation in Equation \ref{eq:Tepper}.}
@@ -200,7 +200,7 @@ where $\tau_{ij}$ is the contribution to optical depth at pixel $i$ by pixel $j$
 
 In Section \ref{sec:sherwood suite} we have presented the \texttt{SHERWOOD THERMAL} simulation suite, which include runs with the same initial seed but different thermal parameters and WDM particle masses. Naturally, challenging such parameters modify the IGM and Lyman-$\alpha$ forest properties. In this section, we explore how the density field and the Lyman-$\alpha$ forest are modified by such parameters within the \texttt{SHERWOOD} suite. In Figure \ref{fig: skewer delta flux} we show an example of this process. The figure shows the $\Delta$ overdensity and flux for 3 different WDM models in ther \texttt{SHERWOOD} suite at $z=4.4$. Note how the CDM skewers shows more fluctuations and pronounced features than the WDM models.
 
-\begin{figure}[h]
+\begin{figure}[ht]
         \centering
             \includegraphics[width=0.99\textwidth]{img/ML/skewer_delta_flux.pdf}
             \caption{The $\Delta$ overdensity and flux for 3 different WDM models in ther \texttt{SHERWOOD} suite at $z=4.4$. Note how the CDM skewers shows more fluctuations and pronounced features than the WDM models.}
@@ -211,7 +211,7 @@ To quantify this in a more robust and precise way, we leverage two summary stati
 For a given set of sightlines, the PDF of a field is the histogram of values for such field on the array obtained concatenating the skewers. We use Numpy's \texttt{numpy.histogram} to compute it and Rice's rule to obtain the number of bins. According to this rule, for $N$ observed values, the number of bins in the histogram should be $\sim 2N^{1/3}$ \cite{Freedman1981}. For data with 2048 pixels, we use 21 bins. Since in this section we are only interested in quantifying the statistics for every model, we refer to Section \ref{sec:recovered statistics} for a discussion of the uncertainty estimation in field statistics.
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
         \centering
             \includegraphics[width=0.8\textwidth]{img/ML/pdf_density_sherwood.pdf}
             \caption{The $\Delta_\tau$ probability distriburion function (PDF) for different WDM models in the \texttt{SHERWOOD} suite.}
@@ -234,7 +234,7 @@ where $\overline{F}$ is the mean value of the field. The power spectrum $P_k$ is
 where $N$ is the number of pixels on a sightline (2048 for \texttt{SHERWOOD}) and $\mathcal{F}$ denotes the (Fast) Fourier Transform operator. Note that, by the Wiener-Khinchin theorem, the power spectrum is just the Fourier transform of the autocorrelation function of the $\delta F$. We compute the PS using Numpy's \texttt{numpy.fft} class. The wavenumber $k$ are binned in log space, with a spacing of $\Delta log(k)=0.1$ in the same manner as \cite{Boera_2019}. The compare the PS from the \texttt{SHERWOOD} data to real observations, we normalise the flux field to match the mean observed flux in \cite{Becker_mean_flux}. We do this by introducing a factor $a$ in the optical depth such that $F=e^{-a\tau}$ matches the mean observed flux at every redshift. Figure \ref{fig: sherwood exact PS} shows the Lyman-$\alpha$ flux power spectrum for different WDM models in the \texttt{SHERWOOD} simulation suite, compared to the observed PS by \cite{Boera_2019}. We begin by observing that WDM models have to effect of supressing structure only in the small scales (high $k$ values). At large scales, all WDM models have a similar power spectrum. Lower masses suppress the PS more than WDM models close to CDM.
 In Figure \ref{fig: sherwood exact PS}, we observe a systematic bias where the Sherwood CDM power spectrum underestimates the observed power spectrum in \cite{Boera_2019}. In the original Sherwood publication \cite{Bolton_2016}, a continuous bias correction factor is applied to the flux in order to forward model the skewers, in addition to matching the observed effective optical depth. This bias correction, which has not been incorporated in this work, could be the origin of the differences observed in the figure. In the rest of the work, we will use the PDF statistic when constraining WDM, so that this PS bias will not be a concern.
 
-\begin{figure}[h]
+\begin{figure}[ht]
         \centering
         \includegraphics[width=0.99\textwidth]{img/ML/PS_sherwood.png}
         \caption{The Lyman-$\alpha$ flux power spectrum for different WDM models in the \texttt{SHERWOOD} simulation suite. For reference, we also plot the observed PS by \cite{Boera_2019}.}
@@ -244,7 +244,7 @@ In Figure \ref{fig: sherwood exact PS}, we observe a systematic bias where the S
 
 Since both the thermal state of the IGM and the WDM particle mass affect the Lyman-$\alpha$ forest, we could ask whether those two effects are degenerate. In fact, a hotter IGM means that the Voigt absoprtion profiles are wider, which smoothes out the forest at small scales, similarly to the effect how low WDM masses. If those two effects are completely degenerate, a smoother Lyman-$\alpha$ forest would not allow discriminating betweent a hotter IGM and a smalleer WDM particle mass. In Figure \ref{fig: PS thermal vs WDM} we show a comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD THERMAL} suite on the Lyman-$\alpha$ flux power spectrum. Note that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range. As a consequence, the Lyman-$\alpha$ forest breaks the degeneracy between thermawl and WDM models.
 
-\begin{figure}[h]
+\begin{figure}[ht]
         \centering
             \includegraphics[width=0.8\textwidth]{img/ML/PS_thermal_vs_wdm.png}
             \caption{A comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD} suite on the Lyman-$\alpha$ flux power spectrum. Note that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range.}

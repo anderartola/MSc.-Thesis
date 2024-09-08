@@ -2,6 +2,8 @@
 % Modifications 
 % were made by Conny Junghans and Jannik Strötgen
 % and Sascha Hunold
+% !TeX TXS-program:bibliography = txs:///biber
+
 
 \documentclass[
      12pt,                    % font size
@@ -49,7 +51,7 @@
 \usepackage{algpseudocode}
 
 \usepackage[minnames=5, maxnames=10, backend=biber,style=numeric,sorting=none]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{ref.bib}
 
 % hyperrefs in the documents
 \usepackage[bookmarks=true,colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black,urlcolor=black]{hyperref} 
@@ -154,11 +156,11 @@ This is the abstract.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{Introduction}
 
-\include{sherwood}
+%\include{sherwood}
 
-\include{ML}
+%\include{ML}
 
-\include{inference}
+%\include{inference}
 
 \include{conclusion}
 

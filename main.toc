@@ -1,50 +1,11 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.4}%
 \contentsline {section}{\numberline {1.1}Cosmological preliminaries}{1}{section.5}%
-\contentsline {section}{\numberline {1.2}Dark matter}{3}{section.18}%
-\contentsline {subsection}{\numberline {1.2.1}Evidence for the inclusion of dark matter in the cosmological model}{3}{subsection.19}%
-\contentsline {subsection}{\numberline {1.2.2}Manifold dark matter candidates}{3}{subsection.20}%
-\contentsline {subsection}{\numberline {1.2.3}Constraining mechanisms for dark matter}{3}{subsection.21}%
-\contentsline {section}{\numberline {1.3}The intergalactic medium}{3}{section.22}%
-\contentsline {chapter}{\numberline {2}Simulating the Lyman-alpha forest}{9}{chapter.43}%
-\contentsline {section}{\numberline {2.1}The Sherwood simulation suite}{9}{section.44}%
-\contentsline {section}{\numberline {2.2}Obtaining mock Lyman-alpha skewers from cosmological simulations}{13}{section.57}%
-\contentsline {section}{\numberline {2.3}Peculiar velocities and optical depth-weighted quantities}{16}{section.65}%
-\contentsline {section}{\numberline {2.4}Statistical analysis of the effect of dark matter in the flux and density fields}{17}{section.68}%
-\contentsline {chapter}{\numberline {3}Deep Learning the Lyman-alpha forest}{24}{chapter.75}%
-\contentsline {section}{\numberline {3.1}Introduction and motivation for the use of Deep Learning}{24}{section.76}%
-\contentsline {section}{\numberline {3.2}Fundamentals of (Bayesian) Neural Networks}{30}{section.87}%
-\contentsline {subsection}{\numberline {3.2.1}Dataset generation, data augmentation and overfitting}{33}{subsection.95}%
-\contentsline {subsection}{\numberline {3.2.2}Deep learning architecture}{36}{subsection.101}%
-\contentsline {subsection}{\numberline {3.2.3}Prediction uncertainty and Bayesian models}{38}{subsection.108}%
-\contentsline {subsection}{\numberline {3.2.4}Hyperparameter selection}{40}{subsection.114}%
-\contentsline {subsection}{\numberline {3.2.5}Loss function and training}{42}{subsection.123}%
-\contentsline {section}{\numberline {3.3}Workflow implementation: Recovering IGM conditions from the Lyman-alpha forest}{45}{section.152}%
-\contentsline {section}{\numberline {3.4}Recovered field statistics and uncertainties}{50}{section.160}%
-\contentsline {subsection}{\numberline {3.4.1}Noisy regions and masking}{51}{subsection.161}%
-\contentsline {subsection}{\numberline {3.4.2}Uncertainty in the recovered statistics}{52}{subsection.163}%
-\contentsline {subsubsection}{\nonumberline Sampling from reconstructed density fields}{52}{subsubsection*.165}%
-\contentsline {subsubsection}{\nonumberline Intrinsic scatter in the recovered PDF}{55}{subsubsection*.171}%
-\contentsline {section}{\numberline {3.5}Model interpretability and limitations}{57}{section.178}%
-\contentsline {subsection}{\numberline {3.5.1}Saliency analysis}{58}{subsection.179}%
-\contentsline {subsection}{\numberline {3.5.2}Covariate shift}{59}{subsection.183}%
-\contentsline {subsection}{\numberline {3.5.3}Extreme covariate shift and malicious data}{61}{subsection.186}%
-\contentsline {subsection}{\numberline {3.5.4}Model pruning}{61}{subsection.188}%
-\contentsline {chapter}{\numberline {4}Constraining Warm Dark Matter at the density level}{64}{chapter.191}%
-\contentsline {section}{\numberline {4.1}Inference pipeline: from Lyman-alpha skewers to WDM constraints}{64}{section.192}%
-\contentsline {section}{\numberline {4.2}Inference testing on Sherwood spectra under realistic observational conditions}{66}{section.195}%
-\contentsline {subsection}{\numberline {4.2.1}Untrained DM models}{66}{subsection.196}%
-\contentsline {subsection}{\numberline {4.2.2}Realistic UVES observational conditions}{68}{subsection.198}%
-\contentsline {section}{\numberline {4.3}Inference on alternative hydrodynamical codes}{70}{section.203}%
-\contentsline {subsection}{\numberline {4.3.1}The Nyx code}{71}{subsection.204}%
-\contentsline {subsection}{\numberline {4.3.2}Inference test on Nyx Lyman-alpha skewers}{74}{subsection.210}%
-\contentsline {section}{\numberline {4.4}WDM constraints from SQUAD DR1 observational data}{76}{section.213}%
-\contentsline {section}{\numberline {4.5}WDM constraints from GHOST observed spectrum}{78}{section.217}%
-\contentsline {section}{\numberline {4.6}Comparison of the inference pipeline against Information Maximising Neural Networks}{80}{section.221}%
-\contentsline {subsection}{\numberline {4.6.1}Information Maximising Neural Networks}{80}{subsection.222}%
-\contentsline {subsection}{\numberline {4.6.2}IMNN training and non-linear summaries}{81}{subsection.225}%
-\contentsline {subsection}{\numberline {4.6.3}Summarising a Gaussian signal}{82}{subsection.228}%
-\contentsline {subsection}{\numberline {4.6.4}IMNN inference results on WDM masses}{86}{subsection.247}%
-\contentsline {chapter}{\numberline {5}Conclusions}{88}{chapter.251}%
-\contentsline {chapter}{\nonumberline Bibliography}{89}{chapter*.252}%
+\contentsline {section}{\numberline {1.2}The intergalactic medium}{3}{section.18}%
+\contentsline {section}{\numberline {1.3}Dark matter}{8}{section.43}%
+\contentsline {subsection}{\numberline {1.3.1}Evidence for the inclusion of dark matter in the cosmological model}{10}{subsection.45}%
+\contentsline {subsection}{\numberline {1.3.2}Manifold dark matter candidates}{10}{subsection.46}%
+\contentsline {subsection}{\numberline {1.3.3}Constraining mechanisms for dark matter}{10}{subsection.47}%
+\contentsline {chapter}{\numberline {2}Conclusions}{11}{chapter.48}%
+\contentsline {chapter}{\nonumberline Bibliography}{12}{chapter*.49}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
