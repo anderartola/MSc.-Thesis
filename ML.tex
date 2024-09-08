@@ -70,7 +70,7 @@ Theorem \ref{th:aprox} can be expanded to include tight bounds on the depth or w
         \label{fig:ML MLP approx}
 \end{figure}
 
-This theoretical result can be easily visualized be understanding how a simple fully connected network (a multilayer perceptron, MLP) can approximate a unit impulse function. It is then enough to recall that a linear combinations of step functions can approximate any integrable function. In \cref{fig:MLP} we show a MLP consisting of an input neuron, and output neuron and a hidden layer with two neurons with a $\tanh{}$ activation function.
+This theoretical result can be easily visualized be understanding how a simple fully connected network (a multilayer perceptron, MLP) can approximate a unit impulse function. It is then enough to recall that a linear combination of step functions can approximate any integrable function. In \cref{fig:MLP} we show a MLP consisting of an input neuron, and output neuron and a hidden layer with two neurons with a $\tanh{}$ activation function.
 From left to right and top to bottom, we set the three biases as $\{0, 20, 0\}$ and the four weights as $\{20, -20, 1/2, 1/2\}$. The resulting MLP then produces the approximation shown in \cref{fig:MLP_approx} of the unit impulse over $[0,1]$. By expanding the number of neurons in the hidden layer we could approximate impulse functions of arbitrary width and height and centered at every arbitrary value. The high degree of expressivity of neural networks makes them particularly suited to parametrically approximate complex non-linear relationships between variables that would otherwise be intractable.
 
 \begin{figure}
