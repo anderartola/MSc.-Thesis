@@ -49,7 +49,7 @@ In this section, we explore the effect of realistic observational conditions, su
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{img/ML/SNR_vs_N.png}
+    \includegraphics[width=0.8\textwidth]{img/ML/SNR_vs_N.png}
     \caption{Inference predictions on WDM3 for different combinations of SNR and number of targets N.}
     \label{fig: inference snr vs n}
 \end{figure}
@@ -60,7 +60,7 @@ We now evaluate the constraining power of the approach developed in this work. F
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{img/ML/inference_cdm_sherwood.png}
+    \includegraphics[width=0.8\textwidth]{img/ML/inference_cdm_sherwood.png}
     \caption{The figure shows 100 different $\chi^2$ fits on 450 \texttt{SHERWOOD} CDM skerwers and the $2\sigma$ constraints distribution as we vary the exact obsserved draw.}
     \label{fig: inference cdm sherwood}
 \end{figure}
@@ -68,7 +68,7 @@ Figure \ref{fig: inference cdm sherwood} shows the distribution of $2\sigma$ lim
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\linewidth]{img/ML/pdf_model_observed.png}
+    \includegraphics[width=0.6\textwidth]{img/ML/pdf_model_observed.png}
     \caption{An example observed $\Delta_\tau$ PDF recovered using 450 skewers and its uncertainties in black, plotted against the model CDM PDF, which is the best-fit model in the $\chi^2$ test. }
     \label{fig: inference cdm PDF}
 \end{figure}
@@ -80,7 +80,7 @@ In Figure \ref{fig: wdm constraints summary} we summarise in black the current $
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\linewidth]{img/ML/limits_summary.png}
+    \includegraphics[width=0.6\textwidth]{img/ML/limits_summary.png}
     \caption{Summary $2\sigma$ relic WDM constraints based on \cite{sherwood_wdm} and this work.}
     \label{fig: wdm constraints summary}
 \end{figure}
@@ -128,7 +128,7 @@ In the rest of this section, we consider 3 Nyx runs at $z=4.4$ using CDM and 20h
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{img/ML/nyx_skewer.png}
+    \includegraphics[width=0.8\textwidth]{img/ML/nyx_skewer.png}
     \caption{A typical Lyman-$\alpha$ skewer obtained from the Nyx runs with $z_\mathrm{re}=6$ at $z=4.4$.}
     \label{fig: nyx skewer}
 \end{figure}
@@ -137,7 +137,7 @@ Since we want to test our inference pipeline, in this test we want to be as agno
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.99\linewidth]{img/ML/TD_plane_nyx_sher.png}
+    \includegraphics[width=0.99\textwidth,trim={5cm 0 3cm 4cm},clip]{img/ML/TD_plane_nyx_sher.png}
     \caption{The 2D distribution of pixels in the temperature-density plane comparing the \texttt{Nyx} CDM run $z_\mathrm{re}=6$ to the \texttt{SHERWOOD THERMAL} CDM runs. The top panel shows the $95\%$ contours in red and black colours. The bottom panel shows the temperature distribution at the mean density value. As can be observed, the \text{Nyx} does not fit any of the runs in our training dataset.}
     \label{fig: nyx TD}
 \end{figure}
@@ -147,7 +147,7 @@ We begin by evaluating the performance of our fiducial neural network with froze
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\linewidth]{img/ML/violin_nyx.png}
+    \includegraphics[width=0.8\textwidth]{img/ML/violin_nyx.png}
     \caption{Violin plot with the $1\sigma$ residues distribution as defined in Equation \ref{eq: residuals}. Values in the range $[0,1]$ correspond to pixels that have been successfully recovered within a $1\sigma$ accuracy. Observer how the models with earlier reionization ($z_\mathrm{re}=7$ and $z_\mathrm{re}=8$), which have lower temperatures, have a higher recovery rate. This is likely because our training data set contains more WDM models close to CDM, and we know that loss WDM masses and low temperate have a degenerate effect on the Lyman-$\alpha$ forest. In general, we note that the $\geq 75 \%$ of the pixels are correctly recovered.}
     \label{fig: nyx violin}
 \end{figure}
@@ -198,7 +198,7 @@ Our SQUAD DR1  data consists of 6 Lyman-$\alpha$ sightlines of size 20h$^{-1}$cM
     All sightlines are 20h$^{-1}$cMpc and centered at $z=4.4$.}
     \label{tab: squad dr1}
    $$ 
-       \begin{array}{p{0.4\linewidth}cc}
+       \begin{array}{p{0.4\textwidth}cc}
           \hline
           \noalign{\smallskip}
           SQUAD DR1 name &  z_{\mathrm{em.}} & \mathrm{SNR} \\ 
@@ -222,7 +222,7 @@ We are then set to predict the recovered density fields for each sightline. Figu
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{img/ML/SQUAD_pred.png}
+    \includegraphics[width=0.7\textwidth]{img/ML/SQUAD_pred.png}
     \caption{All 6 sightlines from the SQUAD DR1 sample in Table \ref{tab: squad dr1}. As can be seen, the noise levels vary, depending on the exposure time to the target. All sightlines are 20h$^{-1}$cMpc and centered at $z=4.4$. We show the recovered density field by our fiducial architecture trained on \texttt{SHERWOOD THERMAL} and retrained with the noise specifications of each target.}
     \label{fig: squad pred}
 \end{figure}
@@ -262,7 +262,7 @@ We also consider a Lyman-$\alpha$ skewer obtained from the GHOST instrument, whi
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\linewidth]{img/ML/ghost_spectrum.png}
+    \includegraphics[width=0.7\textwidth]{img/ML/ghost_spectrum.png}
     \caption{THE GHOST spectrum for J0306+1853 \cite{Wang_2015}. The red curve shows the reconstructed continuum together with $1\sigma$ uncertainties, obtained with a PCA technique based on the spectrum to the right side of the Lyman-$\alpha$ line. Observe the DLA at $\sim 1150$ \textup{~\AA}, which we mask when analysing the Lyman-$\alpha$ forest. }
     \label{fig: ghost spectrum}
 \end{figure}
@@ -289,7 +289,7 @@ In Table \ref{tab: summary constraints} we list the current state-of-the-art $2\
     \caption[]{List of  current state-of-the-art $2\sigma$ lower bounds on $m_{\mathrm{WDM}}$ thermal relics constraints in the literature obtained from the Lyman-$\alpha$ power spectrum. We compare them to the results of this work, obtained doing inference directly at the density field level recovered by our Bayesian neural network. }
        \label{tab: summary constraints}
    $$ 
-       \begin{array}{p{0.4\linewidth}c}
+       \begin{array}{p{0.4\textwidth}c}
           \hline
           \noalign{\smallskip}
           Source &  2\sigma\ m_{\mathrm{WDM}} \mathrm{{\ lower \ bound\ [KeV]}}  \\ 
@@ -374,16 +374,16 @@ For this example, we select fiducial parameters $\theta_f=(\mu=0, \sigma=1)$ and
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\linewidth]{img/ML/normal_plot_training.png}
+    \includegraphics[width=0.95\textwidth]{img/ML/normal_plot_training.png}
     \caption{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on a normal field. The goal is to find summaries to optimally extract information about the mean and variance of the field.}
     \label{fig:IMNN training normal test}
 \end{figure}
 
-To better interpret the network output and to understand its behaviour, we generate samples of the same size with the zero mean but a standard deviation randomly sampled from $(0,12)$. We then compute the exact statistic (the sample standard deviation) and plot it against the second IMNN summary output. The result is Figure \ref{fig:IMNN normal std}. Observe that the exact statistic in the $x$-axis is highly correlated to the network summary in the $y$-axis. Since the relation between the two quantities is clearly bijective, the model has successfully learnt to extract all the possible information for the field covariance. The natural scatter is due to having a simple NN model.
+To better interpret the network output and to understand its behaviour, we generate samples of the same size with the zero mean, but a standard deviation randomly sampled from $(0,12)$. We then compute the exact statistic (the sample standard deviation) and plot it against the second IMNN summary output. The result is Figure \ref{fig:IMNN normal std}. Observe that the exact statistic in the $x$-axis is highly correlated to the network summary in the $y$-axis. Since the relation between the two quantities is clearly bijective, the model has successfully learnt to extract all the possible information for the field covariance. The natural scatter is due to having a simple NN model.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{img/ML/std_vs_model.png}
+    \includegraphics[width=0.75\textwidth]{img/ML/std_vs_model.png}
     \caption{The IMNN summary plotted against the exact sufficient statistic for the standard deviation using multiple samples with $\sigma \in (0,12)$.}
     \label{fig:IMNN normal std}
 \end{figure}
@@ -416,7 +416,7 @@ In Figure \ref{fig:IMNN normal posterior} we show the posterior samples and Gaus
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{img/ML/ABC_posteriors_normal.png}
+    \includegraphics[width=0.75\textwidth]{img/ML/ABC_posteriors_normal.png}
     \caption{Posterior samples and KDE for the ABC rejection algorithm applied to the normal toy model, where we infer the mean and variance of a Gaussian field with flat priors and the summaries output of an IMNN. The dashed vertical lines show the true parameter values.}
     \label{fig:IMNN normal posterior}
 \end{figure}
@@ -436,7 +436,7 @@ We use the \texttt{SHERWOOD} simulation suite with varied WDM mass to train the 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\linewidth]{img/ML/WDM_training_plot.png}
+    \includegraphics[width=0.95\textwidth]{img/ML/WDM_training_plot.png}
     \caption{$|F|$ and $||C-I ||+||C+I||$ as a function of the epoch for the training and validation sets during the training of the IMNN on the \texttt{SHERWOOD} dataset Lyman-$\alpha$ skewers.}
     \label{fig:IMNN  wdm training}
 \end{figure}

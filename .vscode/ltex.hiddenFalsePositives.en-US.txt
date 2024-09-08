@@ -4,3 +4,4 @@
 {"rule":"SENTENCE_WHITESPACE","sentence":"^\\QMirroredStrategy.\\E$"}
 {"rule":"LARGE_NUMBER_OF","sentence":"^\\QNote that this can be interpreted as the necessity of a large number of observed samples when constraining WDM models.\\E$"}
 {"rule":"ADD_AN_ADDITIONAL","sentence":"^\\QPeculiar bulk velocities of the gas will add an additional Doppler effect in the cross-section as\\E$"}
+{"rule":"ABSORB_AT_IN","sentence":"^\\QWe are interested in studying the effect of the Lyman-\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q absorbed at \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
