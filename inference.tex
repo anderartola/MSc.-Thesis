@@ -1,4 +1,4 @@
-\chapter{Constraining Warm Dark Matter at the density level}\label{sec: inference pipeline}
+\chapter{Constraining warm dark matter at the density level}\label{sec: inference pipeline}
 
 
 \section{Inference pipeline: from Lyman-alpha skewers to WDM constraints}\label{sec: inference algo}
@@ -26,7 +26,7 @@ Note that this fitting procedure is non-Bayesian, in the sense that we don't inc
 
 
 
-\section{Inference testing on Sherwood spectra under realistic observational conditions}\label{sec:inference test sherwood}
+\section{Inference testing on simulated Sherwood spectra under realistic observational conditions}\label{sec:inference test sherwood}
 In this first section, we run our inference pipeline from Section \ref{sec: inference pipeline} using a set of toy observed skewers. More precisely, we use our neural network trained on different subsets of the \texttt{SHERWOOD} dataset and use validation \texttt{SHERWOOD} skewers as the ``observed'' skewers.
 
 \subsection{Untrained DM models}
@@ -54,9 +54,9 @@ In this section, we explore the effect of realistic observational conditions, su
     \label{fig: inference snr vs n}
 \end{figure}
 
-A common compromise in an observational program with a fixed observational time is between the number of targets and exposure time per target, which determines the SNR. In Figure \ref{fig: inference snr vs n} we show how prioritising SNR or the number of targets affects to inferred WDM masses on the WDM3 model. In general, we find that increasing the target number leads to slightly tighter confidence regions while increasing the SNR leads to more accurate constraints. Most crucially, observe how the true model mass is, in both cases, recovered within $2\sigma$.
+A common compromise in an observational program with a fixed observational time is between the number of targets and exposure time per target, which determines the SNR. In Figure \ref{fig: inference snr vs n} we show how prioritising SNR or the number of targets affects the inferred WDM masses on the WDM3 model. In general, we find that increasing the target number leads to slightly tighter confidence regions while increasing the SNR leads to more accurate constraints. Most crucially, observe how the true model mass is, in both cases, recovered within $2\sigma$.
 
-We now evaluate the constraining power of the approach developed in this work. For that purpose, we assume CDM to be the true DM model and use our fiducial neural network trained on \texttt{SHERWOOD}. We then draw 450 \texttt{SHERWOOD} CDM skewers, corresponding to 30 observed UVES spectra, post-process them with a resolution of 6 km/s, add random Gaussian noise with $\text{SNR}=30$ and use them to run our inference pipeline from section \ref{sec: inference pipeline}. Since the fit depends on the exact draw of ``observed'' skewers, we repeat this process 100 times with a random draw each time to obtain the $2\sigma$ limit distribution.
+We now evaluate the constraining power of the approach developed in this work. To that end, we assume CDM to be the true DM model and use our fiducial neural network trained on \texttt{SHERWOOD}. We then draw 450 simulated \texttt{SHERWOOD} CDM skewers, corresponding to 30 observed UVES spectra, post-process them with a resolution of 6 km/s, add random Gaussian noise with $\text{SNR}=30$ and use them to run our inference pipeline from Section \ref{sec: inference pipeline}. Since the fit depends on the exact draw of ``observed'' skewers, we repeat this process 100 times with a random draw each time to obtain the $2\sigma$ limit distribution.
 
 \begin{figure}
     \centering
@@ -64,24 +64,24 @@ We now evaluate the constraining power of the approach developed in this work. F
     \caption{The figure shows 100 different $\chi^2$ fits on 450 \texttt{SHERWOOD} CDM skerwers and the $2\sigma$ constraints distribution as we vary the exact obsserved draw.}
     \label{fig: inference cdm sherwood}
 \end{figure}
-Figure \ref{fig: inference cdm sherwood} shows the distribution of $2\sigma$ limits and the mean $2\sigma$ constraint produced by this process. The mean $2\sigma$ constraint that we report for the inverse mass is $\sim 0.12$ KeV$^{-1}$, or $\sim 8.3$ KeV for the WDM model mass.
+Figure \ref{fig: inference cdm sherwood} shows the distribution of $2\sigma$ limits and the mean $2\sigma$ constraint produced by this process. The mean $2\sigma$ constraint that we report for the inverse mass is $\sim 0.12$ KeV$^{-1}$, or $\sim 8.3$ KeV for the WDM model mass. Again, recall that in this section we are using simulated data.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{img/ML/pdf_model_observed.png}
-    \caption{An example observed $\Delta_\tau$ PDF recovered using 450 simualted CDM skewers and its uncertainties in black, plotted against the model CDM PDF, which is the best-fit model in the $\chi^2$ test. }
+    \caption{An example observed $\Delta_\tau$ PDF recovered using 450 simulated CDM skewers and its uncertainties in black, plotted against the model CDM PDF, which is the best-fit model in the $\chi^2$ test. }
     \label{fig: inference cdm PDF}
 \end{figure}
 
 To confirm that the fitting process works as expected, we plot in Figure \ref{fig: inference cdm PDF} the best fit PDF, which corresponds to the CDM model according to Figure \ref{fig: inference cdm sherwood} and an example recovered PDF from a set of 450 observed skewers. Recall that the uncertainties in the recovered PDF include the sample scatter using bootstrapping as well as the machine learning uncertainties, as we have discussed in Section \ref{sec:recovered statistics}. As expected, the observed PDF is within a $2\sigma$ distance of the model CDM PDF.
 
-In Figure \ref{fig: wdm constraints summary} we summarise in black the current $2\sigma$ state-of-the-art constraint in the literature, using a non-ML approach. In orange, we compare the forecasted constraints from the non-machine learning approach in \cite{sherwood_wdm} to our approach in an equivalent dataset to the one used in section \ref{sec:hires test}. Compared to current limits, our forecasted constraint is a twofold improvement, from $\sim 4$ to $\sim 8$ KeV. On the same dataset, we forecast our machine learning technique to match the approach in \cite{sherwood_wdm}. As a significant caveat, note that the work in \cite{sherwood_wdm} is a joint analysis not only on WDM but also on thermal parameters of the IGM, cosmological parameters, etc. The aforementioned paper encompasses a larger number of parameters with a more complex and refined approach than this work.
+In Figure \ref{fig: wdm constraints summary} we summarise in black the current $2\sigma$ state-of-the-art constraint in the literature, using a non-ML approach. In orange, we compare the forecasted constraints from the non-machine learning approach in \cite{sherwood_wdm} to our approach in an equivalent dataset to the one used in Section \ref{sec:hires test}. Compared to current limits, our forecasted constraint is a twofold improvement, from $\sim 4$ to $\sim 8$ KeV. On the same dataset, we forecast our machine learning technique to match the approach in \cite{sherwood_wdm}. As a significant caveat, note that the work in \cite{sherwood_wdm} is a joint analysis not only on WDM but also on thermal parameters of the IGM, cosmological parameters, etc. The aforementioned paper encompasses a larger number of parameters with a more complex and refined approach than this work.
 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{img/ML/limits_summary.png}
-    \caption{Summary $2\sigma$ relic WDM constraints based on \cite{sherwood_wdm} and this work.}
+    \caption{Summary $2\sigma$ relic WDM constraints based on \cite{sherwood_wdm} compared to the forecast obtained in this work. Recall that this forecast has been obtained using simulated data from the \texttt{SHERWOOD} CDM run, as explained in Section \ref{sec:hires test}.}
     \label{fig: wdm constraints summary}
 \end{figure}
 
@@ -151,11 +151,11 @@ We begin by evaluating the performance of our fiducial neural network with froze
     \caption{Violin plot with the $1\sigma$ residues distribution as defined in Equation \ref{eq: residuals}. Values in the range $[-1,1]$ correspond to pixels that have been successfully recovered within a $1\sigma$ accuracy. Observer how the models with earlier reionization ($z_\mathrm{re}=7$ and $z_\mathrm{re}=8$), which have lower temperatures, have a higher recovery rate. This is likely because our training data set contains more WDM models close to CDM, and we know that high WDM masses and low temperate have a degenerate effect on the Lyman-$\alpha$ forest. In general, we note that the $\geq 75 \%$ of the pixels are correctly recovered.}
     \label{fig: nyx violin}
 \end{figure}
-We then run the same inference pipeline for the $z_\mathrm{re}=6$ model as we did in section \ref{sec:hires test} with a single major difference. Since we know that the \texttt{Nyx} runs do not fit any of our thermal models (and the same circumstance will occur when using real observations), we need to utilise the fiducial neural network trained on multiple thermal modes, \texttt{SHERWOOD THERMAL}. Additionally, when fitting the recovered $\Delta_\tau$ PDF to each model PDF, we will have 3 different $\chi^2$ curves for each one of the thermal models $\{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$. To avoid a joint optimization problem and constraining the thermal history on top of the WDM mass (which is out of the scoop of this work, and also unrealistic since we are not using a fine thermal model grid), we will select the thermal model that minimises the $\chi^2$ value, that is
+We then run the same inference pipeline for the $z_\mathrm{re}=6$ model as we did in Section \ref{sec:hires test} with a single major difference. Since we know that the \texttt{Nyx} runs do not fit any of our thermal models (and the same circumstance will occur when using real observations), we need to utilise the fiducial neural network trained on multiple thermal modes, \texttt{SHERWOOD THERMAL}. Additionally, when fitting the recovered $\Delta_\tau$ PDF to each model PDF, we will have 3 different $\chi^2$ curves for each one of the thermal models $\{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$. To avoid a joint optimization problem and constraining the thermal history on top of the WDM mass (which is out of the scoop of this work, and also unrealistic since we are not using a fine thermal model grid), we will select the thermal model that minimises the $\chi^2$ value, that is
 \begin{equation}\label{eq: chi thermal def}
     \mathrm{min}_{t,m} \, \, \chi^2(t,m),
 \end{equation}
-where $t\in \{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$ and $m$ labels the continously interpolatted inverse warm dark matter mass. We compute $\chi^2(t,m)$ and find that the ref and hot model produce similar $\chi^2$ values, while the cold model has $\chi^2 \sim 1000$, as expected from Figure \ref{fig: nyx TD}. Both the ref and hot models produce a similar $2\sigma$ lower bound on the WDM mass: $m_{\mathrm{WDM}} \gtrsim 10$ KeV. Compared to section \ref{sec:hires test}, the results are fairly similar, showcasing the robustness of our approach.
+where $t\in \{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$ and $m$ labels the continously interpolatted inverse warm dark matter mass. We compute $\chi^2(t,m)$ and find that the ref and hot model produce similar $\chi^2$ values, while the cold model has $\chi^2 \sim 1000$, as expected from Figure \ref{fig: nyx TD}. Both the ref and hot models produce a similar $2\sigma$ lower bound on the WDM mass: $m_{\mathrm{WDM}} \gtrsim 10$ KeV. Compared to Section \ref{sec:hires test}, the results are fairly similar, showcasing the robustness of our approach.
 
 
 
@@ -189,7 +189,7 @@ where $t\in \{\mathrm{ref}, \mathrm{hot}, \mathrm{cold} \}$ and $m$ labels the c
 
 
 \section{WDM constraints from SQUAD DR1 observational data}\label{sec:inference squad}
-We begin applying our density recovery and WDM mass inference pipeline to a set of 6 observed quasar sightlines from the SQUAD DR1 survey \cite{Murphy_2018}. Since we are working with observational data, we will always train the model with the complete \texttt{SHERWOOD THERMAL} dataset that includes varied thermal histories and WDM masses. Note that since we are not trying to constrain the thermal history (or other parameters that can affect the Lyman-$\alpha$ forest), we should ideally use a training set that includes as much variation as possible to make sure the neural network can perform in a scenario where we ignore the true thermal history.
+We begin applying our density recovery and WDM mass inference pipeline to a set of 6 observed quasar sightlines from the SQUAD DR1 survey \cite{Murphy_2018}. Since we are working with observational data, we will always train the model with the complete \texttt{SHERWOOD THERMA L} dataset that includes varied thermal histories and WDM masses. Note that since we are not trying to constrain the thermal history (or other parameters that can affect the Lyman-$\alpha$ forest), we should ideally use a training set that includes as much variation as possible to make sure the neural network can perform in a scenario where we ignore the true thermal history.
 
 Our SQUAD DR1  data consists of 6 Lyman-$\alpha$ sightlines of size 20h$^{-1}$cMpc with varied SNR (see Table \ref{tab: squad dr1}), observed with the Ultraviolet and Visual Echelle Spectrograph (UVES) on the European Southern Observatory’s Very Large Telescope, which has an average resolution of $\mathrm{FWHM}\approx 6$km s$^{-1}$. We consider sightlines centred at $z=4.4$ for this specific application. Since each quasar has its own noise level, we retrain the same fiducial architecture with the corresponding noise level before the prediction step.
 
@@ -257,35 +257,49 @@ We now compute the $\chi^2(t,m)$ for all 3 thermal models, which are minimised f
 
 
 \section{WDM constraints from GHOST observed spectrum}\label{sec:inference ghost}
-We also consider a Lyman-$\alpha$ skewer obtained from the GHOST instrument, which corresponds to the ultra-luminous quasar J0306+1853 \cite{Wang_2015} with emission redshift $z=5.363$. For this spectrum, we have a continuum reconstruction in the range $[971, 1210]$ \textup{~\AA} in the emission rest frame, with an average signal-to-noise ratio of $\mathrm{SNR}\approx 150$. We extract skewers of length 20h$^{-1}$cMpc and consider them independent to run the neural network predictions. In total, we obtained 13 such sightlines and discarded the range $\approx [1120,1162]$ \textup{~\AA} that contains a DLA.
+We now consider a Lyman-$\alpha$ skewer obtained from the GHOST instrument, which corresponds to the ultra-luminous quasar J0306+1853 \cite{Wang_2015} with emission redshift $z=5.363$, see Figure \ref{fig: ghost spectrum}. For this spectrum, we have a continuum reconstruction in the range $[971, 1210]$ \textup{~\AA} in the emission rest frame, with a resolution of FWHM$\sim 10$ km/s.
+For this target, we use the Lyman-$\alpha$ forest in the range $4.5\leq z \leq 4.9$. In the case of lower redshifts, the Lyman-$\beta$ forest would be visible, while for higher redshifts, a Damped Lyman-$\alpha$ system (DLA) at $\sim 1150$ \textup{~\AA} occurs.
+We extract skewers of length 20h$^{-1}$cMpc and consider them independent to run the neural network predictions. In total, we obtained 10 such sightlines that now have a variable number of pixels in the range $567-603$. We normalise the flux to the continuum emission obtained with a PCA technique based on the spectrum to the right side of the Lyman-$\alpha$ line. We then follow \cite{Bolton_2016} and apply a continuum correction factor $C_\mathrm{corr}\approx 0.8$ to match the continuum normalisation used in the \texttt{SHERWOOD} suite. Note that this step was not needed when working with the SQUAD DR1 data, since there the flux was normalised to the peaks.
 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{img/ML/ghost_spectrum.png}
-    \caption{THE GHOST spectrum for J0306+1853 \cite{Wang_2015}. The red curve shows the reconstructed continuum together with $1\sigma$ uncertainties, obtained with a PCA technique based on the spectrum to the right side of the Lyman-$\alpha$ line. Observe the DLA at $\sim 1150$ \textup{~\AA}, which we mask when analysing the Lyman-$\alpha$ forest. }
+    \caption{The GHOST spectrum for J0306+1853 \cite{Wang_2015}. The red curve shows the reconstructed continuum together with $1\sigma$ uncertainties, obtained with a PCA technique based on the spectrum to the right side of the Lyman-$\alpha$ line. Observe the DLA at $\sim 1150$ \textup{~\AA}, which we mask when analysing the Lyman-$\alpha$ forest. }
     \label{fig: ghost spectrum}
 \end{figure}
 
+To recover the $\Delta_\tau$ field from such skewers, we retrain our Bayesian neural network with the specifications of each skewer. We use the closest redshift snapshot avaible from the \texttt{SHERWOOD} suite, which are $[4.5, 4.6, 4.7, 4.8, 4.9]$, a resolution of FWHM$=10$ km/s and SNR$=50$. Figure \ref{fig: ghost rec} shows all 10 20h$^{-1}$cMpc portions of the spectrum together with the recovered density field. We split the original spectrum into 10 such skewers of the same length as the ones of the \texttt{Sherwood} dataset, and consider them independent. Note that the skewers have a different number of pixels.
 
 
-Figure \ref{fig: ghost rec} shows an example 20h$^{-1}$cMpc portion of the spectrum together with the recovered density field. We split the original spectrum into 13 such skewers of the same length as the ones of the \texttt{Sherwood} dataset, and consider them independent.
-
-We apply our WDM inference pipeline to the 13 segments of the J0306+1853 spectrum. The $\chi^2$ is minimised for the CDM model within each thermal history, and the best-fit thermal model is the \texttt{SHERWOOD THERMAL} CDM reference run. The corresponding $2\sigma$ constraint on the WDM mass is $m_{\mathrm{WDM}} \gtrsim 4.4$ KeV at $2\sigma$ confidence.
-
-
-
-
-\begin{figure}[h!]
+\begin{figure}
     \centering
-    \includegraphics[width=7.5cm]{img/ML/ghost_recovered.png}
-    \caption{An example 20h$^{-1}$cMpc portion of the J0306+1853 spectrum together with the recovered density field. We split the original spectrum into 13 such skewers of the same length as the ones of the \texttt{SHERWOOD THERMAL} dataset, and consider them independent.}
+    \includegraphics[width=0.8\textwidth]{img/ML/GHOST_reconstructions.png}
+    \caption{All 20h$^{-1}$cMpc portions of the J0306+1853 spectrum together with the recovered density field. We split the original spectrum into 10 such skewers of the same length as the ones of the \texttt{SHERWOOD THERMAL} dataset, and consider them independent. For each skewer, we show the closest redshift available in the \texttt{SHERWOOD} suite on which the neural network has been trained to obtain the predictions.}
     \label{fig: ghost rec}
 \end{figure}
 
+We apply our WDM inference pipeline to the 10 segments of the J0306+1853 spectrum. We would like to now combine the reconstructed $\Delta_\tau$ fields at different redshifts. Since the properties of the fields change with redshift, at each redshift we compute the $\chi^2$ metric between the reconstructed $\Delta_\tau$ fields and the $\texttt{SHERWOOD}$ model PDFs. Then, we compute the mean $\chi^2$ across redshifts and use it as the final $\chi^2$ on which to obtain the WDM particle mass constraints.
 
-In Table \ref{tab: summary constraints} we list the current state-of-the-art $2\sigma$ lower bounds on $m_{\mathrm{WDM}}$ thermal relics constraints in the literature obtained from the Lyman-$\alpha$ power spectrum. The previous efforts are based on a Bayesian inference framework to compare the observed power spectrum with the one obtained from simulated data. In contrast, in our work, we do the inference directly on the non-observable density field level. The resulting bounds produced in our work are comparable to previous efforts but with the advantage of requiring substantially less observational data. For reference, in \cite{sherwood_wdm}, the constraints are obtained from 15 spectra measured along 327h$^{-1}$cMpc,  while our GHOST data consists of 13  20h$^{-1}$cMpc skewers. The tightening of the constraint from the SQUAD DR1 sample to the GHOST sample is also expected since the latter is a larger sample with lower noise.
-\begin{table}[h!]
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ML/GHOST_chi.png}
+    \caption{The final $\chi^2$ metric for our GHOST sample, consisting of 10 skewers in the redshifts $[4.5, 4.6, 4.7, 4.8, 4.9]$. The $\chi^2$ shown is the mean across the $\chi^2$ for each redshift.}
+    \label{fig: ghost chi}
+\end{figure}
+Figure \ref{fig: ghost chi} shows the mean $\chi^2$ across all redshifts $[4.5, 4.6, 4.7, 4.8, 4.9]$ for all three thermal models, as a function of the WDM particle mass. As expected, the $\chi^2$ is minimised for the CDM model within each thermal history, and the best-fit thermal model is the \texttt{SHERWOOD} CDM reference run. The corresponding $2\sigma$ constraint, displayed in blue, on the WDM mass is $m_{\mathrm{WDM}} \gtrsim 3.9$ KeV at $2\sigma$ confidence.
+
+For reference and completeness, in Figure \ref{fig: ghost fit} we show the GHOST reconstructed $\Delta_\tau$ PDF at $z=4.9$ obtained from two 20h$^{-1}$cMpc skewers compared to the best fit \texttt{SHERWOOD} ref CDM at $z=4.9$. We find a good agreement between the model and observed PDF, even when only two skewers are used at each redshift.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/ML/fit_ghost_z49.pdf}
+    \caption{The GHOST reconstructed $\Delta_\tau$ PDF at $z=4.9$ obtained from two 20h$^{-1}$cMpc skewers compared to the best fit \texttt{SHERWOOD} ref CDM at $z=4.9$. We find a good agreement between the model and observed PDF, even when only two skewers are used at each redshift.}
+    \label{fig: ghost fit}
+\end{figure}
+
+In Table \ref{tab: summary constraints} we list the current state-of-the-art $2\sigma$ lower bounds on $m_{\mathrm{WDM}}$ thermal relics constraints in the literature obtained from the Lyman-$\alpha$ power spectrum. The previous efforts are based on a Bayesian inference framework to compare the observed power spectrum with the one obtained from simulated data. In contrast, in our work, we do the inference directly on the non-observable density field level. The resulting bounds produced in our work are comparable to previous efforts but with the advantage of requiring substantially less observational data. For reference, in \cite{sherwood_wdm}, the constraints are obtained from 15 spectra measured along 327h$^{-1}$cMpc, while our GHOST data consists of 10 20h$^{-1}$cMpc skewers, corresponding to 24 times less observed data needed. The tightening of the constraint from the SQUAD DR1 sample to the GHOST sample is also expected since the latter is a larger sample.
+\begin{table}[ht!]
     \caption[]{List of  current state-of-the-art $2\sigma$ lower bounds on $m_{\mathrm{WDM}}$ thermal relics constraints in the literature obtained from the Lyman-$\alpha$ power spectrum. We compare them to the results of this work, obtained doing inference directly at the density field level recovered by our Bayesian neural network. }
        \label{tab: summary constraints}
    $$ 
@@ -302,7 +316,7 @@ In Table \ref{tab: summary constraints} we list the current state-of-the-art $2\
           \hline
           \noalign{\smallskip}
           This work (SQUAD DR1 sample)  & 3.8   \\
-          This work (GHOST spectrum)  & 4.4        \\
+          This work (GHOST spectrum)  & 3.9        \\
 
           \noalign{\smallskip}
           \hline
@@ -327,7 +341,7 @@ In Table \ref{tab: summary constraints} we list the current state-of-the-art $2\
 \section{Comparison of the inference pipeline against Information Maximising Neural Networks}
 
 
-The inference pipeline presented so far in this section is based on a simple $\chi^2$ fit of the $\Delta_\tau$ recovered PDFs from our fiducial NN model. This pipeline relies on a series of contingent choices, most notably the use of the density PDFs as the summary statistics of the fields. In this section, we explore, in an agnostic way, the possibility of using other summaries different from the $\Delta_\tau$ PDFs to perform the inference (note that other summaries such as the density power spectrum, curvature, etc., could potentially be used). More concretely, we will introduce Information Maximising Neural Networks (IMNNs) and use them to perform the inference within a Bayesian framework. We then compare the results of this procedure with the inference pipeline discussed in section \ref{sec: inference pipeline}.
+The inference pipeline presented so far in this section is based on a simple $\chi^2$ fit of the $\Delta_\tau$ recovered PDFs from our fiducial NN model. This pipeline relies on a series of contingent choices, most notably the use of the density PDFs as the summary statistics of the fields. In this section, we explore, in an agnostic way, the possibility of using other summaries different from the $\Delta_\tau$ PDFs to perform the inference (note that other summaries such as the density power spectrum, curvature, etc., could potentially be used). More concretely, we will introduce Information Maximising Neural Networks (IMNNs) and use them to perform the inference within a Bayesian framework. We then compare the results of this procedure with the inference pipeline discussed in Section \ref{sec: inference pipeline}.
 
 \subsection{Information Maximising Neural Networks}
 Information Maximising Neural Networks aim at obtaining optimal summaries of data \cite{Charnock_2018}. Neural networks are used to parametrise these summaries in an agnostic way by maximising the information of the summaries concerning the model parameters of interest.
@@ -461,7 +475,7 @@ In Figure \ref{fig:IMNN wdm training} we show the training progress of the IMNN 
 \end{figure}
 
 In Figure \ref{fig:IMNN WDM posterior}a) we show the summaries of the trained IMNN for all the available \texttt{SHERWOOD} Lyman-$\alpha$ skewers in Fourier space. Observe how the summaries show a large scatter for every model, corresponding to the large simulation variability within each skewer. However, the mean summaries show a clear bijective trend, manifesting that the IMNN has learnt an informative summary. Note that this can be interpreted as the necessity of a large number of observed samples when constraining WDM models.
-We use the IMNN summaries to perform an inference test and obtain a Bayesian posterior as follows. First, we select 50 CDM skewers from the validation dataset and obtain their corresponding summaries by passing them through the IMNN. We now use all validation skewers from the \texttt{SHERWOOD} suite and obtain their summaries. We use the ABC rejection Algorithm \ref{alg:ABC} to generate to posterior distribution in Figure \ref{fig:IMNN WDM posterior}b). The $2\sigma$ limit for the WDM mass is $\sim 3$ KeV. Recall that this is a comparable constraint to the one obtained in section \ref{sec:inference squad}. We interpret this not only as a robustness sign of our original pipeline involving a $\chi^2$ fit the $\Delta_\tau$ PDFs, but most notably as a sign that it optimally extracts the majority of the information of the Lyman-$\alpha$ skewers with respect to the WDM mass parameter.
+We use the IMNN summaries to perform an inference test and obtain a Bayesian posterior as follows. First, we select 50 CDM skewers from the validation dataset and obtain their corresponding summaries by passing them through the IMNN. We now use all validation skewers from the \texttt{SHERWOOD} suite and obtain their summaries. We use the ABC rejection Algorithm \ref{alg:ABC} to generate to posterior distribution in Figure \ref{fig:IMNN WDM posterior}b). The $2\sigma$ limit for the WDM mass is $\sim 3$ KeV. Recall that this is a comparable constraint to the one obtained in Section \ref{sec:inference squad}. We interpret this not only as a robustness sign of our original pipeline involving a $\chi^2$ fit the $\Delta_\tau$ PDFs, but most notably as a sign that it optimally extracts the majority of the information of the Lyman-$\alpha$ skewers with respect to the WDM mass parameter.
 
 
 

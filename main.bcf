@@ -2488,15 +2488,16 @@
     <bcf:citekey order="124" intorder="1">Murphy_2018</bcf:citekey>
     <bcf:citekey order="125" intorder="1">Murphy_2018</bcf:citekey>
     <bcf:citekey order="126" intorder="1">Wang_2015</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">Wang_2015</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">Bolton_2016</bcf:citekey>
     <bcf:citekey order="128" intorder="1">Wang_2015</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">Wang_2015</bcf:citekey>
     <bcf:citekey order="130" intorder="1">sherwood_wdm</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">Villasenor_2023</bcf:citekey>
-    <bcf:citekey order="132" intorder="1">Charnock_2018</bcf:citekey>
-    <bcf:citekey order="133" intorder="1">ly2017tutorialfisherinformation</bcf:citekey>
-    <bcf:citekey order="134" intorder="1">maitra2024parameterestimationlyalphaforest</bcf:citekey>
-    <bcf:citekey order="135" intorder="1">review_ABC</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">sherwood_wdm</bcf:citekey>
+    <bcf:citekey order="132" intorder="1">Villasenor_2023</bcf:citekey>
+    <bcf:citekey order="133" intorder="1">Charnock_2018</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">ly2017tutorialfisherinformation</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">maitra2024parameterestimationlyalphaforest</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">review_ABC</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

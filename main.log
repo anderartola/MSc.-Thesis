@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.26)  13 SEP 2024 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.26)  16 SEP 2024 11:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1440,7 +1440,7 @@ chapter 3.
 
 
 ]
-<img/ML/MLP_unit_impulse.png, id=724, 2007.5pt x 1606.0pt>
+<img/ML/MLP_unit_impulse.png, id=723, 2007.5pt x 1606.0pt>
 File: img/ML/MLP_unit_impulse.png Graphic file (type png)
 <use img/ML/MLP_unit_impulse.png>
 Package pdftex.def Info: img/ML/MLP_unit_impulse.png  used on input line 65.
@@ -1457,8 +1457,11 @@ Package pdftex.def Info: img/ML/HPC.png  used on input line 78.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [30{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img/ML/HPC.png>]
-<img//ML/fig1_color.pdf, id=769, 667.49374pt x 479.7925pt>
+ [30 <./img/ML/HPC.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [31{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<img//ML/fig1_color.pdf, id=782, 667.49374pt x 479.7925pt>
 File: img//ML/fig1_color.pdf Graphic file (type pdf)
 <use img//ML/fig1_color.pdf>
 Package pdftex.def Info: img//ML/fig1_color.pdf  used on input line 102.
@@ -1466,37 +1469,30 @@ Package pdftex.def Info: img//ML/fig1_color.pdf  used on input line 102.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
  [32 <./img//ML/fig1_color.pdf>]
-<img/ML/CAMELS_Images_Update.pdf, id=809, 831.105pt x 1228.59pt>
-File: img/ML/CAMELS_Images_Update.pdf Graphic file (type pdf)
-<use img/ML/CAMELS_Images_Update.pdf>
-Package pdftex.def Info: img/ML/CAMELS_Images_Update.pdf  used on input line 123.
-(pdftex.def)             Requested size: 236.9703pt x 170.20222pt.
-<img/ML/results_fixed_sim512_res512_z0.pdf, id=811, 462.77057pt x 346.43108pt>
-File: img/ML/results_fixed_sim512_res512_z0.pdf Graphic file (type pdf)
-<use img/ML/results_fixed_sim512_res512_z0.pdf>
-Package pdftex.def Info: img/ML/results_fixed_sim512_res512_z0.pdf  used on input line 129.
-(pdftex.def)             Requested size: 201.2003pt x 150.617pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [33]
-<img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf, id=825, 522.34975pt x 487.65256pt>
+<img/ML/CAMELS_Images_Update.pdf, id=817, 831.105pt x 1228.59pt>
+File: img/ML/CAMELS_Images_Update.pdf Graphic file (type pdf)
+<use img/ML/CAMELS_Images_Update.pdf>
+Package pdftex.def Info: img/ML/CAMELS_Images_Update.pdf  used on input line 123.
+(pdftex.def)             Requested size: 236.9703pt x 170.20222pt.
+<img/ML/results_fixed_sim512_res512_z0.pdf, id=819, 462.77057pt x 346.43108pt>
+File: img/ML/results_fixed_sim512_res512_z0.pdf Graphic file (type pdf)
+<use img/ML/results_fixed_sim512_res512_z0.pdf>
+Package pdftex.def Info: img/ML/results_fixed_sim512_res512_z0.pdf  used on input line 129.
+(pdftex.def)             Requested size: 201.2003pt x 150.617pt.
+<img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf, id=824, 522.34975pt x 487.65256pt>
 File: img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf Graphic file (type pdf)
 <use img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf>
 Package pdftex.def Info: img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf  used on input line 139.
 (pdftex.def)             Requested size: 268.27162pt x 250.44814pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7047) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
@@ -1782,6 +1778,11 @@ File: img/ML/inference_no_train.png Graphic file (type png)
 Package pdftex.def Info: img/ML/inference_no_train.png  used on input line 38.
 (pdftex.def)             Requested size: 442.64612pt x 344.28625pt.
 
+Overfull \hbox (15.97891pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.2 Inference testing on simulated Sherwood spectra under realistic observational conditions[]
+ []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [71]
@@ -1793,6 +1794,11 @@ File: img/ML/SNR_vs_N.png Graphic file (type png)
 <use img/ML/SNR_vs_N.png>
 Package pdftex.def Info: img/ML/SNR_vs_N.png  used on input line 52.
 (pdftex.def)             Requested size: 357.69322pt x 223.52374pt.
+
+Overfull \hbox (15.97891pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.2 Inference testing on simulated Sherwood spectra under realistic observational conditions[]
+ []
+
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
@@ -1811,13 +1817,13 @@ Package pdftex.def Info: img/ML/pdf_model_observed.png  used on input line 71.
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [74 <./img/ML/inference_cdm_sherwood.png>]
-<img/ML/limits_summary.png, id=1712, 360.04913pt x 254.10132pt>
+<img/ML/limits_summary.png, id=1711, 360.04913pt x 254.10132pt>
 File: img/ML/limits_summary.png Graphic file (type png)
 <use img/ML/limits_summary.png>
 Package pdftex.def Info: img/ML/limits_summary.png  used on input line 83.
 (pdftex.def)             Requested size: 268.27162pt x 189.33867pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6063) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
@@ -1826,12 +1832,12 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [76 <./img/ML/limits_summary.png>]
-<img/ML/nyx_skewer.png, id=1730, 507.04633pt x 145.69632pt>
+<img/ML/nyx_skewer.png, id=1732, 507.04633pt x 145.69632pt>
 File: img/ML/nyx_skewer.png Graphic file (type png)
 <use img/ML/nyx_skewer.png>
 Package pdftex.def Info: img/ML/nyx_skewer.png  used on input line 131.
 (pdftex.def)             Requested size: 357.69322pt x 102.78261pt.
-<img/ML/TD_plane_nyx_sher.png, id=1732, 1504.62125pt x 1170.3725pt>
+<img/ML/TD_plane_nyx_sher.png, id=1734, 1504.62125pt x 1170.3725pt>
 File: img/ML/TD_plane_nyx_sher.png Graphic file (type png)
 <use img/ML/TD_plane_nyx_sher.png>
 Package pdftex.def Info: img/ML/TD_plane_nyx_sher.png  used on input line 140.
@@ -1846,7 +1852,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [78 <./img/ML/TD_plane_nyx_sher.png>]
-<img/ML/violin_nyx.png, id=1750, 1672.2475pt x 1337.99875pt>
+<img/ML/violin_nyx.png, id=1752, 1672.2475pt x 1337.99875pt>
 File: img/ML/violin_nyx.png Graphic file (type png)
 <use img/ML/violin_nyx.png>
 Package pdftex.def Info: img/ML/violin_nyx.png  used on input line 150.
@@ -1861,7 +1867,7 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [80 <./img/ML/violin_nyx.png>]
-<img/ML/SQUAD_pred.png, id=1773, 434.77632pt x 723.85632pt>
+<img/ML/SQUAD_pred.png, id=1775, 434.77632pt x 723.85632pt>
 File: img/ML/SQUAD_pred.png Graphic file (type png)
 <use img/ML/SQUAD_pred.png>
 Package pdftex.def Info: img/ML/SQUAD_pred.png  used on input line 225.
@@ -1873,81 +1879,69 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [82 <./img/ML/SQUAD_pred.png>]
-<img/ML/squad_chi.png, id=1790, 2341.74875pt x 1672.2475pt>
+<img/ML/squad_chi.png, id=1792, 2341.74875pt x 1672.2475pt>
 File: img/ML/squad_chi.png Graphic file (type png)
 <use img/ML/squad_chi.png>
 Package pdftex.def Info: img/ML/squad_chi.png  used on input line 237.
 (pdftex.def)             Requested size: 236.9703pt x 169.19931pt.
-<img/ML/squad_fit_pdf.png, id=1791, 362.50632pt x 290.23631pt>
+<img/ML/squad_fit_pdf.png, id=1793, 362.50632pt x 290.23631pt>
 File: img/ML/squad_fit_pdf.png Graphic file (type png)
 <use img/ML/squad_fit_pdf.png>
 Package pdftex.def Info: img/ML/squad_fit_pdf.png  used on input line 243.
 (pdftex.def)             Requested size: 201.2003pt x 161.08748pt.
-<img/ML/ghost_spectrum.png, id=1793, 507.04633pt x 145.69632pt>
+<img/ML/ghost_spectrum.png, id=1797, 507.04633pt x 145.69632pt>
 File: img/ML/ghost_spectrum.png Graphic file (type png)
 <use img/ML/ghost_spectrum.png>
-Package pdftex.def Info: img/ML/ghost_spectrum.png  used on input line 265.
+Package pdftex.def Info: img/ML/ghost_spectrum.png  used on input line 267.
 (pdftex.def)             Requested size: 312.979pt x 89.93283pt.
-<img/ML/ghost_recovered.png, id=1797, 290.23631pt x 217.96632pt>
-File: img/ML/ghost_recovered.png Graphic file (type png)
-<use img/ML/ghost_recovered.png>
-Package pdftex.def Info: img/ML/ghost_recovered.png  used on input line 281.
-(pdftex.def)             Requested size: 213.39566pt x 160.2582pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [83 <./img/ML/squad_chi.png> <./img/ML/squad_fit_pdf.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [84 <./img/ML/ghost_spectrum.png> <./img/ML/ghost_recovered.png>]
-Overfull \hbox (8.65715pt too wide) has occurred while \output is active
-[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [85]
-Underfull \vbox (badness 1152) has occurred while \output is active []
+<img/ML/GHOST_reconstructions.png, id=1809, 434.77632pt x 723.85632pt>
+File: img/ML/GHOST_reconstructions.png Graphic file (type png)
+<use img/ML/GHOST_reconstructions.png>
+Package pdftex.def Info: img/ML/GHOST_reconstructions.png  used on input line 277.
+(pdftex.def)             Requested size: 357.69322pt x 595.55415pt.
 
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+LaTeX Warning: Float too large for page by 57.05414pt on input line 280.
 
- [86]
-Overfull \hbox (8.65715pt too wide) has occurred while \output is active
-[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
- []
+<img/ML/GHOST_chi.png, id=1810, 362.50632pt x 290.23631pt>
+File: img/ML/GHOST_chi.png Graphic file (type png)
+<use img/ML/GHOST_chi.png>
+Package pdftex.def Info: img/ML/GHOST_chi.png  used on input line 286.
+(pdftex.def)             Requested size: 357.69322pt x 286.38268pt.
+<img/ML/fit_ghost_z49.pdf, id=1813, 362.55402pt x 290.28403pt>
+File: img/ML/fit_ghost_z49.pdf Graphic file (type pdf)
+<use img/ML/fit_ghost_z49.pdf>
+Package pdftex.def Info: img/ML/fit_ghost_z49.pdf  used on input line 296.
+(pdftex.def)             Requested size: 357.69322pt x 286.40761pt.
 
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [87]
-<img/ML/normal_plot_training.png, id=1852, 651.58632pt x 362.50632pt>
-File: img/ML/normal_plot_training.png Graphic file (type png)
-<use img/ML/normal_plot_training.png>
-Package pdftex.def Info: img/ML/normal_plot_training.png  used on input line 377.
-(pdftex.def)             Requested size: 424.7577pt x 236.31772pt.
-<img/ML/std_vs_model.png, id=1854, 1672.2475pt x 1337.99875pt>
-File: img/ML/std_vs_model.png Graphic file (type png)
-<use img/ML/std_vs_model.png>
-Package pdftex.def Info: img/ML/std_vs_model.png  used on input line 386.
-(pdftex.def)             Requested size: 335.3361pt x 268.30957pt.
-
-Underfull \vbox (badness 2229) has occurred while \output is active []
+Underfull \vbox (badness 1478) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [88 <./img/ML/normal_plot_training.png>]
-<img/ML/ABC_posteriors_normal.png, id=1865, 2007.5pt x 1606.0pt>
-File: img/ML/ABC_posteriors_normal.png Graphic file (type png)
-<use img/ML/ABC_posteriors_normal.png>
-Package pdftex.def Info: img/ML/ABC_posteriors_normal.png  used on input line 419.
-(pdftex.def)             Requested size: 335.3361pt x 268.26231pt.
+ [84 <./img/ML/ghost_spectrum.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
+ [85 <./img/ML/GHOST_reconstructions.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [86 <./img/ML/GHOST_chi.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [87 <./img/ML/fit_ghost_z49.pdf>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [88]
 Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 [] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
  []
@@ -1955,16 +1949,68 @@ Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [89 <./img/ML/std_vs_model.png>]
+ [89]
+<img/ML/normal_plot_training.png, id=1913, 651.58632pt x 362.50632pt>
+File: img/ML/normal_plot_training.png Graphic file (type png)
+<use img/ML/normal_plot_training.png>
+Package pdftex.def Info: img/ML/normal_plot_training.png  used on input line 391.
+(pdftex.def)             Requested size: 424.7577pt x 236.31772pt.
+<img/ML/std_vs_model.png, id=1915, 1672.2475pt x 1337.99875pt>
+File: img/ML/std_vs_model.png Graphic file (type png)
+<use img/ML/std_vs_model.png>
+Package pdftex.def Info: img/ML/std_vs_model.png  used on input line 400.
+(pdftex.def)             Requested size: 335.3361pt x 268.30957pt.
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [90 <./img/ML/ABC_posteriors_normal.png>]
-<img/ML/WDM_training_plot.png, id=1892, 651.58632pt x 362.50632pt>
+ [90]
+<img/ML/ABC_posteriors_normal.png, id=1927, 2007.5pt x 1606.0pt>
+File: img/ML/ABC_posteriors_normal.png Graphic file (type png)
+<use img/ML/ABC_posteriors_normal.png>
+Package pdftex.def Info: img/ML/ABC_posteriors_normal.png  used on input line 433.
+(pdftex.def)             Requested size: 335.3361pt x 268.26231pt.
+
+Underfull \vbox (badness 1142) has occurred while \output is active []
+
+
+Overfull \hbox (8.65715pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [91 <./img/ML/normal_plot_training.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [92 <./img/ML/std_vs_model.png>]
+Overfull \hbox (8.65715pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [93 <./img/ML/ABC_posteriors_normal.png>]
+<img/ML/WDM_training_plot.png, id=1962, 651.58632pt x 362.50632pt>
 File: img/ML/WDM_training_plot.png Graphic file (type png)
 <use img/ML/WDM_training_plot.png>
-Package pdftex.def Info: img/ML/WDM_training_plot.png  used on input line 439.
+Package pdftex.def Info: img/ML/WDM_training_plot.png  used on input line 453.
 (pdftex.def)             Requested size: 424.7577pt x 236.31772pt.
+<img/ML/IMNN_output.png, id=1964, 462.528pt x 346.896pt>
+File: img/ML/IMNN_output.png Graphic file (type png)
+<use img/ML/IMNN_output.png>
+Package pdftex.def Info: img/ML/IMNN_output.png  used on input line 464.
+(pdftex.def)             Requested size: 236.9703pt x 177.72977pt.
+<img/ML/IMNN_ABC_wdm.png, id=1965, 462.528pt x 346.896pt>
+File: img/ML/IMNN_ABC_wdm.png Graphic file (type png)
+<use img/ML/IMNN_ABC_wdm.png>
+Package pdftex.def Info: img/ML/IMNN_ABC_wdm.png  used on input line 470.
+(pdftex.def)             Requested size: 201.2003pt x 150.90382pt.
 
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [94 <./img/ML/WDM_training_plot.png>])
 Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 [] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
  []
@@ -1972,26 +2018,12 @@ Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [91 <./img/ML/WDM_training_plot.png>]
-<img/ML/IMNN_output.png, id=1902, 462.528pt x 346.896pt>
-File: img/ML/IMNN_output.png Graphic file (type png)
-<use img/ML/IMNN_output.png>
-Package pdftex.def Info: img/ML/IMNN_output.png  used on input line 450.
-(pdftex.def)             Requested size: 236.9703pt x 177.72977pt.
-<img/ML/IMNN_ABC_wdm.png, id=1903, 462.528pt x 346.896pt>
-File: img/ML/IMNN_ABC_wdm.png Graphic file (type png)
-<use img/ML/IMNN_ABC_wdm.png>
-Package pdftex.def Info: img/ML/IMNN_ABC_wdm.png  used on input line 456.
-(pdftex.def)             Requested size: 201.2003pt x 150.90382pt.
-)
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [92 <./img/ML/IMNN_output.png> <./img/ML/IMNN_ABC_wdm.png>]
+ [95 <./img/ML/IMNN_output.png> <./img/ML/IMNN_ABC_wdm.png>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 chapter 5.
-[93
+[96
 
 
 
@@ -1999,22 +2031,13 @@ chapter 5.
 ])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [94]
+ [97]
 chapter without number
-[95
+[98
 
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [96]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [97]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [98]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [99]
@@ -2038,7 +2061,16 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
  [105]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [106] (./main.aux (./Introduction.aux) (./sherwood.aux) (./ML.aux) (./inference.aux) (./conclusion.aux))
+ [106]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [107]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [108]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [109] (./main.aux (./Introduction.aux) (./sherwood.aux) (./ML.aux) (./inference.aux) (./conclusion.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `main.hd' has not changed.
@@ -2048,18 +2080,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42526 strings out of 476025
- 859852 string characters out of 5790016
+ 42549 strings out of 476025
+ 860408 string characters out of 5790016
  1870388 words of memory out of 5000000
- 61787 multiletter control sequences out of 15000+600000
+ 61803 multiletter control sequences out of 15000+600000
  542006 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,106p,10641b,2315s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (112 pages, 29935652 bytes).
+Output written on main.pdf (115 pages, 32987694 bytes).
 PDF statistics:
- 2586 PDF objects out of 2984 (max. 8388607)
- 1828 compressed objects within 19 object streams
- 461 named destinations out of 1000 (max. 500000)
- 670 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2655 PDF objects out of 2984 (max. 8388607)
+ 1855 compressed objects within 19 object streams
+ 466 named destinations out of 1000 (max. 500000)
+ 680 words of extra memory for PDF output out of 10000 (max. 10000000)
 
