@@ -1,5 +1,5 @@
 \chapter{Simulating the Lyman-alpha forest} \label{chap:sherwood}
-In Section \ref{chapter:intro} we discussed how the Lyman-$\alpha$ forest is sensitive to multiple physical parameters, such as the low-gas temperatures, velocities, densities, etc. Each possible state of the IGM's ionised low-density gas can lead to different absorption spectra and different forms of the forest. Hydrogen reionisation finishes at $z<5.3$ \cite{Bosman_2022}. Hence, at low redshift, there is no neutral hydrogen to produce absorption features, and we have complete transmission of the Lyman-$\alpha$ flux without features, which means we cannot extract information about the IGM through this process. On the other end, at high redshifts, $z>6$, the hydrogen is not sufficiently ionised and total absorption of the quasar continuum by neutral hydrogen generates long Gunn-Peterson troughs. The Lyman-$\alpha$ forest at $2<z<5$ is then a powerful probe of the state of the IGM at scales and redshifts not accessible by any other observable \cite{Hernquist__1996}. As a consequence, simulations of the Lyman-$\alpha$ forest are typically carried out at said redshift range.
+In Section \ref{chapter:intro} we discussed how the Lyman-$\alpha$ forest is sensitive to multiple physical parameters, such as the low-density gas temperatures, velocities, densities, etc. Each possible state of the IGM's ionised low-density gas can lead to different absorption spectra and different morphologies of the forest. Hydrogen reionisation finishes at $z<5.3$ \cite{Bosman_2022}. Hence, at low redshift, there is no neutral hydrogen to produce absorption features, and we have complete transmission of the continuum flux without features, which means we cannot extract information about the IGM through this process. On the other end, at high redshifts, $z>6$, the hydrogen is not sufficiently ionised and total absorption of the quasar continuum by neutral hydrogen generates long Gunn-Peterson troughs. The Lyman-$\alpha$ forest at $2\lesssim z\lesssim 6$ is then a powerful probe of the state of the IGM at scales and redshifts not accessible by any other observable \cite{Hernquist__1996}. As a consequence, simulations of the Lyman-$\alpha$ forest are typically carried out at said redshift range.
 
 
 
@@ -24,7 +24,7 @@ In this work, we will mainly focus on the \texttt{SHERWOOD} simulation suite\foo
 \begin{equation}
         H=\sum_i\frac{\boldsymbol{p}_i^2}{2 m_i a(t)^2}+\frac12\sum_{ij}\frac{m_im_j \varphi(\boldsymbol{x}_i-\boldsymbol{x}_j)}{a(t)},
 \end{equation}
-where $\boldsymbol{x}$ are the comoving positions, $a$ the scale factor, $\boldsymbol{p}$ the canonical momenta and $m$ the particle masses.
+where $\boldsymbol{x}$ are the comoving positions, $a$ the scale factor, $\boldsymbol{p}$ the canonical momenta, $m$ the particle masses and $\varPhi$ the gravitational interaction potential.
 
 On the other hand, the gas particles are traced using Smoothed Particle Hydrodynamics (SPH). SPH describes a fluid using a finite set of tracer particles that sample the local state of the fluid. Then, smooth quantities are obtained by using a smoothing kernel to interpolate between the tracer's properties. The equation of motion for the SPH particles is then
 \begin{equation}
@@ -38,7 +38,10 @@ Here, $W$ is the smoothing kernel, $h_i$ are smoothing length parameters, $P_i$ 
 
 
 
-Gravity is the driving force for structure formation in the Universe, but its long-range nature makes it challenging to implement efficiently. \texttt{GADGET-2} implements a gravitational algorithm that ensures sufficient spatial adaptability by using a hierarchical multipole expansion. By using a tree-like approach, we can compute the force applied to a particle in complexity $\mathcal{O}(log(N))$ instead of $\mathcal{O}(N)$, where $N$ is the number of particles. The algorithm works by subdividing the space into octants, such that each leaf contains a single particle. The net force on a particle is then calculated by traversing the octree and replacing a distant cell with a single body, thus reducing the number of needed terms. This process is also called the \emph{Barnes-Hut} algorithm, see Figure \ref{fig: 2D Barnes Hut} for an Illustration of it.
+Gravity is the driving force for structure formation in the Universe, but its long-range nature makes it challenging to implement efficiently. \texttt{GADGET-2} implements a gravitational algorithm that ensures sufficient spatial adaptability by using a hierarchical multipole expansion. By using a tree-like approach, we can compute the force applied to a particle in complexity $\mathcal{O}(log(N))$ instead of $\mathcal{O}(N)$, where $N$ is the number of particles. The algorithm works by subdividing the space into octants, such that each leaf contains a single particle. The net force on a particle is then calculated by traversing the octree and replacing a distant cell with a single body, thus reducing the number of needed terms. This process is also called the \emph{Barnes-Hut} algorithm, see Figure \ref{fig: 2D Barnes Hut} for an illustration of it. Finally, the  dynamics of the system are then governed by the interaction potential
+\begin{equation}
+        \nabla^2\varPhi(x)=4\pi G(\rho-\overline{\rho}).
+\end{equation}
 
 \begin{figure}
         \centering
@@ -47,17 +50,14 @@ Gravity is the driving force for structure formation in the Universe, but its lo
         \label{fig: 2D Barnes Hut}     
 \end{figure}
 
-The  dynamics of the system are then governed by the interaction potential
-\begin{equation}
-        \nabla^2\varPhi(x)=4\pi G(\rho-\overline{\rho}).
-\end{equation}
 
-The \texttt{SHERWOOD} suite implements the effect of WDM by suppressing the initial power spectrum as described in \cite{Viel_2005}. In this approach, the effects of the warm dark matter free-streaming length on the matter distribution are described by a transfer function $T(k)$
+
+The \texttt{SHERWOOD} suite implements the effect of WDM by suppressing the initial power spectrum as described in \cite{Viel_2005}. In this approach, the effects of the warm dark matter free-streaming length on the matter distribution are described by a transfer function $T(k)$:
 
 \begin{equation}
         T(k)^2=\frac{P(k)_{\Lambda\mathrm{WDM}}}{P(k)_{\Lambda\mathrm{CDM}}},
 \end{equation}
-where $P(k)$ is the matter power spectrum (see Section \ref{sec:statistics sher} for more details). For pure thermal WDM models, as the ones we consider in this work, the transfer function can be approximated by:
+where $P(k)_{\Lambda\mathrm{C(W)DM}}$ are the matter power spectrum for a WDN and CDM model (see Section \ref{sec:statistics sher} for more details). For pure thermal WDM models, as the ones we consider in this work, the transfer function can be approximated by:
 
 \begin{equation}
         T(k)=[1+(\alpha k)^{2\nu}]^{-5/\nu},
@@ -75,13 +75,13 @@ In our work, we use a subset of the \texttt{SHERWOOD} suite described in \cite{s
 
 \begin{table}
         \caption[]{List of the \texttt{SHERWOOD} runs used in the work.
-        All box sizes are 20h$^{-1}$. The table shows the mean temperature of the IGM, $T_0$, at redshift $z=4.4$, the redshift of reionisation, and the set of WDM masses included. We work with the inverse WDM mass and consider 0 to correspond to the CDM reference run.}
+        All box sizes are 20h$^{-1}$cMpc. The table shows the mean temperature of the IGM, $T_0$, at redshift $z=4.4$, the redshift of reionisation, and the set of WDM masses included. We work with the inverse WDM mass and consider 0 KeV$^{-1}$ to correspond to the CDM reference run.}
            \label{tab: Sherwood}
        $$ 
            \begin{array}{p{0.3\linewidth}ccc}
               \hline
               \noalign{\smallskip}
-              Run      &  T_0 {[\mathrm{K}]}\ (z=4.4) &z_\mathrm{rei}^\mathrm{end}& \mathrm{WDM} [\mathrm{KeV}^{-1}] \\ 
+              Run      &  T_0 {[\mathrm{K}]}\ (z=4.4) &z_\mathrm{rei}^\mathrm{end}& \mathrm{WDM}\ [\mathrm{KeV}^{-1}] \\ 
               \noalign{\smallskip}
               \hline
               \noalign{\smallskip}
@@ -93,9 +93,9 @@ In our work, we use a subset of the \texttt{SHERWOOD} suite described in \cite{s
            \end{array}
        $$ 
      \end{table}
-The reference run is L20-ref. We will refer to the dataset consisting of this run as \texttt{SHERWOOD} in what follows. We also use two runs with varied thermal parameters L20-ref-hot and L20-ref-cold. The dataset consisting of all 3 runs will be denoted as \texttt{SHERWOOD THERMAL} in this work.
+The reference run is L20-ref. We will refer to the dataset consisting of this run as \texttt{SHERWOOD} in what follows. We also use two runs with varied thermal parameters L20-ref-hot and L20-ref-cold. The dataset consisting of all three runs will be denoted as \texttt{SHERWOOD THERMAL} in this work. The variations in the thermal parameter $T_0$ for the hot and cold runs in the \texttt{SHERWOOD THERMAL} suite are achieved by scaling the photo-heating rates, see \cite{Gaikwad_2021} for more details. Note that this approach is not physical, since one would ideally want to modify the properties of the ionising sources (luminosity function,...).
 
-We conclude this section by visually inspecting the \texttt{SHERWOOD} data, to give a broad intuition of how the IGM fields behave. In Figure \ref{fig: 2D density image} we show a 2D neutral hydrogen overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. The simulation size is 20h$^{-1}$cMpc. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect of multiple DM candidates on the density field.
+We conclude this section by visually inspecting the \texttt{SHERWOOD} data, to give a broad intuition of how the IGM fields behave. In Figure \ref{fig: 2D density image} we show a 2D neutral hydrogen overdensity field generated using the \texttt{SHERWOOD} suite at $z=4.2$ for multiple WDM models. On the horizontal axis, we linearly interpolate the density field for the WDM models to show the effect of multiple DM candidates on the density field.
 \begin{figure}[ht]
         \centering
         \includegraphics[width=0.99\textwidth]{img/ML/density_image_wdm.pdf}
@@ -122,7 +122,7 @@ In Figure \ref{fig: 1D density skewer} we show a  1D neutral hydrogen overdensit
 \section{Obtaining mock Lyman-alpha skewers from cosmological simulations}
 The \texttt{SHERWOOD} simulation suite described in Section \ref{sec:sherwood suite} generates as output the low-density IGM's overdensity, hydrogen neutral fraction, sightline velocity, temperature and the redshift of every pixel. For each run, those fields form a $(5000, 2048)$ array for a total of 5000 sightlines per box. From such data, we can use Equation \ref{eq:lyman opacity} to compute the simulated Lyman-$\alpha$ sightlines. We implement the code in Python and discretise the integral in Equation \ref{eq:lyman opacity} to sum over all 2048 pixels in the skewer. We use the values for the recombination coefficient in \cite{Luki__2014}.
 
-In our code, we consider two different implementations for the Voigt profile, which is non-analytical. Firstly, we exploit the relationship with the Faddeeva function. The Faddeeva function is implemented in Scipy under \texttt{scipy.special.wofz} for optimized computation. Let us prove a relationship between the Faddeeva function and the Voigt function. Let $z=x+iy$.
+In our code, we consider two different implementations for the Voigt profile, which is non-analytical. Firstly, we exploit the relationship with the Faddeeva function. The Faddeeva function is implemented in \texttt{Scipy} under \texttt{scipy.special.wofz} for optimized computation. Let us prove a relationship between the Faddeeva function and the Voigt function. Let $z=x+iy$.
 The Faddeeva function $w(z)$ is defined as
 
 \begin{equation}
@@ -149,36 +149,36 @@ with
 \begin{equation}
         K(x)=\frac1{2x^2}\left[(4x^2+3)\left(x^2+1\right)\mathrm{e}^{-x^2}-\frac1{x^2}(2x^2+3)\sinh x^2\right].
 \end{equation}
-As can be seen from the Tepper-Garcia approximation, the Voigt function is a modified Gaussian function. Figure \ref{fig: VOIGT APPROX} shows a comparison between the Faddeeva and Tepper-Garcia implementations of the Voigt function for multiple values of the $y$ parameter. Since in our problem, typical recombination coefficients are of order $10^{-10}$cm$^3$s$^{-1}$, both implementations are essentially equivalent.
+As can be seen from the Tepper-Garcia approximation, the Voigt function is a modified Gaussian function. Figure \ref{fig: VOIGT APPROX} shows a comparison between the Faddeeva and Tepper-Garcia implementations of the Voigt function for multiple values of the $y$ parameter. Since in our problem, typical recombination coefficients are of order $10^{-10}$cm$^3$s$^{-1}$, both implementations are essentially equivalent. Note that the implementation using the Faddeeva function is exact, in the sense that Equation \ref{eq:FAD} holds. We use the Faddeeva function since it is already efficiently implemented in $\texttt{Scipy}$.
 
 \begin{figure}[ht]
         \centering
         \includegraphics[width=0.8\textwidth]{img/ML/TP-FA.pdf}
-        \caption{Comparison of the Voigt function $V(x,y)$ that is included in Equation \ref{eq:lyman opacity} implemented using the relation with the Faddeeva function in Equation \ref{eq:FAD} and the Tepper-Garcia approximation in Equation \ref{eq:Tepper}.}
+        \caption{Comparison of the Voigt function $V(x,y)$ that is included in Equation \ref{eq:lyman opacity} implemented using the relation with the Faddeeva function in Equation \ref{eq:FAD} (which is exact) and the Tepper-Garcia approximation in Equation \ref{eq:Tepper}.}
         \label{fig: VOIGT APPROX}     
 \end{figure}
 
-An important aspect when simulating Lyman-$\alpha$ sightlines is boundary conditions. In fact, the simulation boxes in the \texttt{SHERWOOD} suite and other cosmological codes implement periodic boundary conditions. This means that a physical quantity $Q$ satisfies
+An important aspect when simulating Lyman-$\alpha$ sightlines are boundary conditions. In fact, the simulation boxes in the \texttt{SHERWOOD} suite and other cosmological codes implement periodic boundary conditions. This means that a physical quantity $Q$ satisfies
 \begin{eqnarray}
         Q(0)=Q(L),
 \end{eqnarray}
 where $L$ is the length of the simulation box. This condition also applies to the density field, temperature field, etc. Periodic boundary conditions allow the implementation of relevant physical conditions, such as conserved quantities, in the simulation volume. As a consequence, we would like the optical depth fields generated using the \texttt{SHERWOOD} data to also implement periodic boundary conditions. This will be the case if every pixel in the sightline has the approximate same environment. To achieve this in a computationally efficient manner, observe that in Equation \ref{eq:lyman opacity}, for $\alpha\to 0$, the amplitude of the Voigt profile is set by $b(T)\sim 10$ km/s for $T\sim 10^4$. Since the pixel scale is $\sim 1$ km/s, the Voigt profiles only influence nearby pixels. As such, let us fix a pixel $i$ on which we wish to calculate the optical depth. Then, we iterate over all pixels $j$ and evaluate the condition $|z[i]-z[j]| < L/2$. If this condition is true, we use Equation \ref{eq:lyman opacity} to compute the contribution. If the condition is false, then we use the pixel at $z[j]\pm L/2$ that is closer to $z[i]$. This allows us to include (approximately) periodic boundary conditions with a complexity $\mathcal{O}(N^2)$ where $N$ is the number of pixels. For reference, see the optical depth field in Figure \ref{fig: skewer sherwood}, where we have applied this procedure.
 
+Finally, to compare the simulated Lyman-$\alpha$ flux skewers with real observations, we must address the normalisation of the flux field. This is necessary since the ionisation rate is not perfectly known and calibrated in the \texttt{SHERWOOD} suite. We normalise the flux field obtained from the \texttt{SHERWOOD} runs to match the mean observed flux in \cite{Becker_mean_flux}. We do this by introducing a factor $a$ in the optical depth such that $F=e^{-a\tau}$ matches the mean observed flux at every redshift.
+
 
 
 \section{Peculiar velocities and optical depth-weighted quantities}\label{sec: optical depth weighted}
-Equation \ref{eq:lyman opacity} relates properties of the low-density hydrogen in the IGM to the Lyman-$\alpha$ flux field. Each density pixel contributes to the optical depth at any fixed pixel by a quantity proportional to its density and to the absorption profile. However, note that the velocity contributes by shifting the centre of the absorption profile. As a consequence, the small-scale peculiar velocities of the absorbers due to structure formation wash out the correlation between the overdensity $\Delta$ and $\tau$ fields. A second undesirable effect of the velocity is that it can create potential degeneracies between the gas properties and the flux. In fact, the effect of the velocity field can be captured by considering a shifted density field generating the same flux field. These two problems mean that it is not feasible to recover the real $\Delta$ from the flux. To better correlate the flux features with the density and temperature features and neglect the effects of peculiar velocities, it is common in the literature to work with optical depth-weighted quantities \cite{_oltinsk__2021}. Such quantities allow for better identification of the gas associated with a certain absorption profile. Optical depth quantities are highly correlated to real quantities and act as a proxy for the latter \cite{Schaye1999}.
-
-We define the optical depth-weighted overdensity field, $\Delta_\tau$, as
+Equation \ref{eq:lyman opacity} relates properties of the low-density hydrogen in the IGM to the Lyman-$\alpha$ flux field. Each density pixel contributes to the optical depth at any fixed pixel by a quantity proportional to its density and to the absorption profile. However, note that the velocity contributes by shifting the centre of the absorption profile. As a consequence, the small-scale peculiar velocities of the absorbers due to structure formation wash out the correlation between the overdensity $\Delta$ and $\tau$ fields. A second undesirable effect of the velocity is that it can create potential degeneracies between the gas properties and the flux. In fact, the effect of the velocity field can be captured by considering a shifted density field generating the same flux field. These two problems mean that it is not feasible to recover the real $\Delta$ from the flux. To better correlate the flux features with the density and temperature features and neglect the effects of peculiar velocities, it is common in the literature to work with optical depth-weighted quantities \cite{_oltinsk__2021}, \cite{Schaye1999}. Such quantities allow for better identification of the gas associated with a certain absorption profile. Optical depth quantities are highly correlated to real quantities and act as a proxy for the latter \cite{Schaye1999}. We define the optical depth-weighted overdensity field, $\Delta_\tau$, as
 \begin{equation}\label{eq: OD weighted}
         \Delta_{\tau,i}=\sum_j \tau_{ij} \Delta_j /\tau_i,
 \end{equation}
-where $\tau_{ij}$ is the contribution to optical depth at pixel $i$ by pixel $j$. Equation \ref{eq: OD weighted} can also be used to compute the optical depth-weighted temperature. Figure \ref{fig: skewer sherwood} shows a 20h$^{-1}$cMpc \texttt{SHERWOOD} CDM skewer at $z=4.4$ with 2048 pixels. We show the hydrogen overdensity $\Delta$, temperature $T$ and velocity along the sightline $V$, Lyman-$\alpha$ optical depth and flux computed according to Equation \ref{eq:lyman opacity}. We also show the optical depth-weighted overdensity and temperature, computed according to Equation \ref{eq: OD weighted}. Note how optical depth-weighted fields smooth out fluctuations in the small scales since Equation \ref{eq: OD weighted} is essentially a weighted convolution. The main effect of optical depth-weighted fields is that they are highly correlated to the flux field, with a limited shifting effect due to local velocities. For instance, consider the optical depth peak at $\sim$880 km/s, which is associated with a real $\Delta$ peak at $\sim$840 km/s due to peculiar velocity effects. However, the $\Delta_\tau$ peak closely follows to optical depth peak.
+where $\tau_{ij}$ is the contribution to optical depth at pixel $i$ by pixel $j$. Equation \ref{eq: OD weighted} can also be used in an analogous manner to compute the optical depth-weighted temperature. Figure \ref{fig: skewer sherwood} shows a 20h$^{-1}$cMpc \texttt{SHERWOOD} CDM skewer at $z=4.4$ with 2048 pixels. We show the hydrogen overdensity $\Delta$, temperature $T$ and velocity along the sightline $V$, Lyman-$\alpha$ optical depth and flux computed according to Equation \ref{eq:lyman opacity}. We also show the optical depth-weighted overdensity and temperature, computed according to Equation \ref{eq: OD weighted}. Note how optical depth-weighted fields smooth out fluctuations in the small scales since Equation \ref{eq: OD weighted} is essentially a weighted convolution. The main effect of optical depth-weighted fields is that they are highly correlated to the flux field, with a limited shifting effect due to local velocities. For instance, consider the optical depth peak at $\sim$880 km/s, which is associated with a real $\Delta$ peak at $\sim$840 km/s due to peculiar velocity effects. However, the $\Delta_\tau$ peak closely follows to optical depth peak.
 
 \begin{figure}
         \centering
         \includegraphics[width=0.95\textwidth]{img/ML/Skewer_OD_quantities.pdf}
-        \caption{A 20h$^{-1}$cMpc \texttt{SHERWOOD} CDM skewer at $z=4.4$ with 2048 pixels. We show the hydrogen overdensity $\Delta$, temperature $T$ and velocity along the sightline $V$, Lyman-$\alpha$ optical depth and flux computed according to \ref{eq:lyman opacity}. We also show the optical depth-weighted overdensity and temperature, computed according to \ref{eq: OD weighted}}
+        \caption{A 20h$^{-1}$cMpc \texttt{SHERWOOD} CDM skewer at $z=4.4$ with 2048 pixels. We show the hydrogen overdensity $\Delta$, temperature $T$ and velocity along the sightline $V$, Lyman-$\alpha$ optical depth and flux computed according to \ref{eq:lyman opacity}. We also show the optical depth-weighted overdensity and temperature, computed according to Equation \ref{eq: OD weighted}.}
         \label{fig: skewer sherwood}     
 \end{figure}
 
@@ -194,10 +194,10 @@ where $\tau_{ij}$ is the contribution to optical depth at pixel $i$ by pixel $j$
 
 
 
-\section{Statistical analysis of the effect of dark matter in the flux and density fields}\label{sec:statistics sher}
+\section{Statistical analysis of the effect of WMD in the Lyman-alpha forest and density fields}\label{sec:statistics sher}
 
 
-In Section \ref{sec:sherwood suite} we have presented the \texttt{SHERWOOD THERMAL} simulation suite, which includes runs with the same initial seed but different thermal parameters and WDM particle masses. Naturally, changing such parameters modifies the IGM and Lyman-$\alpha$ forest properties. In this section, we explore how the density field and the Lyman-$\alpha$ forest are modified by such parameters within the \texttt{SHERWOOD} suite. In Figure \ref{fig: skewer delta flux} we show an example of this process. The figure shows the $\Delta$ overdensity and flux for 3 different WDM models in the \texttt{SHERWOOD} suite at $z=4.4$. Note how the CDM skewers show more fluctuations and pronounced features than the WDM models.
+In Section \ref{sec:sherwood suite} we have presented the \texttt{SHERWOOD THERMAL} simulation suite, which includes runs with the same initial seed but different thermal parameters and WDM particle masses. Naturally, changing such parameters modifies the IGM and Lyman-$\alpha$ forest properties. In this section, we explore how the density field and the Lyman-$\alpha$ forest are modified by such parameters within the Sherwood simulations. In Figure \ref{fig: skewer delta flux} we show an example of this process. The figure shows the $\Delta$ overdensity and flux for three different WDM models in the \texttt{SHERWOOD} suite at $z=4.4$. Note how the CDM skewers show more fluctuations and pronounced features than the WDM models.
 
 \begin{figure}[ht]
         \centering
@@ -220,7 +220,7 @@ For a given set of sightlines, the PDF of a field is the histogram of values for
 
 In Figure \ref{fig: exact density PDF} we show the $\Delta_\tau$ PDF at $z=4.4$ for different WDM particle masses in the \texttt{SHERWOOD} suite. Note how low mass models tend to have a more localised distribution near the mean, which reflects the observation from Figure \ref{fig: skewer delta flux} that such models have smoother fields. In contrast, the CDM model has a greater variance, reflecting the fact that more pronounced features occur, which leads to more extreme values for the fields. 
 
-The PDF quantifies how often a certain value occurs, but not the correlations in the field. To study the oscillations in the fields it is common in the literature to use the Power Spectrum (PS) \cite{McDonald_2006,Ravoux_2023}. The PS is defined in Fourier space of the relevant field, up to a normalisation factor. Here, we focus on the Lyman-$\alpha$ flux field, $F$, since it has been measured from multiple quasar samples. Since we are only interested in how $F$ oscillates, we consider the flux contrast
+The PDF quantifies how often a certain value occurs, but not the correlations in the field. To study the oscillations in the fields it is common in the literature to use the Power Spectrum (PS) \cite{McDonald_2006,Ravoux_2023}. The PS is defined in the Fourier space of the relevant field, up to a normalisation factor. Here, we focus on the Lyman-$\alpha$ flux field, $F$, since it has been measured from multiple quasar samples. Since we are only interested in how $F$ oscillates, we consider the flux contrast
 
 \begin{equation}\label{eq: flux contrast}
         \delta F=\frac{F}{\overline{F}} -1,
@@ -230,8 +230,8 @@ where $\overline{F}$ is the mean value of the field. The power spectrum $P_k$ is
 \begin{equation}\label{eq: PS def}
         P_k = \left| \mathcal{F}(\frac{1}{N} F)  \right| ^2,
 \end{equation}
-where $N$ is the number of pixels on a sightline (2048 for \texttt{SHERWOOD}) and $\mathcal{F}$ denotes the (Fast) Fourier Transform operator. Note that, by the Wiener-Khinchin theorem, the power spectrum is just the Fourier transform of the autocorrelation function of the $\delta F$. We compute the PS using Numpy's \texttt{numpy.fft} class. The wavenumber $k$ is binned in log space, with a spacing of $\Delta log(k)=0.1$ in the same manner as \cite{Boera_2019}. To compare the PS from the \texttt{SHERWOOD} data to real observations, we normalise the flux field to match the mean observed flux in \cite{Becker_mean_flux}. We do this by introducing a factor $a$ in the optical depth such that $F=e^{-a\tau}$ matches the mean observed flux at every redshift. Figure \ref{fig: sherwood exact PS} shows the Lyman-$\alpha$ flux power spectrum for different WDM models in the \texttt{SHERWOOD} simulation suite, compared to the observed PS by \cite{Boera_2019}. We begin by observing that WDM models have the effect of suppressing structure only in the small scales (high $k$ values). At large scales, all WDM models have a similar power spectrum. Lower masses suppress the PS more than WDM models close to CDM.
-In Figure \ref{fig: sherwood exact PS}, we observe a systematic bias where the Sherwood CDM power spectrum underestimates the observed power spectrum in \cite{Boera_2019}. In the original Sherwood publication \cite{Bolton_2016}, a continuous bias correction factor is applied to the flux in order to forward model the skewers, in addition to matching the observed effective optical depth. This bias correction, which has not been incorporated in this work, could be the origin of the differences observed in the figure. In the rest of the work, we will use the PDF statistic when constraining WDM, so that this PS bias will not be a concern.
+where $N$ is the number of pixels on a sightline (2048 for \texttt{SHERWOOD}) and $\mathcal{F}$ denotes the (Fast) Fourier Transform operator. Note that, by the Wiener-Khinchin theorem, the power spectrum is just the Fourier transform of the autocorrelation function of the $\delta F$. We compute the PS using Numpy's \texttt{numpy.fft} class. The wavenumber $k$ is binned in log space, with a spacing of $\Delta log(k)=0.1$ in the same manner as \cite{Boera_2019}. Figure \ref{fig: sherwood exact PS} shows the Lyman-$\alpha$ flux power spectrum for different WDM models in the \texttt{SHERWOOD} simulation suite, compared to the observed PS by \cite{Boera_2019}. We begin by observing that WDM models have the effect of suppressing structure only in the small scales (high $k$ values). At large scales, all WDM models have a similar power spectrum. Lower masses suppress the PS more than WDM models close to CDM.
+In Figure \ref{fig: sherwood exact PS}, we observe a systematic bias where the Sherwood CDM power spectrum underestimates the observed power spectrum in \cite{Boera_2019}. In the original Sherwood publication \cite{Bolton_2016}, attention is drawn to a systemic bias in the continuum level produced by the \texttt{SHERWOOD} runs. As redshift increases, the authors note how the simulations recover the true continuum level of $F=1$ less frequently and suggest a continuous bias correction factor to be applied to the flux in order to forward model the skewers. This bias correction is estimated to be $\sim 0.8$ for $z>4$ and has not been incorporated in Figure \ref{fig: sherwood exact PS}. It could then be the origin of the differences observed in the figure.
 
 \begin{figure}[ht]
         \centering
@@ -241,12 +241,12 @@ In Figure \ref{fig: sherwood exact PS}, we observe a systematic bias where the S
 \end{figure}
 
 
-Since both the thermal state of the IGM and the WDM particle mass affect the Lyman-$\alpha$ forest, we could ask whether those two effects are degenerate. In fact, a hotter IGM means that the Voigt absorption profiles are wider, which smoothes out the forest at small scales, similar to the effect how low WDM masses. If those two effects are completely degenerate, a smoother Lyman-$\alpha$ forest would not allow discriminating between a hotter IGM and a smaller WDM particle mass. In Figure \ref{fig: PS thermal vs WDM} we show a comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD THERMAL} suite on the Lyman-$\alpha$ flux power spectrum. Note that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range. As a consequence, the Lyman-$\alpha$ forest breaks the degeneracy between thermal and WDM models.
+Since both the thermal state of the IGM and the WDM particle mass affect the Lyman-$\alpha$ forest, we could ask whether those two effects are degenerate. In fact, a hotter IGM means that the Voigt absorption profiles are wider, which smoothes out the forest at small scales, similar to the effect of low WDM masses. If those two effects are completely degenerate, a smoother Lyman-$\alpha$ forest would not allow discriminating between a hotter IGM and a smaller WDM particle mass. In Figure \ref{fig: PS thermal vs WDM} we show a comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD THERMAL} suite on the Lyman-$\alpha$ flux power spectrum. We find that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range. As a consequence, the Lyman-$\alpha$ forest breaks the degeneracy between thermal and WDM models.
 
 \begin{figure}[ht]
         \centering
             \includegraphics[width=0.8\textwidth]{img/ML/PS_thermal_vs_wdm.png}
-            \caption{A comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD} suite on the Lyman-$\alpha$ flux power spectrum. Note that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range.}
+            \caption{A comparison at $z=4.4$ of the effect of WDM models and thermal models within the \texttt{SHERWOOD THERMAL} suite on the Lyman-$\alpha$ flux power spectrum. Note that both effects are not completely degenerate. WDM models only suppress the power spectrum at small scales, while hotter models modify the power spectrum in the whole wavenumber range.}
             \label{fig: PS thermal vs WDM}
 \end{figure}   
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.26)  16 SEP 2024 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.26)  27 SEP 2024 10:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1179,12 +1179,18 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 90
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<img/ML/signature.png, id=15, 333.245pt x 188.705pt>
+File: img/ML/signature.png Graphic file (type png)
+<use img/ML/signature.png>
+Package pdftex.def Info: img/ML/signature.png  used on input line 141.
+(pdftex.def)             Requested size: 85.35826pt x 48.33365pt.
+ [2 <./img/ML/signature.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1200,7 +1206,12 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
 
 
-])
+]
+Overfull \hbox (2.03697pt too wide) detected at line 47
+ []\T1/cmss/bx/n/12 101
+ []
+
+)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -1235,7 +1246,7 @@ Class scrreprt Warning: \float@addtolists detected!
 
 
 ]
-Underfull \vbox (badness 5475) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
@@ -1244,6 +1255,9 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [4]
@@ -1253,72 +1267,78 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [5]
-<img/lyman-alpha.pdf, id=213, 609.16806pt x 283.00635pt>
+Underfull \vbox (badness 2837) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [6]
+<img/lyman-alpha.pdf, id=233, 609.16806pt x 283.00635pt>
 File: img/lyman-alpha.pdf Graphic file (type pdf)
 <use img/lyman-alpha.pdf>
-Package pdftex.def Info: img/lyman-alpha.pdf  used on input line 163.
+Package pdftex.def Info: img/lyman-alpha.pdf  used on input line 173.
 (pdftex.def)             Requested size: 447.11482pt x 207.71999pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [6 <./img/lyman-alpha.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [7 <./img/lyman-alpha.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [7]
-<img/ML/forest.png, id=262, 1103.12125pt x 394.47375pt>
+ [8]
+<img/ML/forest.png, id=284, 1103.12125pt x 394.47375pt>
 File: img/ML/forest.png Graphic file (type png)
 <use img/ML/forest.png>
-Package pdftex.def Info: img/ML/forest.png  used on input line 214.
+Package pdftex.def Info: img/ML/forest.png  used on input line 224.
 (pdftex.def)             Requested size: 447.11482pt x 159.88739pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [8]
+ [9]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [9 <./img/ML/forest.png>]
-<img/ML/villa_wdm.png, id=303, 541.12163pt x 458.1918pt>
-File: img/ML/villa_wdm.png Graphic file (type png)
-<use img/ML/villa_wdm.png>
-Package pdftex.def Info: img/ML/villa_wdm.png  used on input line 240.
-(pdftex.def)             Requested size: 447.11482pt x 378.60718pt.
-
+ [10 <./img/ML/forest.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [10]
+ [11]
+<img/ML/villa_wdm.png, id=341, 541.12163pt x 458.1918pt>
+File: img/ML/villa_wdm.png Graphic file (type png)
+<use img/ML/villa_wdm.png>
+Package pdftex.def Info: img/ML/villa_wdm.png  used on input line 250.
+(pdftex.def)             Requested size: 447.11482pt x 378.60718pt.
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [11 <./img/ML/villa_wdm.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 253.
+ [12 <./img/ML/villa_wdm.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 263.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ))
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [12]
+ [13]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [13]
+ [14]
 \openout2 = `sherwood.aux'.
 
  (./sherwood.tex
 chapter 2.
-[14
+
+Underfull \vbox (badness 1057) has occurred while \output is active []
+
+ [15
 
 
 
 
 ]
-<img/ML/Barnes_hut_tree.png, id=377, 803.0pt x 803.0pt>
+<img/ML/Barnes_hut_tree.png, id=396, 803.0pt x 803.0pt>
 File: img/ML/Barnes_hut_tree.png Graphic file (type png)
 <use img/ML/Barnes_hut_tree.png>
-Package pdftex.def Info: img/ML/Barnes_hut_tree.png  used on input line 45.
+Package pdftex.def Info: img/ML/Barnes_hut_tree.png  used on input line 48.
 (pdftex.def)             Requested size: 223.5574pt x 223.55193pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1326,18 +1346,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [15]
+ [16]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [16 <./img/ML/Barnes_hut_tree.png>]
+ [17 <./img/ML/Barnes_hut_tree.png>]
 
 pdfTeX warning: pdflatex (file ./img/ML/density_image_wdm.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ML/density_image_wdm.pdf, id=401, 642.32973pt x 222.64178pt>
+<img/ML/density_image_wdm.pdf, id=423, 642.32973pt x 222.64178pt>
 File: img/ML/density_image_wdm.pdf Graphic file (type pdf)
 <use img/ML/density_image_wdm.pdf>
 Package pdftex.def Info: img/ML/density_image_wdm.pdf  used on input line 101.
 (pdftex.def)             Requested size: 442.64612pt x 153.42934pt.
-<img/ML/Skewer_density.pdf, id=403, 434.82402pt x 145.74402pt>
+<img/ML/Skewer_density.pdf, id=425, 434.82402pt x 145.74402pt>
 File: img/ML/Skewer_density.pdf Graphic file (type pdf)
 <use img/ML/Skewer_density.pdf>
 Package pdftex.def Info: img/ML/Skewer_density.pdf  used on input line 108.
@@ -1348,32 +1368,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [17]
+ [18]
 Underfull \vbox (badness 2368) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [18 <./img/ML/density_image_wdm.pdf> <./img/ML/Skewer_density.pdf>]
-<img/ML/TP-FA.pdf, id=483, 362.53497pt x 290.28403pt>
+ [19 <./img/ML/density_image_wdm.pdf> <./img/ML/Skewer_density.pdf>]
+<img/ML/TP-FA.pdf, id=508, 362.53497pt x 290.28403pt>
 File: img/ML/TP-FA.pdf Graphic file (type pdf)
 <use img/ML/TP-FA.pdf>
 Package pdftex.def Info: img/ML/TP-FA.pdf  used on input line 156.
 (pdftex.def)             Requested size: 357.69322pt x 286.40761pt.
 
-Underfull \vbox (badness 2158) has occurred while \output is active []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [19]
+ [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [20 <./img/ML/TP-FA.pdf>]
-<img/ML/Skewer_OD_quantities.pdf, id=554, 362.55402pt x 290.284pt>
+ [21 <./img/ML/TP-FA.pdf>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [22]
+<img/ML/Skewer_OD_quantities.pdf, id=588, 362.55402pt x 290.284pt>
 File: img/ML/Skewer_OD_quantities.pdf Graphic file (type pdf)
 <use img/ML/Skewer_OD_quantities.pdf>
 Package pdftex.def Info: img/ML/Skewer_OD_quantities.pdf  used on input line 180.
@@ -1384,11 +1404,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [21]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [22 <./img/ML/Skewer_OD_quantities.pdf>]
-<img/ML/skewer_delta_flux.pdf, id=619, 362.55402pt x 290.28403pt>
+ [23 <./img/ML/Skewer_OD_quantities.pdf>]
+<img/ML/skewer_delta_flux.pdf, id=646, 362.55402pt x 290.28403pt>
 File: img/ML/skewer_delta_flux.pdf Graphic file (type pdf)
 <use img/ML/skewer_delta_flux.pdf>
 Package pdftex.def Info: img/ML/skewer_delta_flux.pdf  used on input line 204.
@@ -1399,8 +1416,8 @@ Underfull \vbox (badness 1817) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [23 <./img/ML/skewer_delta_flux.pdf>]
-<img/ML/pdf_density_sherwood.png, id=662, 1672.2475pt x 1337.99875pt>
+ [24 <./img/ML/skewer_delta_flux.pdf>]
+<img/ML/pdf_density_sherwood.png, id=689, 1672.2475pt x 1337.99875pt>
 File: img/ML/pdf_density_sherwood.png Graphic file (type png)
 <use img/ML/pdf_density_sherwood.png>
 Package pdftex.def Info: img/ML/pdf_density_sherwood.png  used on input line 215.
@@ -1408,8 +1425,8 @@ Package pdftex.def Info: img/ML/pdf_density_sherwood.png  used on input line 215
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [24 <./img/ML/pdf_density_sherwood.png>]
-<img/ML/PS_sherwood.png, id=681, 2006.49625pt x 1337.99875pt>
+ [25 <./img/ML/pdf_density_sherwood.png>]
+<img/ML/PS_sherwood.png, id=709, 2006.49625pt x 1337.99875pt>
 File: img/ML/PS_sherwood.png Graphic file (type png)
 <use img/ML/PS_sherwood.png>
 Package pdftex.def Info: img/ML/PS_sherwood.png  used on input line 238.
@@ -1417,8 +1434,8 @@ Package pdftex.def Info: img/ML/PS_sherwood.png  used on input line 238.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [25]
-<img/ML/PS_thermal_vs_wdm.png, id=697, 1672.2475pt x 1337.99875pt>
+ [26]
+<img/ML/PS_thermal_vs_wdm.png, id=723, 1672.2475pt x 1337.99875pt>
 File: img/ML/PS_thermal_vs_wdm.png Graphic file (type png)
 <use img/ML/PS_thermal_vs_wdm.png>
 Package pdftex.def Info: img/ML/PS_thermal_vs_wdm.png  used on input line 248.
@@ -1426,21 +1443,21 @@ Package pdftex.def Info: img/ML/PS_thermal_vs_wdm.png  used on input line 248.
 )
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [26 <./img/ML/PS_sherwood.png>]
+ [27 <./img/ML/PS_sherwood.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [27 <./img/ML/PS_thermal_vs_wdm.png>]
+ [28 <./img/ML/PS_thermal_vs_wdm.png>]
 \openout2 = `ML.aux'.
 
  (./ML.tex
 chapter 3.
-[28
+[29
 
 
 
 
 ]
-<img/ML/MLP_unit_impulse.png, id=723, 2007.5pt x 1606.0pt>
+<img/ML/MLP_unit_impulse.png, id=750, 2007.5pt x 1606.0pt>
 File: img/ML/MLP_unit_impulse.png Graphic file (type png)
 <use img/ML/MLP_unit_impulse.png>
 Package pdftex.def Info: img/ML/MLP_unit_impulse.png  used on input line 65.
@@ -1448,20 +1465,23 @@ Package pdftex.def Info: img/ML/MLP_unit_impulse.png  used on input line 65.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [29 <./img/ML/MLP_unit_impulse.png>]
-<img/ML/HPC.png, id=740, 1123.19624pt x 822.07124pt>
+ [30 <./img/ML/MLP_unit_impulse.png>]
+<img/ML/HPC.png, id=766, 1123.19624pt x 822.07124pt>
 File: img/ML/HPC.png Graphic file (type png)
 <use img/ML/HPC.png>
 Package pdftex.def Info: img/ML/HPC.png  used on input line 78.
 (pdftex.def)             Requested size: 312.979pt x 229.06198pt.
 
+Underfull \vbox (badness 1571) has occurred while \output is active []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [30 <./img/ML/HPC.png>]
+ [31 <./img/ML/HPC.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [31{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<img//ML/fig1_color.pdf, id=782, 667.49374pt x 479.7925pt>
+ [32{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<img//ML/fig1_color.pdf, id=810, 667.49374pt x 479.7925pt>
 File: img//ML/fig1_color.pdf Graphic file (type pdf)
 <use img//ML/fig1_color.pdf>
 Package pdftex.def Info: img//ML/fig1_color.pdf  used on input line 102.
@@ -1469,24 +1489,24 @@ Package pdftex.def Info: img//ML/fig1_color.pdf  used on input line 102.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [32 <./img//ML/fig1_color.pdf>]
+ [33 <./img//ML/fig1_color.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [33]
-<img/ML/CAMELS_Images_Update.pdf, id=817, 831.105pt x 1228.59pt>
+ [34]
+<img/ML/CAMELS_Images_Update.pdf, id=847, 831.105pt x 1228.59pt>
 File: img/ML/CAMELS_Images_Update.pdf Graphic file (type pdf)
 <use img/ML/CAMELS_Images_Update.pdf>
 Package pdftex.def Info: img/ML/CAMELS_Images_Update.pdf  used on input line 123.
 (pdftex.def)             Requested size: 236.9703pt x 170.20222pt.
-<img/ML/results_fixed_sim512_res512_z0.pdf, id=819, 462.77057pt x 346.43108pt>
+<img/ML/results_fixed_sim512_res512_z0.pdf, id=849, 462.77057pt x 346.43108pt>
 File: img/ML/results_fixed_sim512_res512_z0.pdf Graphic file (type pdf)
 <use img/ML/results_fixed_sim512_res512_z0.pdf>
 Package pdftex.def Info: img/ML/results_fixed_sim512_res512_z0.pdf  used on input line 129.
 (pdftex.def)             Requested size: 201.2003pt x 150.617pt.
-<img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf, id=824, 522.34975pt x 487.65256pt>
+<img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf, id=854, 522.34975pt x 487.65256pt>
 File: img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf Graphic file (type pdf)
 <use img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf>
 Package pdftex.def Info: img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf  used on input line 139.
@@ -1497,17 +1517,17 @@ Underfull \vbox (badness 7047) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [34 <./img/ML/results_fixed_sim512_res512_z0.pdf> <./img/ML/CAMELS_Images_Update.pdf>]
+ [35 <./img/ML/results_fixed_sim512_res512_z0.pdf> <./img/ML/CAMELS_Images_Update.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [35 <./img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [36]
+ [36 <./img//ML/scatter__and__posterior_contours_fiducial_tdr.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [37]
-<img/ML/poly_overfit.png, id=947, 1249.66875pt x 683.55376pt>
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [38]
+<img/ML/poly_overfit.png, id=977, 1249.66875pt x 683.55376pt>
 File: img/ML/poly_overfit.png Graphic file (type png)
 <use img/ML/poly_overfit.png>
 Package pdftex.def Info: img/ML/poly_overfit.png  used on input line 205.
@@ -1518,20 +1538,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [38]
+ [39]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [39 <./img/ML/poly_overfit.png>]
+ [40 <./img/ML/poly_overfit.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [40]
+ [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [41]
-<img/ML/MaxpoolSample2.png, id=987, 164.25pt x 68.547pt>
+ [42]
+<img/ML/MaxpoolSample2.png, id=1017, 164.25pt x 68.547pt>
 File: img/ML/MaxpoolSample2.png Graphic file (type png)
 <use img/ML/MaxpoolSample2.png>
 Package pdftex.def Info: img/ML/MaxpoolSample2.png  used on input line 268.
@@ -1539,8 +1559,8 @@ Package pdftex.def Info: img/ML/MaxpoolSample2.png  used on input line 268.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [42 <./img/ML/MaxpoolSample2.png>]
-<img/ML/scheme_bnn.png, id=1000, 1084.05pt x 405.515pt>
+ [43 <./img/ML/MaxpoolSample2.png>]
+<img/ML/scheme_bnn.png, id=1031, 1084.05pt x 405.515pt>
 File: img/ML/scheme_bnn.png Graphic file (type png)
 <use img/ML/scheme_bnn.png>
 Package pdftex.def Info: img/ML/scheme_bnn.png  used on input line 290.
@@ -1551,140 +1571,157 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [43 <./img/ML/scheme_bnn.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [44]
-<img/ML/Parzen.pdf, id=1027, 756.8275pt x 481.8pt>
-File: img/ML/Parzen.pdf Graphic file (type pdf)
-<use img/ML/Parzen.pdf>
-Package pdftex.def Info: img/ML/Parzen.pdf  used on input line 328.
-(pdftex.def)             Requested size: 268.27162pt x 170.7792pt.
-
+ [44 <./img/ML/scheme_bnn.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [45]
+<img/ML/Parzen.png, id=1058, 757.02824pt x 482.0409pt>
+File: img/ML/Parzen.png Graphic file (type png)
+<use img/ML/Parzen.png>
+Package pdftex.def Info: img/ML/Parzen.png  used on input line 326.
+(pdftex.def)             Requested size: 442.64612pt x 281.86406pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [46 <./img/ML/Parzen.pdf>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 365.
-
+ [46]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [47]
+ [47 <./img/ML/Parzen.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 362.
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [48]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [49]
 
 pdfTeX warning: pdflatex (file ./img/ML/mirror_training.drawio.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ML/mirror_training.drawio.pdf, id=1099, 240.9pt x 243.79079pt>
+<img/ML/mirror_training.drawio.pdf, id=1115, 240.9pt x 243.79079pt>
 File: img/ML/mirror_training.drawio.pdf Graphic file (type pdf)
 <use img/ML/mirror_training.drawio.pdf>
-Package pdftex.def Info: img/ML/mirror_training.drawio.pdf  used on input line 416.
+Package pdftex.def Info: img/ML/mirror_training.drawio.pdf  used on input line 413.
 (pdftex.def)             Requested size: 268.27162pt x 271.51492pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [49]
-<img/ML/nn_archi.jpg, id=1113, 370.45602pt x 207.77625pt>
+ [50]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [51 <./img/ML/mirror_training.drawio.pdf>]
+<img/ML/nn_archi.jpg, id=1156, 370.45602pt x 207.77625pt>
 File: img/ML/nn_archi.jpg Graphic file (type jpg)
 <use img/ML/nn_archi.jpg>
-Package pdftex.def Info: img/ML/nn_archi.jpg  used on input line 439.
+Package pdftex.def Info: img/ML/nn_archi.jpg  used on input line 436.
 (pdftex.def)             Requested size: 447.11482pt x 250.78227pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [50 <./img/ML/mirror_training.drawio.pdf>]
-Underfull \vbox (badness 2253) has occurred while \output is active []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [51 <./img/ML/nn_archi.jpg>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [52]
-<img/ML/learning_curve.png, id=1156, 1672.2475pt x 1337.99875pt>
-File: img/ML/learning_curve.png Graphic file (type png)
-<use img/ML/learning_curve.png>
-Package pdftex.def Info: img/ML/learning_curve.png  used on input line 484.
-(pdftex.def)             Requested size: 312.979pt x 250.40457pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [52 <./img/ML/nn_archi.jpg>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [53]
-<img/ML/skewer.pdf, id=1166, 579.36403pt x 290.28403pt>
+<img/ML/learning_curve.png, id=1184, 1672.2475pt x 1337.99875pt>
+File: img/ML/learning_curve.png Graphic file (type png)
+<use img/ML/learning_curve.png>
+Package pdftex.def Info: img/ML/learning_curve.png  used on input line 479.
+(pdftex.def)             Requested size: 312.979pt x 250.40457pt.
+<img/ML/skewer.pdf, id=1187, 579.36403pt x 290.28403pt>
 File: img/ML/skewer.pdf Graphic file (type pdf)
 <use img/ML/skewer.pdf>
-Package pdftex.def Info: img/ML/skewer.pdf  used on input line 493.
+Package pdftex.def Info: img/ML/skewer.pdf  used on input line 486.
 (pdftex.def)             Requested size: 442.64612pt x 221.78749pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [54 <./img/ML/learning_curve.png>]
-Underfull \vbox (badness 1755) has occurred while \output is active []
+ [54]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [55 <./img/ML/skewer.pdf>]
-<img/ML/PDF_masked_unmasked.pdf, id=1235, 362.38199pt x 290.28403pt>
+ [55 <./img/ML/learning_curve.png>]
+Underfull \vbox (badness 2012) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [56 <./img/ML/skewer.pdf>]
+<img/ML/PDF_masked_unmasked.pdf, id=1262, 362.38199pt x 290.28403pt>
 File: img/ML/PDF_masked_unmasked.pdf Graphic file (type pdf)
 <use img/ML/PDF_masked_unmasked.pdf>
-Package pdftex.def Info: img/ML/PDF_masked_unmasked.pdf  used on input line 522.
+Package pdftex.def Info: img/ML/PDF_masked_unmasked.pdf  used on input line 515.
 (pdftex.def)             Requested size: 380.05032pt x 304.43958pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [56 <./img/ML/PDF_masked_unmasked.pdf>]
-<img/ML/ml_resample_no_covariance.png, id=1286, 2675.9975pt x 1002.74625pt>
+ [57]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [58 <./img/ML/PDF_masked_unmasked.pdf>]
+<img/ML/ml_resample_no_covariance.png, id=1319, 2675.9975pt x 1002.74625pt>
 File: img/ML/ml_resample_no_covariance.png Graphic file (type png)
 <use img/ML/ml_resample_no_covariance.png>
-Package pdftex.def Info: img/ML/ml_resample_no_covariance.png  used on input line 538.
+Package pdftex.def Info: img/ML/ml_resample_no_covariance.png  used on input line 531.
 (pdftex.def)             Requested size: 380.05032pt x 142.4032pt.
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [57 <./img/ML/ml_resample_no_covariance.png>]
-<img/ML/cov_mat_imprs.png, id=1298, 367.92657pt x 290.23631pt>
+<img/ML/cov_mat_imprs.png, id=1321, 367.92657pt x 290.23631pt>
 File: img/ML/cov_mat_imprs.png Graphic file (type png)
 <use img/ML/cov_mat_imprs.png>
-Package pdftex.def Info: img/ML/cov_mat_imprs.png  used on input line 554.
+Package pdftex.def Info: img/ML/cov_mat_imprs.png  used on input line 547.
 (pdftex.def)             Requested size: 380.05032pt x 299.81474pt.
-<img/ML/ml_resample_corr.png, id=1303, 2675.9975pt x 1002.74625pt>
+<img/ML/ml_resample_corr.png, id=1326, 2675.9975pt x 1002.74625pt>
 File: img/ML/ml_resample_corr.png Graphic file (type png)
 <use img/ML/ml_resample_corr.png>
-Package pdftex.def Info: img/ML/ml_resample_corr.png  used on input line 563.
+Package pdftex.def Info: img/ML/ml_resample_corr.png  used on input line 556.
 (pdftex.def)             Requested size: 380.05032pt x 142.4032pt.
+
+Underfull \vbox (badness 3895) has occurred while \output is active []
+
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [58 <./img/ML/cov_mat_imprs.png>]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 579.
+ [59 <./img/ML/ml_resample_no_covariance.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [60 <./img/ML/cov_mat_imprs.png> <./img/ML/ml_resample_corr.png>]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 572.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
+<img/ML/boot_vs_exxact.png, id=1350, 362.43405pt x 290.16405pt>
+File: img/ML/boot_vs_exxact.png Graphic file (type png)
+<use img/ML/boot_vs_exxact.png>
+Package pdftex.def Info: img/ML/boot_vs_exxact.png  used on input line 588.
+(pdftex.def)             Requested size: 380.05032pt x 304.28719pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [59 <./img/ML/ml_resample_corr.png>]
-<img/ML/boot_vs_exxact.png, id=1326, 362.43405pt x 290.16405pt>
-File: img/ML/boot_vs_exxact.png Graphic file (type png)
-<use img/ML/boot_vs_exxact.png>
-Package pdftex.def Info: img/ML/boot_vs_exxact.png  used on input line 595.
-(pdftex.def)             Requested size: 380.05032pt x 304.28719pt.
-<img/ML/PDF_full_vs_60.pdf, id=1328, 362.55402pt x 290.28403pt>
+ [62 <./img/ML/boot_vs_exxact.png>]
+<img/ML/PDF_full_vs_60.pdf, id=1374, 362.55402pt x 290.28403pt>
 File: img/ML/PDF_full_vs_60.pdf Graphic file (type pdf)
 <use img/ML/PDF_full_vs_60.pdf>
-Package pdftex.def Info: img/ML/PDF_full_vs_60.pdf  used on input line 607.
+Package pdftex.def Info: img/ML/PDF_full_vs_60.pdf  used on input line 600.
 (pdftex.def)             Requested size: 380.05032pt x 304.30669pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1692,34 +1729,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [60]
+ [63 <./img/ML/PDF_full_vs_60.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [61 <./img/ML/boot_vs_exxact.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [62 <./img/ML/PDF_full_vs_60.pdf>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [63]
-<img/ML/saliency.pdf, id=1400, 362.55402pt x 290.28403pt>
+ [64]
+<img/ML/saliency.pdf, id=1429, 362.55402pt x 290.28403pt>
 File: img/ML/saliency.pdf Graphic file (type pdf)
 <use img/ML/saliency.pdf>
-Package pdftex.def Info: img/ML/saliency.pdf  used on input line 680.
+Package pdftex.def Info: img/ML/saliency.pdf  used on input line 673.
 (pdftex.def)             Requested size: 268.27162pt x 214.80681pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [64 <./img/ML/saliency.pdf>]
-<img/ML/skewer_notrain_wdm1.pdf, id=1440, 507.09402pt x 218.01402pt>
+ [65 <./img/ML/saliency.pdf>]
+<img/ML/skewer_notrain_wdm1.pdf, id=1469, 507.09402pt x 218.01402pt>
 File: img/ML/skewer_notrain_wdm1.pdf Graphic file (type pdf)
 <use img/ML/skewer_notrain_wdm1.pdf>
-Package pdftex.def Info: img/ML/skewer_notrain_wdm1.pdf  used on input line 694.
+Package pdftex.def Info: img/ML/skewer_notrain_wdm1.pdf  used on input line 687.
 (pdftex.def)             Requested size: 402.4006pt x 173.01093pt.
-<img/ML/skewer_notrain_wdm4.pdf, id=1441, 507.09402pt x 218.01402pt>
+<img/ML/skewer_notrain_wdm4.pdf, id=1470, 507.09402pt x 218.01402pt>
 File: img/ML/skewer_notrain_wdm4.pdf Graphic file (type pdf)
 <use img/ML/skewer_notrain_wdm4.pdf>
-Package pdftex.def Info: img/ML/skewer_notrain_wdm4.pdf  used on input line 701.
+Package pdftex.def Info: img/ML/skewer_notrain_wdm4.pdf  used on input line 694.
 (pdftex.def)             Requested size: 402.4006pt x 173.01093pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1727,35 +1758,38 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [65 <./img/ML/skewer_notrain_wdm1.pdf>]
-<img/ML/malicious_input.png, id=1499, 434.77632pt x 217.96632pt>
+ [66 <./img/ML/skewer_notrain_wdm1.pdf>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [67 <./img/ML/skewer_notrain_wdm4.pdf>]
+<img/ML/malicious_input.png, id=1583, 434.77632pt x 217.96632pt>
 File: img/ML/malicious_input.png Graphic file (type png)
 <use img/ML/malicious_input.png>
-Package pdftex.def Info: img/ML/malicious_input.png  used on input line 712.
+Package pdftex.def Info: img/ML/malicious_input.png  used on input line 705.
 (pdftex.def)             Requested size: 402.4006pt x 201.74539pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [66 <./img/ML/skewer_notrain_wdm4.pdf>]
+ [68 <./img/ML/malicious_input.png>]
 
 pdfTeX warning: pdflatex (file ./img/ML/filter-acti.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ML/filter-acti.pdf, id=1560, 579.36452pt x 272.92967pt>
+<img/ML/filter-acti.pdf, id=1598, 579.36452pt x 272.92967pt>
 File: img/ML/filter-acti.pdf Graphic file (type pdf)
 <use img/ML/filter-acti.pdf>
-Package pdftex.def Info: img/ML/filter-acti.pdf  used on input line 726.
+Package pdftex.def Info: img/ML/filter-acti.pdf  used on input line 720.
 (pdftex.def)             Requested size: 402.4006pt x 189.56688pt.
-<img/ML/NLL_diff_channels.pdf, id=1561, 362.55402pt x 290.28403pt>
+<img/ML/NLL_diff_channels.pdf, id=1599, 362.55402pt x 290.28403pt>
 File: img/ML/NLL_diff_channels.pdf Graphic file (type pdf)
 <use img/ML/NLL_diff_channels.pdf>
-Package pdftex.def Info: img/ML/NLL_diff_channels.pdf  used on input line 733.
+Package pdftex.def Info: img/ML/NLL_diff_channels.pdf  used on input line 727.
 (pdftex.def)             Requested size: 402.4006pt x 322.20578pt.
 )
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [67 <./img/ML/malicious_input.png>]
+ [69 <./img/ML/filter-acti.pdf>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [68 <./img/ML/filter-acti.pdf> <./img/ML/NLL_diff_channels.pdf>]
+ [70 <./img/ML/NLL_diff_channels.pdf>]
 \openout2 = `inference.aux'.
 
  (./inference.tex
@@ -1763,7 +1797,7 @@ chapter 4.
 
 Underfull \vbox (badness 1270) has occurred while \output is active []
 
- [69
+ [71
 
 
 
@@ -1771,8 +1805,8 @@ Underfull \vbox (badness 1270) has occurred while \output is active []
 ]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [70]
-<img/ML/inference_no_train.png, id=1669, 650.43pt x 505.89pt>
+ [72]
+<img/ML/inference_no_train.png, id=1703, 650.43pt x 505.89pt>
 File: img/ML/inference_no_train.png Graphic file (type png)
 <use img/ML/inference_no_train.png>
 Package pdftex.def Info: img/ML/inference_no_train.png  used on input line 38.
@@ -1785,11 +1819,11 @@ Overfull \hbox (15.97891pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [71]
+ [73]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [72 <./img/ML/inference_no_train.png>]
-<img/ML/SNR_vs_N.png, id=1682, 2675.9975pt x 1672.2475pt>
+ [74 <./img/ML/inference_no_train.png>]
+<img/ML/SNR_vs_N.png, id=1717, 2675.9975pt x 1672.2475pt>
 File: img/ML/SNR_vs_N.png Graphic file (type png)
 <use img/ML/SNR_vs_N.png>
 Package pdftex.def Info: img/ML/SNR_vs_N.png  used on input line 52.
@@ -1802,146 +1836,158 @@ Overfull \hbox (15.97891pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [73 <./img/ML/SNR_vs_N.png>]
-<img/ML/inference_cdm_sherwood.png, id=1693, 2409.0pt x 1606.0pt>
+ [75 <./img/ML/SNR_vs_N.png>]
+<img/ML/inference_cdm_sherwood.png, id=1728, 2409.0pt x 1606.0pt>
 File: img/ML/inference_cdm_sherwood.png Graphic file (type png)
 <use img/ML/inference_cdm_sherwood.png>
 Package pdftex.def Info: img/ML/inference_cdm_sherwood.png  used on input line 63.
 (pdftex.def)             Requested size: 357.69322pt x 238.46356pt.
-<img/ML/pdf_model_observed.png, id=1695, 362.50632pt x 290.23631pt>
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [76 <./img/ML/inference_cdm_sherwood.png>]
+<img/ML/pdf_model_observed.png, id=1737, 362.50632pt x 290.23631pt>
 File: img/ML/pdf_model_observed.png Graphic file (type png)
 <use img/ML/pdf_model_observed.png>
 Package pdftex.def Info: img/ML/pdf_model_observed.png  used on input line 71.
 (pdftex.def)             Requested size: 268.27162pt x 214.78922pt.
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [74 <./img/ML/inference_cdm_sherwood.png>]
-<img/ML/limits_summary.png, id=1711, 360.04913pt x 254.10132pt>
+<img/ML/limits_summary.png, id=1746, 360.04913pt x 254.10132pt>
 File: img/ML/limits_summary.png Graphic file (type png)
 <use img/ML/limits_summary.png>
 Package pdftex.def Info: img/ML/limits_summary.png  used on input line 83.
 (pdftex.def)             Requested size: 268.27162pt x 189.33867pt.
 
-Underfull \vbox (badness 6063) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (15.97891pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.2 Inference testing on simulated Sherwood spectra under realistic observational conditions[]
+ []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [75 <./img/ML/pdf_model_observed.png>]
+ [77 <./img/ML/pdf_model_observed.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [76 <./img/ML/limits_summary.png>]
-<img/ML/nyx_skewer.png, id=1732, 507.04633pt x 145.69632pt>
+ [78 <./img/ML/limits_summary.png>]
+<img/ML/nyx_skewer.png, id=1767, 507.04633pt x 145.69632pt>
 File: img/ML/nyx_skewer.png Graphic file (type png)
 <use img/ML/nyx_skewer.png>
 Package pdftex.def Info: img/ML/nyx_skewer.png  used on input line 131.
 (pdftex.def)             Requested size: 357.69322pt x 102.78261pt.
-<img/ML/TD_plane_nyx_sher.png, id=1734, 1504.62125pt x 1170.3725pt>
+
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [79 <./img/ML/nyx_skewer.png>]
+<img/ML/TD_plane_nyx_sher.png, id=1778, 1504.62125pt x 1170.3725pt>
 File: img/ML/TD_plane_nyx_sher.png Graphic file (type png)
 <use img/ML/TD_plane_nyx_sher.png>
 Package pdftex.def Info: img/ML/TD_plane_nyx_sher.png  used on input line 140.
 (pdftex.def)             Requested size: 442.64612pt x 366.23914pt.
+<img/ML/Nyx_skewer_rec.png, id=1783, 434.77632pt x 217.96632pt>
+File: img/ML/Nyx_skewer_rec.png Graphic file (type png)
+<use img/ML/Nyx_skewer_rec.png>
+Package pdftex.def Info: img/ML/Nyx_skewer_rec.png  used on input line 150.
+(pdftex.def)             Requested size: 442.64612pt x 221.9236pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [77 <./img/ML/nyx_skewer.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [78 <./img/ML/TD_plane_nyx_sher.png>]
-<img/ML/violin_nyx.png, id=1752, 1672.2475pt x 1337.99875pt>
+<img/ML/violin_nyx.png, id=1784, 1672.2475pt x 1337.99875pt>
 File: img/ML/violin_nyx.png Graphic file (type png)
 <use img/ML/violin_nyx.png>
-Package pdftex.def Info: img/ML/violin_nyx.png  used on input line 150.
+Package pdftex.def Info: img/ML/violin_nyx.png  used on input line 157.
 (pdftex.def)             Requested size: 357.69322pt x 286.19415pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [79]
+ [80]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [80 <./img/ML/violin_nyx.png>]
-<img/ML/SQUAD_pred.png, id=1775, 434.77632pt x 723.85632pt>
+ [81 <./img/ML/TD_plane_nyx_sher.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [82 <./img/ML/Nyx_skewer_rec.png>]
+<img/ML/SQUAD_pred.png, id=1815, 434.77632pt x 723.85632pt>
 File: img/ML/SQUAD_pred.png Graphic file (type png)
 <use img/ML/SQUAD_pred.png>
-Package pdftex.def Info: img/ML/SQUAD_pred.png  used on input line 225.
+Package pdftex.def Info: img/ML/SQUAD_pred.png  used on input line 232.
 (pdftex.def)             Requested size: 312.979pt x 521.09883pt.
 
+Underfull \vbox (badness 2285) has occurred while \output is active []
+
+
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [81]
+ [83 <./img/ML/violin_nyx.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [82 <./img/ML/SQUAD_pred.png>]
-<img/ML/squad_chi.png, id=1792, 2341.74875pt x 1672.2475pt>
+ [84 <./img/ML/SQUAD_pred.png>]
+<img/ML/squad_chi.png, id=1833, 2341.74875pt x 1672.2475pt>
 File: img/ML/squad_chi.png Graphic file (type png)
 <use img/ML/squad_chi.png>
-Package pdftex.def Info: img/ML/squad_chi.png  used on input line 237.
+Package pdftex.def Info: img/ML/squad_chi.png  used on input line 244.
 (pdftex.def)             Requested size: 236.9703pt x 169.19931pt.
-<img/ML/squad_fit_pdf.png, id=1793, 362.50632pt x 290.23631pt>
+<img/ML/squad_fit_pdf.png, id=1834, 362.50632pt x 290.23631pt>
 File: img/ML/squad_fit_pdf.png Graphic file (type png)
 <use img/ML/squad_fit_pdf.png>
-Package pdftex.def Info: img/ML/squad_fit_pdf.png  used on input line 243.
+Package pdftex.def Info: img/ML/squad_fit_pdf.png  used on input line 250.
 (pdftex.def)             Requested size: 201.2003pt x 161.08748pt.
-<img/ML/ghost_spectrum.png, id=1797, 507.04633pt x 145.69632pt>
-File: img/ML/ghost_spectrum.png Graphic file (type png)
-<use img/ML/ghost_spectrum.png>
-Package pdftex.def Info: img/ML/ghost_spectrum.png  used on input line 267.
-(pdftex.def)             Requested size: 312.979pt x 89.93283pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [83 <./img/ML/squad_chi.png> <./img/ML/squad_fit_pdf.png>]
-<img/ML/GHOST_reconstructions.png, id=1809, 434.77632pt x 723.85632pt>
+ [85]
+<img/ML/ghost_spectrum.png, id=1849, 507.04633pt x 145.69632pt>
+File: img/ML/ghost_spectrum.png Graphic file (type png)
+<use img/ML/ghost_spectrum.png>
+Package pdftex.def Info: img/ML/ghost_spectrum.png  used on input line 274.
+(pdftex.def)             Requested size: 312.979pt x 89.93283pt.
+<img/ML/GHOST_reconstructions.png, id=1853, 434.77632pt x 723.85632pt>
 File: img/ML/GHOST_reconstructions.png Graphic file (type png)
 <use img/ML/GHOST_reconstructions.png>
-Package pdftex.def Info: img/ML/GHOST_reconstructions.png  used on input line 277.
+Package pdftex.def Info: img/ML/GHOST_reconstructions.png  used on input line 284.
 (pdftex.def)             Requested size: 357.69322pt x 595.55415pt.
 
 
-LaTeX Warning: Float too large for page by 57.05414pt on input line 280.
+LaTeX Warning: Float too large for page by 57.05414pt on input line 287.
 
-<img/ML/GHOST_chi.png, id=1810, 362.50632pt x 290.23631pt>
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [86 <./img/ML/squad_chi.png> <./img/ML/squad_fit_pdf.png> <./img/ML/ghost_spectrum.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [87 <./img/ML/GHOST_reconstructions.png>]
+<img/ML/GHOST_chi.png, id=1867, 362.50632pt x 290.23631pt>
 File: img/ML/GHOST_chi.png Graphic file (type png)
 <use img/ML/GHOST_chi.png>
-Package pdftex.def Info: img/ML/GHOST_chi.png  used on input line 286.
+Package pdftex.def Info: img/ML/GHOST_chi.png  used on input line 293.
 (pdftex.def)             Requested size: 357.69322pt x 286.38268pt.
-<img/ML/fit_ghost_z49.pdf, id=1813, 362.55402pt x 290.28403pt>
-File: img/ML/fit_ghost_z49.pdf Graphic file (type pdf)
-<use img/ML/fit_ghost_z49.pdf>
-Package pdftex.def Info: img/ML/fit_ghost_z49.pdf  used on input line 296.
-(pdftex.def)             Requested size: 357.69322pt x 286.40761pt.
-
-Underfull \vbox (badness 1478) has occurred while \output is active []
-
+<img/ML/fit_ghost_z49.png, id=1870, 362.50632pt x 290.23631pt>
+File: img/ML/fit_ghost_z49.png Graphic file (type png)
+<use img/ML/fit_ghost_z49.png>
+Package pdftex.def Info: img/ML/fit_ghost_z49.png  used on input line 303.
+(pdftex.def)             Requested size: 357.69322pt x 286.38268pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [84 <./img/ML/ghost_spectrum.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [85 <./img/ML/GHOST_reconstructions.png>]
+ [88 <./img/ML/GHOST_chi.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [86 <./img/ML/GHOST_chi.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+ [89 <./img/ML/fit_ghost_z49.png>]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [87 <./img/ML/fit_ghost_z49.pdf>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [88]
+ [90]
 Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 [] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
  []
@@ -1949,68 +1995,44 @@ Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [89]
-<img/ML/normal_plot_training.png, id=1913, 651.58632pt x 362.50632pt>
+ [91]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [92]
+<img/ML/normal_plot_training.png, id=1924, 651.58632pt x 362.50632pt>
 File: img/ML/normal_plot_training.png Graphic file (type png)
 <use img/ML/normal_plot_training.png>
-Package pdftex.def Info: img/ML/normal_plot_training.png  used on input line 391.
+Package pdftex.def Info: img/ML/normal_plot_training.png  used on input line 399.
 (pdftex.def)             Requested size: 424.7577pt x 236.31772pt.
-<img/ML/std_vs_model.png, id=1915, 1672.2475pt x 1337.99875pt>
+
+Overfull \hbox (8.65715pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [93 <./img/ML/normal_plot_training.png>]
+<img/ML/std_vs_model.png, id=1933, 1672.2475pt x 1337.99875pt>
 File: img/ML/std_vs_model.png Graphic file (type png)
 <use img/ML/std_vs_model.png>
-Package pdftex.def Info: img/ML/std_vs_model.png  used on input line 400.
+Package pdftex.def Info: img/ML/std_vs_model.png  used on input line 408.
 (pdftex.def)             Requested size: 335.3361pt x 268.30957pt.
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [90]
-<img/ML/ABC_posteriors_normal.png, id=1927, 2007.5pt x 1606.0pt>
+ [94 <./img/ML/std_vs_model.png>]
+<img/ML/ABC_posteriors_normal.png, id=1945, 2007.5pt x 1606.0pt>
 File: img/ML/ABC_posteriors_normal.png Graphic file (type png)
 <use img/ML/ABC_posteriors_normal.png>
-Package pdftex.def Info: img/ML/ABC_posteriors_normal.png  used on input line 433.
+Package pdftex.def Info: img/ML/ABC_posteriors_normal.png  used on input line 441.
 (pdftex.def)             Requested size: 335.3361pt x 268.26231pt.
-
-Underfull \vbox (badness 1142) has occurred while \output is active []
-
-
-Overfull \hbox (8.65715pt too wide) has occurred while \output is active
-[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [91 <./img/ML/normal_plot_training.png>]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [92 <./img/ML/std_vs_model.png>]
-Overfull \hbox (8.65715pt too wide) has occurred while \output is active
-[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
- []
-
-
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [93 <./img/ML/ABC_posteriors_normal.png>]
-<img/ML/WDM_training_plot.png, id=1962, 651.58632pt x 362.50632pt>
+<img/ML/WDM_training_plot.png, id=1947, 651.58632pt x 362.50632pt>
 File: img/ML/WDM_training_plot.png Graphic file (type png)
 <use img/ML/WDM_training_plot.png>
-Package pdftex.def Info: img/ML/WDM_training_plot.png  used on input line 453.
+Package pdftex.def Info: img/ML/WDM_training_plot.png  used on input line 461.
 (pdftex.def)             Requested size: 424.7577pt x 236.31772pt.
-<img/ML/IMNN_output.png, id=1964, 462.528pt x 346.896pt>
-File: img/ML/IMNN_output.png Graphic file (type png)
-<use img/ML/IMNN_output.png>
-Package pdftex.def Info: img/ML/IMNN_output.png  used on input line 464.
-(pdftex.def)             Requested size: 236.9703pt x 177.72977pt.
-<img/ML/IMNN_ABC_wdm.png, id=1965, 462.528pt x 346.896pt>
-File: img/ML/IMNN_ABC_wdm.png Graphic file (type png)
-<use img/ML/IMNN_ABC_wdm.png>
-Package pdftex.def Info: img/ML/IMNN_ABC_wdm.png  used on input line 470.
-(pdftex.def)             Requested size: 201.2003pt x 150.90382pt.
 
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [94 <./img/ML/WDM_training_plot.png>])
 Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 [] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
  []
@@ -2018,12 +2040,40 @@ Overfull \hbox (8.65715pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [95 <./img/ML/IMNN_output.png> <./img/ML/IMNN_ABC_wdm.png>]
+ [95]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [96 <./img/ML/ABC_posteriors_normal.png>]
+<img/ML/IMNN_output.png, id=1972, 462.528pt x 346.896pt>
+File: img/ML/IMNN_output.png Graphic file (type png)
+<use img/ML/IMNN_output.png>
+Package pdftex.def Info: img/ML/IMNN_output.png  used on input line 472.
+(pdftex.def)             Requested size: 236.9703pt x 177.72977pt.
+<img/ML/IMNN_ABC_wdm.png, id=1973, 462.528pt x 346.896pt>
+File: img/ML/IMNN_ABC_wdm.png Graphic file (type png)
+<use img/ML/IMNN_ABC_wdm.png>
+Package pdftex.def Info: img/ML/IMNN_ABC_wdm.png  used on input line 478.
+(pdftex.def)             Requested size: 201.2003pt x 150.90382pt.
+
+Underfull \vbox (badness 1735) has occurred while \output is active []
+
+
+Overfull \hbox (8.65715pt too wide) has occurred while \output is active
+[] |\T1/cmr/m/sl/12 4.6 Comparison of the inference pipeline against Information Maximising Neural Networks[]
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [97 <./img/ML/WDM_training_plot.png>])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [98 <./img/ML/IMNN_output.png> <./img/ML/IMNN_ABC_wdm.png>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 chapter 5.
-[96
+[99
 
 
 
@@ -2031,22 +2081,13 @@ chapter 5.
 ])
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [97]
+ [100]
 chapter without number
-[98
+[101
 
 
 
 ]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [99]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [100]
-Overfull \vbox (1.76944pt too high) has occurred while \output is active []
-
- [101]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
  [102]
@@ -2070,7 +2111,16 @@ Overfull \vbox (1.76944pt too high) has occurred while \output is active []
  [108]
 Overfull \vbox (1.76944pt too high) has occurred while \output is active []
 
- [109] (./main.aux (./Introduction.aux) (./sherwood.aux) (./ML.aux) (./inference.aux) (./conclusion.aux))
+ [109]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [110]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [111]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+ [112] (./main.aux (./Introduction.aux) (./sherwood.aux) (./ML.aux) (./inference.aux) (./conclusion.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package rerunfilecheck Info: File `main.hd' has not changed.
@@ -2080,18 +2130,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42549 strings out of 476025
- 860408 string characters out of 5790016
- 1870388 words of memory out of 5000000
- 61803 multiletter control sequences out of 15000+600000
+ 42597 strings out of 476025
+ 861790 string characters out of 5790016
+ 1872382 words of memory out of 5000000
+ 61837 multiletter control sequences out of 15000+600000
  542006 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,106p,10641b,2315s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (115 pages, 35066055 bytes).
+Output written on main.pdf (118 pages, 35391445 bytes).
 PDF statistics:
- 2655 PDF objects out of 2984 (max. 8388607)
- 1855 compressed objects within 19 object streams
- 466 named destinations out of 1000 (max. 500000)
- 680 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2686 PDF objects out of 2984 (max. 8388607)
+ 1910 compressed objects within 20 object streams
+ 478 named destinations out of 1000 (max. 500000)
+ 690 words of extra memory for PDF output out of 10000 (max. 10000000)
 
